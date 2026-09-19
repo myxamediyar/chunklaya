@@ -1,0 +1,24 @@
+[project]
+name = "chunklaya"
+version = "0.1.0"
+description = "Long-input harness for Laya, the open-weights System 1 decision model: chunk, gate, aggregate."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.12"
+keywords = ["laya", "jev", "decision-model", "long-context", "chunking", "system-one"]
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["torch>=2.14", "laya>=0.3.3", "numpy>=2.0"]
+
+[project.optional-dependencies]
+eval = ["pyarrow>=25"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["chunklaya*"]

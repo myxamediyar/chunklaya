@@ -1,0 +1,20 @@
+loaded on mps in 22s; cfg max_len=1024 head_max_len=256
+
+=== Exp 2: needle noul, ~3800 tok haystack ===
+  detector: choice
+  raw@4096: 465 ms/state, seq≈3796
+  chunked para: 698 ms/state, 69 chunks/state
+  chunked 750/750: 349 ms/state, 5 chunks/state
+  chunked 750/375: 738 ms/state, 9 chunks/state
+
+  AUC needle-present vs absent (0.5=chance, ±~0.08 at n=30); recall@spec90 in brackets
+  arm                              start                middle                   end    none q50
+  raw4096                   0.897 [0.83]          0.518 [0.17]          0.509 [0.13]       0.000
+  max_para                  0.874 [0.53]          0.874 [0.53]          0.874 [0.53]       0.975
+  any_para                  0.874 [0.50]          0.874 [0.50]          0.874 [0.50]       0.981
+  max_750/750               0.852 [0.70]          0.575 [0.17]          0.564 [0.10]       0.001
+  any_750/750               0.856 [0.70]          0.594 [0.17]          0.566 [0.10]       0.002
+  max_750/375               0.823 [0.50]          0.594 [0.13]          0.568 [0.10]       0.002
+  any_750/375               0.814 [0.50]          0.602 [0.17]          0.578 [0.10]       0.004
+
+written results/2026-09-20-para-choice/results.json  |  total 292s

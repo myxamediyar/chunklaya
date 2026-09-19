@@ -1,0 +1,18 @@
+loaded on mps in 22s; cfg max_len=1024 head_max_len=256
+
+=== Exp 2: needle noul, ~3800 tok haystack ===
+  clean haystack: dropped 14 of 877 non-sports articles with P(Sports) > 0.2
+  detector: choice
+  raw@4096: 468 ms/state, seq≈3804
+  chunked para: 748 ms/state, 68 chunks/state
+  chunked 750/750: 387 ms/state, 5 chunks/state
+
+  AUC needle-present vs absent (0.5=chance, ±~0.08 at n=30); recall@spec90 in brackets
+  arm                              start                middle                   end    none q50
+  raw4096                   0.974 [0.93]          0.547 [0.10]          0.541 [0.10]       0.000
+  max_para                  1.000 [1.00]          1.000 [1.00]          1.000 [1.00]       0.022
+  any_para                  1.000 [1.00]          1.000 [1.00]          1.000 [1.00]       0.049
+  max_750/750               0.957 [0.87]          0.478 [0.10]          0.611 [0.17]       0.001
+  any_750/750               0.961 [0.87]          0.476 [0.07]          0.589 [0.17]       0.002
+
+written results/2026-09-20-para-choice-clean/results.json  |  total 223s

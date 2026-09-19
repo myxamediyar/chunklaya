@@ -1,0 +1,18 @@
+loaded on mps in 22s; cfg max_len=1024 head_max_len=256
+
+=== Exp 2: needle noul, ~3800 tok haystack ===
+  clean haystack: dropped 14 of 877 non-sports articles with P(Sports) > 0.2
+  detector: choice
+  raw@4096: 453 ms/state, seq≈3799
+  chunked para: 3 ms/state, 69 chunks/state
+
+  AUC needle-present vs absent, bootstrap 95% CI (n=100/cell); recall@spec90 in brackets
+  arm                                      start                        middle                           end  none q50  tok/doc  in band
+  raw4096               0.907 [0.86,0.95] r=0.82      0.503 [0.42,0.59] r=0.10      0.521 [0.44,0.60] r=0.10     0.000     3799     3.2%
+  max_para              1.000 [1.00,1.00] r=1.00      1.000 [1.00,1.00] r=1.00      1.000 [1.00,1.00] r=1.00     0.022     6864     0.8%
+  any_para              1.000 [1.00,1.00] r=1.00      1.000 [1.00,1.00] r=1.00      1.000 [1.00,1.00] r=1.00     0.052     6864     0.8%
+  'in band' = share of all documents whose score falls in [0.3, 0.7] — the fraction a classifier.dev-style smart tier would escalate
+
+cache: 2977 rows cached, 28605 hits / 400 misses this session
+
+written results/2026-09-20-n100-clean/results.json  |  total 205s

@@ -1,0 +1,37 @@
+loaded on mps in 21s; cfg max_len=1024 head_max_len=256
+
+=== Exp 1: whole-state choice, same-class filler ~3800 tok ===
+  raw        acc=0.975  P(gold)=0.976  467 ms/state
+  mixture    acc=1.000  P(gold)=0.977  1077 ms/state
+  loglinear  acc=1.000  P(gold)=0.999  (from mixture's chunks)
+  stack      acc=0.625  P(gold)=0.652  1119 ms/state
+  chunks/state≈10.0  gate q50=0.22
+
+=== Exp 2: needle noul, ~3800 tok haystack ===
+  raw@4096: 480 ms/state, seq≈3788
+  chunked 750/375: 530 ms/state, 9 chunks/state
+  chunked 750/750: 289 ms/state, 5 chunks/state
+  chunked 512/256: 542 ms/state, 14 chunks/state
+  chunked 1024/512: 531 ms/state, 7 chunks/state
+
+  AUC needle-present vs absent (0.5=chance, ±~0.08 at n=30); recall@spec90 in brackets
+  arm                              start                middle                   end    none q50
+  raw4096                   0.880 [0.67]          0.576 [0.10]          0.552 [0.20]       0.115
+  max_750/375               0.788 [0.40]          0.642 [0.23]          0.521 [0.10]       0.273
+  any_750/375               0.796 [0.27]          0.663 [0.20]          0.572 [0.10]       0.467
+  max_750/750               0.811 [0.53]          0.547 [0.17]          0.521 [0.17]       0.184
+  any_750/750               0.827 [0.53]          0.562 [0.17]          0.558 [0.17]       0.232
+  max_512/256               0.629 [0.23]          0.592 [0.10]          0.517 [0.10]       0.276
+  any_512/256               0.643 [0.10]          0.634 [0.07]          0.561 [0.10]       0.506
+  max_1024/512              0.739 [0.07]          0.561 [0.10]          0.552 [0.10]       0.290
+  any_1024/512              0.777 [0.13]          0.617 [0.13]          0.589 [0.10]       0.424
+
+=== Exp 3: needle offset inside one ~950-tok window, raw@1024 ===
+  70 ms/state, seq max=960 (<1024: untruncated)
+  none: q25=0.001 q50=0.039 q75=0.167
+  offset≈   0  AUC=0.878  recall@spec90=0.60  q25=0.165 q50=0.649 q75=0.802
+  offset≈ 222  AUC=0.629  recall@spec90=0.23  q25=0.018 q50=0.070 q75=0.349
+  offset≈ 467  AUC=0.593  recall@spec90=0.17  q25=0.012 q50=0.078 q75=0.211
+  offset≈ 683  AUC=0.570  recall@spec90=0.13  q25=0.006 q50=0.071 q75=0.203
+
+written results/2026-09-19-chunked/results.json  |  total 636s

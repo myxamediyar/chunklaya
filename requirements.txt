@@ -1,0 +1,5 @@
+# pinned to what the 2026-09-19 experiment ran on (macOS arm64, Python 3.14, MPS)
+torch==2.14.0
+laya==0.3.3
+numpy==2.5.3
+pyarrow==25.0.1

@@ -1,0 +1,20 @@
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 3690.87it/s]
+loaded in 26.9s on mps, dtype torch.float32, cfg max_len=1024 head_max_len=256
+
+=== Exp 1: length-only (same-class filler), 4-way choice ===
+  S@1024         n=120  acc=0.983  P(gold)=0.980  conf=0.988  seq_len≈762  ms/item=59  [1.34 GB mps]
+  L@1024(trunc)  n=120  acc=1.000  P(gold)=0.991  conf=0.978  seq_len≈1024  ms/item=77  [1.34 GB mps]
+  M@2048         n=120  acc=0.992  P(gold)=0.991  conf=0.989  seq_len≈1841  ms/item=164  [2.37 GB mps]
+  L@4096         n=120  acc=0.992  P(gold)=0.991  conf=0.984  seq_len≈3801  ms/item=455  [2.38 GB mps]
+
+=== Exp 2: needle (sports article in non-sports haystack), noul ===
+  max_len=1024  needle=start   n=30  mean P(true)=0.475  median=0.460  correct@0.5=0.433  seq_len≈1024  ms/item=79
+  max_len=1024  needle=middle  n=30  mean P(true)=0.090  median=0.017  correct@0.5=0.067  seq_len≈1024  ms/item=78
+  max_len=1024  needle=end     n=30  mean P(true)=0.109  median=0.012  correct@0.5=0.033  seq_len≈1024  ms/item=79
+  max_len=1024  needle=none    n=30  mean P(true)=0.063  median=0.006  correct@0.5=0.967  seq_len≈1024  ms/item=79
+  max_len=4096  needle=start   n=30  mean P(true)=0.612  median=0.672  correct@0.5=0.733  seq_len≈3800  ms/item=456
+  max_len=4096  needle=middle  n=30  mean P(true)=0.319  median=0.293  correct@0.5=0.267  seq_len≈3801  ms/item=458
+  max_len=4096  needle=end     n=30  mean P(true)=0.195  median=0.122  correct@0.5=0.100  seq_len≈3795  ms/item=457
+  max_len=4096  needle=none    n=30  mean P(true)=0.138  median=0.067  correct@0.5=0.933  seq_len≈3798  ms/item=456
+
+written results.json  |  total 189s  |  peak 2.38 GB mps

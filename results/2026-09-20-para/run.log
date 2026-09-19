@@ -1,0 +1,16 @@
+loaded on mps in 20s; cfg max_len=1024 head_max_len=256
+
+=== Exp 2: needle noul, ~3800 tok haystack ===
+  raw@4096: 473 ms/state, seq≈3788
+  chunked para: 644 ms/state, 69 chunks/state
+  chunked 750/750: 292 ms/state, 5 chunks/state
+
+  AUC needle-present vs absent (0.5=chance, ±~0.08 at n=30); recall@spec90 in brackets
+  arm                              start                middle                   end    none q50
+  raw4096                   0.880 [0.67]          0.576 [0.10]          0.552 [0.20]       0.115
+  max_para                  0.596 [0.27]          0.596 [0.27]          0.596 [0.27]       0.390
+  any_para                  0.630 [0.17]          0.630 [0.17]          0.630 [0.17]       0.615
+  max_750/750               0.811 [0.53]          0.547 [0.17]          0.521 [0.17]       0.184
+  any_750/750               0.827 [0.53]          0.562 [0.17]          0.558 [0.17]       0.232
+
+written results/2026-09-20-para/results.json  |  total 189s
