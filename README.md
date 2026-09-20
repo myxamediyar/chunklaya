@@ -11,8 +11,10 @@ feed Laya more text? Not what you'd guess. The encoder handles long input fine �
 give it. A fact buried in the middle of a long document is effectively invisible to it.
 
 This repo measures that failure precisely, then fixes it: chunk the input into passages, screen each
-one, combine the results. Tested on 400 documents with real confidence intervals, at no extra cost
-over just cranking up the context window.
+one, combine the results — or, when the question names something you can search for, locate the one
+passage that matters and let Laya read just that. Tested on 400 documents with real confidence
+intervals, at no extra cost over just cranking up the context window, and now against Jev on a
+public needle benchmark (below).
 
 The narrative version is in [WRITEUP.md](WRITEUP.md), if you want the story instead of the reference.
 
@@ -23,6 +25,7 @@ The narrative version is in [WRITEUP.md](WRITEUP.md), if you want the story inst
 | Classify or rate a long, coherent document | Fine up to 4096 tokens once you raise `max_len` (0.98–0.99 acc) | No change needed |
 | Find whether something occurs anywhere in a long, multi-part input | Chance past the first ~200 tokens (AUC 0.51, CI includes 0.5) | 0.88 at every position, no filtering; 1.000 once known label noise is removed |
 | How precise the per-passage detector is | The default `noul` question misses 2 of 3 true positives, even on one clean passage | Swap to a described `choice` question: 0.3% false positives |
+| Look up a named fact in a long document (the Jev needle benchmark) | Chance past the opening | `prefilter="bm25"`: AUC 0.993 at 1k, 12k and 24k against Jev's 1.000, one passage scored |
 | Cost vs. one long raw call | — | About the same (483 vs 469 ms/doc) |
 
 What's actually in the package:
@@ -37,6 +40,9 @@ What's actually in the package:
   document that's genuinely one long piece of text and doesn't fit even 4096 tokens.
 - **`detectors=`** (`harness.py`) — swap in a sharper per-chunk question and read a probability off it
   instead of using the default `noul`. Necessary because the default one is bad at this — see below.
+- **`prefilter="bm25"`** (`prefilter.py`) — rank the chunks against the question text and score only
+  the top `top_k`. Locating a passage and judging it are different jobs; this hands the first to a
+  ranker and keeps Laya on the second. Stdlib BM25, no forward pass.
 - **`aggregate.py`** — `max`, noisy-OR, and mean for combining `noul` scores across chunks; mixture and
   log-linear pooling for `choice`/`score`.
 - **`PredictionCache`** (`cache.py`) — caches every prediction to disk, keyed by the exact input.
@@ -188,17 +194,39 @@ training label, still holds up at 0.993.)
 **5.** Put 2 and 4 together — one passage per chunk, a `choice`-based detector — and you get the
 headline table above.
 
-### Does Jev handle the same needle test any better?
+### Update: the Jev needle benchmark, and a locate step
 
-Honestly, we don't know — not on this exact question. There's public per-item data for Jev on a
-needle-in-haystack test, and it's a flat 1.000 at every position out to ~22k tokens. But look at the
-needle: it's a fixed template ("The access code for the {color} {object} locker is {4 digits}"), and
-the question restates the exact fields being asked about — that's closer to an exact-text-match lookup
-than the kind of semantic judgment our test uses, and the benchmark's own author calls it saturated.
-TypeSafe's documentation does say plainly that Jev's accuracy falls as the input fills up with
-irrelevant content, and recommends filtering with a relevance question first — the same idea this
-harness is built around — but there's no public number for Jev on a semantic needle test like ours.
-That comparison is still open.
+The comparison the first version left open has been run.
+[jev-decision-bench](https://github.com/OmarMujahid/jev-decision-bench) publishes per-item Jev output
+on a needle-in-a-haystack task: 60 documents each at ~1k, ~12k and ~22k tokens, SQuAD paragraphs as
+filler, one planted sentence of the form "The access code for the {color} {object} locker is
+{4 digits}", and a yes/no question naming the color, the object and a code — the planted one in
+half the items, a different one in the other half. The tasks regenerate deterministically, so
+chunklaya ran on the same 180 documents.
+
+That question is a lookup. The passage that matters is present in every item, and the answer is
+whether four digits match. Laya does that well on the passage by itself (the `choice` detector
+scores AUC 0.994 on the needle sentence alone). What the harness needed was a way to hand Laya that
+passage, and scoring every chunk isn't it: with ~125 chunks, `max` is set by the detector's
+false-positive rate over the other 124. So `ChunkLaya` gained a locate step — `prefilter="bm25",
+top_k=1` ranks the chunks against the question text and Laya scores only the top one.
+
+| | 1k | 12k | 24k | chunks Laya scores |
+|---|---|---|---|---|
+| chunklaya, `prefilter="bm25", top_k=1` | **0.993** | **0.993** | **0.993** | 1 |
+| chunklaya, every chunk scored | 0.972 | 0.699 | 0.658 | 7 / 69 / 125 |
+| Jev, published run | 1.000 | 1.000 | 1.000 | — |
+
+AUC, n=60 per size, identical items. BM25 put the needle passage first in 180 of 180 documents, so
+length stopped mattering. Two things belong next to the table. At the default 0.5 threshold,
+accuracy is 0.883 against Jev's 1.000 — a few mismatched codes still land above 0.5, so calibrate
+the threshold before using it as one. And the Jev column is the benchmark author's run of
+`jev-1.13.0`, not ours; `eval/run_jev_needle.py` reproduces it from a TypeSafe key for about $0.10.
+
+The locate step is lexical, and so is this needle. The semantic needle in the headline table — a
+sports story among non-sports news — has no key phrase to rank on, so there the paragraph-chunk
+detector remains the recipe. Whether an embedding ranker does for that case what BM25 does for this
+one is the next experiment.
 
 ## How to use it, in practice
 
@@ -212,6 +240,9 @@ Whole-document question (classify it, rate it)
     → aggregate with "max" — noisy-OR gets worse as chunk count grows
     → the false-positive rate of your detector, times the number of passages, is roughly your
       false-alarm rate per document — that's the number to optimize, not the needle detection itself
+    → if the question names something searchable (a name, a code, a phrase), add
+      prefilter="bm25", top_k=1: Laya scores one passage instead of all of them, and the
+      false-alarm term above goes away
 
 Whole-document question over something that doesn't fit even 4096 tokens
     → ChunkLaya(mode="tokens", chunk_tokens=750, stride=375), aggregate with "mixture" or "loglinear"
@@ -226,6 +257,7 @@ chunklaya/
   cache.py       PredictionCache — on-disk cache keyed by (state, question, window, checkpoint)
   chunk.py       chunk_text (overlapping token windows) and chunk_paragraphs (one passage per chunk)
   aggregate.py   noul_max / noul_any / noul_mean, choice_mixture / choice_loglinear, score_expected
+  prefilter.py   bm25_rank — the locate step behind prefilter="bm25"
   harness.py     ChunkLaya.ask(state, questions, agg=, detectors=) — same shape as laya.Agent.predict
 eval/
   needle_data.py     deterministic test-state builders
@@ -233,6 +265,8 @@ eval/
   exp_maxlen.py      Finding 1, plus the first raw-window needle test
   exp_chunked.py     the main experiments: chunked classification, needle detection, offset sweep
   exp_detector.py    Finding 4 — comparing detector questions
+  exp_needle_vs_jev.py   the Jev comparison: jev-decision-bench's needle tasks, with and without the prefilter
+  run_jev_needle.py      the same tasks against TypeSafe's API, with your own key
   analyze_maxlen.py, jev_needle_by_depth.py, metrics.py
 results/         one folder per run — see results/README.md
 tests/test_smoke.py   equivalence and correctness checks against the live model, ~1 min
@@ -248,6 +282,8 @@ third_party/     the needle-task builders behind the Jev comparison — someone 
 .venv/bin/python eval/exp_chunked.py --n 100 --exp 2 --configs para,750/750 --detector choice   # the headline table, ~5 min
 .venv/bin/python eval/exp_chunked.py --n 100 --exp 2 --configs para --detector choice --clean-haystack 0.2
 .venv/bin/python eval/exp_detector.py                                                          # ~1 min
+.venv/bin/python eval/exp_needle_vs_jev.py --arms noul,choice --prefilter bm25 --top-k 1        # the Jev table, ~1 min
+.venv/bin/python eval/exp_needle_vs_jev.py                                                     # every chunk scored, ~6 min
 ```
 
 Timings are for an M4 Pro on MPS in fp32. If an MPS op isn't implemented, set
@@ -255,7 +291,10 @@ Timings are for an M4 Pro on MPS in fp32. If an MPS op isn't implemented, set
 
 ## What's still open
 
-- We don't have Jev's number on our actual needle test, only on an easier one.
+- The Jev column is the benchmark author's run. `eval/run_jev_needle.py` reruns it from a TypeSafe
+  key, and can put Jev on our semantic needle, which no public number covers.
+- `prefilter="bm25"` is lexical. A question with nothing to search for — the sports needle — still
+  scores every passage; an embedding ranker for that case is untested.
 - Real long documents (contracts, transcripts) won't split as cleanly on blank lines as news articles
   do. That's the next thing worth testing.
 - The mixture/log-linear aggregation was only tested where every chunk agrees. Disagreeing chunks are

@@ -1,0 +1,4827 @@
+{
+ "sizes": {
+  "1k": {
+   "stats": {
+    "noul": {
+     "n": 60,
+     "acc@0.5": 0.5333333333333333,
+     "auc": 0.9944444444444445,
+     "auc_lo": 0.9777777777777777,
+     "auc_hi": 1.0,
+     "recall@spec90": 1.0,
+     "mean_p_pos": 0.9871516843636831,
+     "mean_p_neg": 0.859355961283048,
+     "s_per_doc": 0.0012005647023518881,
+     "n_chunks": 7.266666666666667,
+     "n_scored": 1.0
+    },
+    "choice": {
+     "n": 60,
+     "acc@0.5": 0.8833333333333333,
+     "auc": 0.9933333333333333,
+     "auc_lo": 0.9777777777777777,
+     "auc_hi": 1.0,
+     "recall@spec90": 0.9333333333333333,
+     "mean_p_pos": 0.9063636263211569,
+     "mean_p_neg": 0.37115817293524744,
+     "s_per_doc": 0.000817116101582845,
+     "n_chunks": 7.266666666666667,
+     "n_scored": 1.0
+    },
+    "jev": {
+     "n": 60,
+     "acc@0.5": 1.0,
+     "auc": 1.0,
+     "auc_lo": 1.0,
+     "auc_hi": 1.0,
+     "recall@spec90": 1.0,
+     "mean_p_pos": 0.989,
+     "mean_p_neg": 0.023666666666666666,
+     "s_per_doc": null,
+     "n_chunks": null,
+     "n_scored": null
+    }
+   },
+   "rows": [
+    {
+     "id": "needle_1k-0",
+     "gold": true,
+     "depth": 0.857,
+     "approx_tokens": 1209,
+     "noul": {
+      "p": 0.990456759929657,
+      "s": 0.005799770355224609,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8654749989509583,
+      "s": 0.001049041748046875,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1024,
+      "server_ms": 94,
+      "in_tok": 1492
+     }
+    },
+    {
+     "id": "needle_1k-1",
+     "gold": false,
+     "depth": 0.0,
+     "approx_tokens": 1074,
+     "noul": {
+      "p": 0.9690212607383728,
+      "s": 0.0021789073944091797,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 140
+     },
+     "choice": {
+      "p": 0.15861310064792633,
+      "s": 0.0008151531219482422,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 110
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1046,
+      "server_ms": 182,
+      "in_tok": 1488
+     }
+    },
+    {
+     "id": "needle_1k-2",
+     "gold": true,
+     "depth": 0.667,
+     "approx_tokens": 1014,
+     "noul": {
+      "p": 0.9775171279907227,
+      "s": 0.0015850067138671875,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9341273903846741,
+      "s": 0.0007669925689697266,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 957,
+      "server_ms": 91,
+      "in_tok": 1343
+     }
+    },
+    {
+     "id": "needle_1k-3",
+     "gold": false,
+     "depth": 0.714,
+     "approx_tokens": 1092,
+     "noul": {
+      "p": 0.9492002129554749,
+      "s": 0.001486063003540039,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.41897353529930115,
+      "s": 0.0007932186126708984,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 934,
+      "server_ms": 73,
+      "in_tok": 1358
+     }
+    },
+    {
+     "id": "needle_1k-4",
+     "gold": true,
+     "depth": 0.0,
+     "approx_tokens": 1108,
+     "noul": {
+      "p": 0.986357569694519,
+      "s": 0.0013911724090576172,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.97133868932724,
+      "s": 0.0008158683776855469,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1031,
+      "server_ms": 138,
+      "in_tok": 1523
+     }
+    },
+    {
+     "id": "needle_1k-5",
+     "gold": false,
+     "depth": 0.625,
+     "approx_tokens": 1096,
+     "noul": {
+      "p": 0.9731835722923279,
+      "s": 0.0013728141784667969,
+      "n_chunks": 9,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.46332138776779175,
+      "s": 0.0008342266082763672,
+      "n_chunks": 9,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 977,
+      "server_ms": 119,
+      "in_tok": 1416
+     }
+    },
+    {
+     "id": "needle_1k-6",
+     "gold": true,
+     "depth": 0.167,
+     "approx_tokens": 1412,
+     "noul": {
+      "p": 0.991554319858551,
+      "s": 0.0015039443969726562,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.909352719783783,
+      "s": 0.0009860992431640625,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 975,
+      "server_ms": 107,
+      "in_tok": 1683
+     }
+    },
+    {
+     "id": "needle_1k-7",
+     "gold": false,
+     "depth": 0.4,
+     "approx_tokens": 1058,
+     "noul": {
+      "p": 0.9323892593383789,
+      "s": 0.0011088848114013672,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.3241359293460846,
+      "s": 0.0007531642913818359,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 920,
+      "server_ms": 54,
+      "in_tok": 1467
+     }
+    },
+    {
+     "id": "needle_1k-8",
+     "gold": true,
+     "depth": 0.167,
+     "approx_tokens": 1091,
+     "noul": {
+      "p": 0.9860324263572693,
+      "s": 0.001249074935913086,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9444641470909119,
+      "s": 0.0008289813995361328,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1312,
+      "server_ms": 327,
+      "in_tok": 1542
+     }
+    },
+    {
+     "id": "needle_1k-9",
+     "gold": false,
+     "depth": 0.857,
+     "approx_tokens": 1132,
+     "noul": {
+      "p": 0.6899299025535583,
+      "s": 0.0011577606201171875,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.11358515918254852,
+      "s": 0.0008242130279541016,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1144,
+      "server_ms": 175,
+      "in_tok": 1458
+     }
+    },
+    {
+     "id": "needle_1k-10",
+     "gold": true,
+     "depth": 0.833,
+     "approx_tokens": 1068,
+     "noul": {
+      "p": 0.9866583943367004,
+      "s": 0.0009839534759521484,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9035162329673767,
+      "s": 0.0007700920104980469,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1086,
+      "server_ms": 140,
+      "in_tok": 1506
+     }
+    },
+    {
+     "id": "needle_1k-11",
+     "gold": false,
+     "depth": 0.6,
+     "approx_tokens": 1121,
+     "noul": {
+      "p": 0.7420235276222229,
+      "s": 0.001302957534790039,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.10244575887918472,
+      "s": 0.0008089542388916016,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1044,
+      "server_ms": 78,
+      "in_tok": 1449
+     }
+    },
+    {
+     "id": "needle_1k-12",
+     "gold": true,
+     "depth": 0.167,
+     "approx_tokens": 1082,
+     "noul": {
+      "p": 0.9923201203346252,
+      "s": 0.001171112060546875,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.941555917263031,
+      "s": 0.0007979869842529297,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1001,
+      "server_ms": 69,
+      "in_tok": 1484
+     }
+    },
+    {
+     "id": "needle_1k-13",
+     "gold": false,
+     "depth": 0.625,
+     "approx_tokens": 1034,
+     "noul": {
+      "p": 0.8961473107337952,
+      "s": 0.001135110855102539,
+      "n_chunks": 9,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.23823975026607513,
+      "s": 0.0008029937744140625,
+      "n_chunks": 9,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 968,
+      "server_ms": 69,
+      "in_tok": 1386
+     }
+    },
+    {
+     "id": "needle_1k-14",
+     "gold": true,
+     "depth": 0.8,
+     "approx_tokens": 1032,
+     "noul": {
+      "p": 0.9900153279304504,
+      "s": 0.0010471343994140625,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9575524926185608,
+      "s": 0.0007531642913818359,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 992,
+      "server_ms": 110,
+      "in_tok": 1324
+     }
+    },
+    {
+     "id": "needle_1k-15",
+     "gold": false,
+     "depth": 0.0,
+     "approx_tokens": 1128,
+     "noul": {
+      "p": 0.7319507598876953,
+      "s": 0.0011630058288574219,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.6572592854499817,
+      "s": 0.0007910728454589844,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1094,
+      "server_ms": 238,
+      "in_tok": 1399
+     }
+    },
+    {
+     "id": "needle_1k-16",
+     "gold": true,
+     "depth": 0.429,
+     "approx_tokens": 1200,
+     "noul": {
+      "p": 0.9755182266235352,
+      "s": 0.0011398792266845703,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.692378580570221,
+      "s": 0.0008878707885742188,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 958,
+      "server_ms": 99,
+      "in_tok": 1582
+     }
+    },
+    {
+     "id": "needle_1k-17",
+     "gold": false,
+     "depth": 0.667,
+     "approx_tokens": 1185,
+     "noul": {
+      "p": 0.8883252143859863,
+      "s": 0.0011332035064697266,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.5295787453651428,
+      "s": 0.0008246898651123047,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 960,
+      "server_ms": 68,
+      "in_tok": 1482
+     }
+    },
+    {
+     "id": "needle_1k-18",
+     "gold": true,
+     "depth": 0.5,
+     "approx_tokens": 1225,
+     "noul": {
+      "p": 0.9773320555686951,
+      "s": 0.001178741455078125,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9573864936828613,
+      "s": 0.0008692741394042969,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 939,
+      "server_ms": 89,
+      "in_tok": 1560
+     }
+    },
+    {
+     "id": "needle_1k-19",
+     "gold": false,
+     "depth": 0.333,
+     "approx_tokens": 1152,
+     "noul": {
+      "p": 0.4972746670246124,
+      "s": 0.0011129379272460938,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.7681291699409485,
+      "s": 0.0008308887481689453,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 913,
+      "server_ms": 57,
+      "in_tok": 1457
+     }
+    },
+    {
+     "id": "needle_1k-20",
+     "gold": true,
+     "depth": 0.667,
+     "approx_tokens": 1029,
+     "noul": {
+      "p": 0.9895852208137512,
+      "s": 0.0011799335479736328,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.7065041065216064,
+      "s": 0.0008530616760253906,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 968,
+      "server_ms": 104,
+      "in_tok": 1392
+     }
+    },
+    {
+     "id": "needle_1k-21",
+     "gold": false,
+     "depth": 1.0,
+     "approx_tokens": 1060,
+     "noul": {
+      "p": 0.9612511396408081,
+      "s": 0.0011110305786132812,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.3802785873413086,
+      "s": 0.0007722377777099609,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 995,
+      "server_ms": 143,
+      "in_tok": 1423
+     }
+    },
+    {
+     "id": "needle_1k-22",
+     "gold": true,
+     "depth": 0.143,
+     "approx_tokens": 1137,
+     "noul": {
+      "p": 0.9873142838478088,
+      "s": 0.0013120174407958984,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9491983652114868,
+      "s": 0.0008559226989746094,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 929,
+      "server_ms": 74,
+      "in_tok": 1499
+     }
+    },
+    {
+     "id": "needle_1k-23",
+     "gold": false,
+     "depth": 0.0,
+     "approx_tokens": 1099,
+     "noul": {
+      "p": 0.9596710205078125,
+      "s": 0.0010323524475097656,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8220242857933044,
+      "s": 0.0007939338684082031,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 910,
+      "server_ms": 56,
+      "in_tok": 1542
+     }
+    },
+    {
+     "id": "needle_1k-24",
+     "gold": true,
+     "depth": 0.167,
+     "approx_tokens": 1062,
+     "noul": {
+      "p": 0.9943027496337891,
+      "s": 0.0011029243469238281,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8352704048156738,
+      "s": 0.0008199214935302734,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1283,
+      "server_ms": 413,
+      "in_tok": 1406
+     }
+    },
+    {
+     "id": "needle_1k-25",
+     "gold": false,
+     "depth": 0.8,
+     "approx_tokens": 1094,
+     "noul": {
+      "p": 0.9528968334197998,
+      "s": 0.0011818408966064453,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.2569189667701721,
+      "s": 0.0007772445678710938,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 906,
+      "server_ms": 51,
+      "in_tok": 1376
+     }
+    },
+    {
+     "id": "needle_1k-26",
+     "gold": true,
+     "depth": 0.143,
+     "approx_tokens": 1138,
+     "noul": {
+      "p": 0.9921509027481079,
+      "s": 0.0010082721710205078,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9181906580924988,
+      "s": 0.0007948875427246094,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1066,
+      "server_ms": 184,
+      "in_tok": 1460
+     }
+    },
+    {
+     "id": "needle_1k-27",
+     "gold": false,
+     "depth": 0.429,
+     "approx_tokens": 1163,
+     "noul": {
+      "p": 0.9817208051681519,
+      "s": 0.0012249946594238281,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.5629777908325195,
+      "s": 0.0008599758148193359,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1002,
+      "server_ms": 138,
+      "in_tok": 1423
+     }
+    },
+    {
+     "id": "needle_1k-28",
+     "gold": true,
+     "depth": 1.0,
+     "approx_tokens": 1194,
+     "noul": {
+      "p": 0.9861745834350586,
+      "s": 0.001157999038696289,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8533653020858765,
+      "s": 0.0009047985076904297,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1288,
+      "server_ms": 369,
+      "in_tok": 1573
+     }
+    },
+    {
+     "id": "needle_1k-29",
+     "gold": false,
+     "depth": 0.286,
+     "approx_tokens": 1084,
+     "noul": {
+      "p": 0.9710381031036377,
+      "s": 0.0011169910430908203,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.2973027229309082,
+      "s": 0.0008139610290527344,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1047,
+      "server_ms": 100,
+      "in_tok": 1431
+     }
+    },
+    {
+     "id": "needle_1k-30",
+     "gold": true,
+     "depth": 0.714,
+     "approx_tokens": 1121,
+     "noul": {
+      "p": 0.9932457804679871,
+      "s": 0.0012478828430175781,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 140
+     },
+     "choice": {
+      "p": 0.9828952550888062,
+      "s": 0.0008461475372314453,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 110
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1029,
+      "server_ms": 122,
+      "in_tok": 1507
+     }
+    },
+    {
+     "id": "needle_1k-31",
+     "gold": false,
+     "depth": 0.833,
+     "approx_tokens": 1134,
+     "noul": {
+      "p": 0.8635514378547668,
+      "s": 0.0010828971862792969,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.27995458245277405,
+      "s": 0.00080108642578125,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 985,
+      "server_ms": 100,
+      "in_tok": 1462
+     }
+    },
+    {
+     "id": "needle_1k-32",
+     "gold": true,
+     "depth": 0.0,
+     "approx_tokens": 1120,
+     "noul": {
+      "p": 0.981333315372467,
+      "s": 0.0009982585906982422,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8964352607727051,
+      "s": 0.0007381439208984375,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1023,
+      "server_ms": 175,
+      "in_tok": 1381
+     }
+    },
+    {
+     "id": "needle_1k-33",
+     "gold": false,
+     "depth": 0.667,
+     "approx_tokens": 1164,
+     "noul": {
+      "p": 0.8734156489372253,
+      "s": 0.0011510848999023438,
+      "n_chunks": 10,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.13669341802597046,
+      "s": 0.0008800029754638672,
+      "n_chunks": 10,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 954,
+      "server_ms": 104,
+      "in_tok": 1517
+     }
+    },
+    {
+     "id": "needle_1k-34",
+     "gold": true,
+     "depth": 0.714,
+     "approx_tokens": 1110,
+     "noul": {
+      "p": 0.9930082559585571,
+      "s": 0.0009872913360595703,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9866320490837097,
+      "s": 0.0008168220520019531,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1029,
+      "server_ms": 135,
+      "in_tok": 1500
+     }
+    },
+    {
+     "id": "needle_1k-35",
+     "gold": false,
+     "depth": 0.571,
+     "approx_tokens": 1099,
+     "noul": {
+      "p": 0.9199100136756897,
+      "s": 0.001149892807006836,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.26003676652908325,
+      "s": 0.0008242130279541016,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1291,
+      "server_ms": 427,
+      "in_tok": 1457
+     }
+    },
+    {
+     "id": "needle_1k-36",
+     "gold": true,
+     "depth": 0.333,
+     "approx_tokens": 1476,
+     "noul": {
+      "p": 0.9892796874046326,
+      "s": 0.001360177993774414,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.932283341884613,
+      "s": 0.0009946823120117188,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 977,
+      "server_ms": 120,
+      "in_tok": 1710
+     }
+    },
+    {
+     "id": "needle_1k-37",
+     "gold": false,
+     "depth": 0.833,
+     "approx_tokens": 1084,
+     "noul": {
+      "p": 0.9227786660194397,
+      "s": 0.0009889602661132812,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.6063271760940552,
+      "s": 0.0007841587066650391,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 940,
+      "server_ms": 91,
+      "in_tok": 1415
+     }
+    },
+    {
+     "id": "needle_1k-38",
+     "gold": true,
+     "depth": 0.6,
+     "approx_tokens": 1044,
+     "noul": {
+      "p": 0.9850561618804932,
+      "s": 0.000885009765625,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9613984227180481,
+      "s": 0.0007331371307373047,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 983,
+      "server_ms": 123,
+      "in_tok": 1363
+     }
+    },
+    {
+     "id": "needle_1k-39",
+     "gold": false,
+     "depth": 0.75,
+     "approx_tokens": 1168,
+     "noul": {
+      "p": 0.8940005302429199,
+      "s": 0.0010762214660644531,
+      "n_chunks": 9,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.7999624013900757,
+      "s": 0.0008687973022460938,
+      "n_chunks": 9,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 966,
+      "server_ms": 80,
+      "in_tok": 1524
+     }
+    },
+    {
+     "id": "needle_1k-40",
+     "gold": true,
+     "depth": 0.286,
+     "approx_tokens": 1059,
+     "noul": {
+      "p": 0.9882792234420776,
+      "s": 0.0009930133819580078,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9465354681015015,
+      "s": 0.0007810592651367188,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 982,
+      "server_ms": 119,
+      "in_tok": 1424
+     }
+    },
+    {
+     "id": "needle_1k-41",
+     "gold": false,
+     "depth": 1.0,
+     "approx_tokens": 1220,
+     "noul": {
+      "p": 0.8259528279304504,
+      "s": 0.0011188983917236328,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.36526820063591003,
+      "s": 0.0009410381317138672,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 983,
+      "server_ms": 116,
+      "in_tok": 1521
+     }
+    },
+    {
+     "id": "needle_1k-42",
+     "gold": true,
+     "depth": 0.5,
+     "approx_tokens": 1014,
+     "noul": {
+      "p": 0.992098331451416,
+      "s": 0.0008749961853027344,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.937728226184845,
+      "s": 0.0007448196411132812,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1012,
+      "server_ms": 146,
+      "in_tok": 1326
+     }
+    },
+    {
+     "id": "needle_1k-43",
+     "gold": false,
+     "depth": 0.833,
+     "approx_tokens": 1126,
+     "noul": {
+      "p": 0.9451371431350708,
+      "s": 0.0011229515075683594,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.43596217036247253,
+      "s": 0.0007789134979248047,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 966,
+      "server_ms": 103,
+      "in_tok": 1422
+     }
+    },
+    {
+     "id": "needle_1k-44",
+     "gold": true,
+     "depth": 0.857,
+     "approx_tokens": 1182,
+     "noul": {
+      "p": 0.9903889298439026,
+      "s": 0.0010251998901367188,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.921970546245575,
+      "s": 0.0008540153503417969,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 973,
+      "server_ms": 102,
+      "in_tok": 1548
+     }
+    },
+    {
+     "id": "needle_1k-45",
+     "gold": false,
+     "depth": 0.143,
+     "approx_tokens": 1122,
+     "noul": {
+      "p": 0.9731346964836121,
+      "s": 0.0009930133819580078,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.2722797393798828,
+      "s": 0.0008189678192138672,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 954,
+      "server_ms": 100,
+      "in_tok": 1408
+     }
+    },
+    {
+     "id": "needle_1k-46",
+     "gold": true,
+     "depth": 0.333,
+     "approx_tokens": 1020,
+     "noul": {
+      "p": 0.988229513168335,
+      "s": 0.0008399486541748047,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9248842000961304,
+      "s": 0.0007472038269042969,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 980,
+      "server_ms": 124,
+      "in_tok": 1380
+     }
+    },
+    {
+     "id": "needle_1k-47",
+     "gold": false,
+     "depth": 0.833,
+     "approx_tokens": 1154,
+     "noul": {
+      "p": 0.9517276287078857,
+      "s": 0.000982046127319336,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.06663559377193451,
+      "s": 0.0008337497711181641,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1036,
+      "server_ms": 139,
+      "in_tok": 1442
+     }
+    },
+    {
+     "id": "needle_1k-48",
+     "gold": true,
+     "depth": 0.833,
+     "approx_tokens": 1096,
+     "noul": {
+      "p": 0.9818867444992065,
+      "s": 0.0010471343994140625,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9211289286613464,
+      "s": 0.0007748603820800781,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 968,
+      "server_ms": 103,
+      "in_tok": 1355
+     }
+    },
+    {
+     "id": "needle_1k-49",
+     "gold": false,
+     "depth": 0.4,
+     "approx_tokens": 1135,
+     "noul": {
+      "p": 0.3670608401298523,
+      "s": 0.0009748935699462891,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.24269992113113403,
+      "s": 0.0007882118225097656,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1075,
+      "server_ms": 210,
+      "in_tok": 1430
+     }
+    },
+    {
+     "id": "needle_1k-50",
+     "gold": true,
+     "depth": 0.8,
+     "approx_tokens": 1038,
+     "noul": {
+      "p": 0.9922424554824829,
+      "s": 0.0009129047393798828,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 140
+     },
+     "choice": {
+      "p": 0.8514278531074524,
+      "s": 0.0007112026214599609,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 110
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1013,
+      "server_ms": 149,
+      "in_tok": 1305
+     }
+    },
+    {
+     "id": "needle_1k-51",
+     "gold": false,
+     "depth": 0.5,
+     "approx_tokens": 1130,
+     "noul": {
+      "p": 0.93071448802948,
+      "s": 0.0009829998016357422,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.29964083433151245,
+      "s": 0.00080108642578125,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 917,
+      "server_ms": 54,
+      "in_tok": 1435
+     }
+    },
+    {
+     "id": "needle_1k-52",
+     "gold": true,
+     "depth": 0.714,
+     "approx_tokens": 1039,
+     "noul": {
+      "p": 0.9868077635765076,
+      "s": 0.0009458065032958984,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9011889100074768,
+      "s": 0.0007512569427490234,
+      "n_chunks": 8,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1006,
+      "server_ms": 90,
+      "in_tok": 1339
+     }
+    },
+    {
+     "id": "needle_1k-53",
+     "gold": false,
+     "depth": 0.167,
+     "approx_tokens": 1196,
+     "noul": {
+      "p": 0.8662179708480835,
+      "s": 0.0010180473327636719,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.13089057803153992,
+      "s": 0.0008540153503417969,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 994,
+      "server_ms": 133,
+      "in_tok": 1533
+     }
+    },
+    {
+     "id": "needle_1k-54",
+     "gold": true,
+     "depth": 0.833,
+     "approx_tokens": 1166,
+     "noul": {
+      "p": 0.9892680048942566,
+      "s": 0.0010747909545898438,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9657541513442993,
+      "s": 0.0008320808410644531,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 942,
+      "server_ms": 76,
+      "in_tok": 1528
+     }
+    },
+    {
+     "id": "needle_1k-55",
+     "gold": false,
+     "depth": 0.167,
+     "approx_tokens": 1156,
+     "noul": {
+      "p": 0.8582882285118103,
+      "s": 0.0009529590606689453,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.4774062931537628,
+      "s": 0.0008208751678466797,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 975,
+      "server_ms": 134,
+      "in_tok": 1444
+     }
+    },
+    {
+     "id": "needle_1k-56",
+     "gold": true,
+     "depth": 0.0,
+     "approx_tokens": 1037,
+     "noul": {
+      "p": 0.9869173765182495,
+      "s": 0.0008640289306640625,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8755786418914795,
+      "s": 0.0007469654083251953,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 963,
+      "server_ms": 62,
+      "in_tok": 1338
+     }
+    },
+    {
+     "id": "needle_1k-57",
+     "gold": false,
+     "depth": 0.667,
+     "approx_tokens": 1062,
+     "noul": {
+      "p": 0.5222551226615906,
+      "s": 0.0008640289306640625,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.35980504751205444,
+      "s": 0.0007443428039550781,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 962,
+      "server_ms": 97,
+      "in_tok": 1405
+     }
+    },
+    {
+     "id": "needle_1k-58",
+     "gold": true,
+     "depth": 1.0,
+     "approx_tokens": 1108,
+     "noul": {
+      "p": 0.9732189178466797,
+      "s": 0.0008618831634521484,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.845391035079956,
+      "s": 0.0007541179656982422,
+      "n_chunks": 6,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 968,
+      "server_ms": 56,
+      "in_tok": 1398
+     }
+    },
+    {
+     "id": "needle_1k-59",
+     "gold": false,
+     "depth": 0.333,
+     "approx_tokens": 1024,
+     "noul": {
+      "p": 0.9705100059509277,
+      "s": 0.0010268688201904297,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.3073982894420624,
+      "s": 0.0008111000061035156,
+      "n_chunks": 7,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 952,
+      "server_ms": 88,
+      "in_tok": 1374
+     }
+    }
+   ]
+  },
+  "12k": {
+   "stats": {
+    "noul": {
+     "n": 60,
+     "acc@0.5": 0.5333333333333333,
+     "auc": 0.9944444444444445,
+     "auc_lo": 0.9777777777777777,
+     "auc_hi": 1.0,
+     "recall@spec90": 1.0,
+     "mean_p_pos": 0.9871516843636831,
+     "mean_p_neg": 0.859355961283048,
+     "s_per_doc": 0.009827951590220133,
+     "n_chunks": 69.48333333333333,
+     "n_scored": 1.0
+    },
+    "choice": {
+     "n": 60,
+     "acc@0.5": 0.8833333333333333,
+     "auc": 0.9933333333333333,
+     "auc_lo": 0.9777777777777777,
+     "auc_hi": 1.0,
+     "recall@spec90": 0.9333333333333333,
+     "mean_p_pos": 0.9063636263211569,
+     "mean_p_neg": 0.37115817293524744,
+     "s_per_doc": 0.009212581316630046,
+     "n_chunks": 69.48333333333333,
+     "n_scored": 1.0
+    },
+    "jev": {
+     "n": 60,
+     "acc@0.5": 1.0,
+     "auc": 1.0,
+     "auc_lo": 1.0,
+     "auc_hi": 1.0,
+     "recall@spec90": 1.0,
+     "mean_p_pos": 0.986,
+     "mean_p_neg": 0.032,
+     "s_per_doc": null,
+     "n_chunks": null,
+     "n_scored": null
+    }
+   },
+   "rows": [
+    {
+     "id": "needle_12k-0",
+     "gold": true,
+     "depth": 0.821,
+     "approx_tokens": 12253,
+     "noul": {
+      "p": 0.990456759929657,
+      "s": 0.011604070663452148,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8654749989509583,
+      "s": 0.010296821594238281,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1865,
+      "server_ms": 155,
+      "in_tok": 11265
+     }
+    },
+    {
+     "id": "needle_12k-1",
+     "gold": false,
+     "depth": 0.094,
+     "approx_tokens": 12033,
+     "noul": {
+      "p": 0.9690212607383728,
+      "s": 0.010009765625,
+      "n_chunks": 65,
+      "n_scored": 1,
+      "in_tok": 140
+     },
+     "choice": {
+      "p": 0.15861310064792633,
+      "s": 0.008799076080322266,
+      "n_chunks": 65,
+      "n_scored": 1,
+      "in_tok": 110
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1895,
+      "server_ms": 181,
+      "in_tok": 11163
+     }
+    },
+    {
+     "id": "needle_12k-2",
+     "gold": true,
+     "depth": 0.635,
+     "approx_tokens": 12270,
+     "noul": {
+      "p": 0.9775171279907227,
+      "s": 0.009444236755371094,
+      "n_chunks": 64,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9341273903846741,
+      "s": 0.008997201919555664,
+      "n_chunks": 64,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1872,
+      "server_ms": 167,
+      "in_tok": 11229
+     }
+    },
+    {
+     "id": "needle_12k-3",
+     "gold": false,
+     "depth": 0.704,
+     "approx_tokens": 12070,
+     "noul": {
+      "p": 0.9492002129554749,
+      "s": 0.009739160537719727,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.41897353529930115,
+      "s": 0.009023904800415039,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1714,
+      "server_ms": 195,
+      "in_tok": 11556
+     }
+    },
+    {
+     "id": "needle_12k-4",
+     "gold": true,
+     "depth": 0.058,
+     "approx_tokens": 12119,
+     "noul": {
+      "p": 0.986357569694519,
+      "s": 0.009650945663452148,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.97133868932724,
+      "s": 0.009057044982910156,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1667,
+      "server_ms": 157,
+      "in_tok": 11379
+     }
+    },
+    {
+     "id": "needle_12k-5",
+     "gold": false,
+     "depth": 0.606,
+     "approx_tokens": 12137,
+     "noul": {
+      "p": 0.9731835722923279,
+      "s": 0.009704828262329102,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.46332138776779175,
+      "s": 0.009555339813232422,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1616,
+      "server_ms": 134,
+      "in_tok": 11298
+     }
+    },
+    {
+     "id": "needle_12k-6",
+     "gold": true,
+     "depth": 0.242,
+     "approx_tokens": 12125,
+     "noul": {
+      "p": 0.991554319858551,
+      "s": 0.010649919509887695,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.909352719783783,
+      "s": 0.009208202362060547,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1559,
+      "server_ms": 139,
+      "in_tok": 11520
+     }
+    },
+    {
+     "id": "needle_12k-7",
+     "gold": false,
+     "depth": 0.403,
+     "approx_tokens": 12161,
+     "noul": {
+      "p": 0.9323892593383789,
+      "s": 0.009875059127807617,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.3241359293460846,
+      "s": 0.009063005447387695,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 2037,
+      "server_ms": 614,
+      "in_tok": 11466
+     }
+    },
+    {
+     "id": "needle_12k-8",
+     "gold": true,
+     "depth": 0.111,
+     "approx_tokens": 12014,
+     "noul": {
+      "p": 0.9860324263572693,
+      "s": 0.009824991226196289,
+      "n_chunks": 73,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9444641470909119,
+      "s": 0.00912618637084961,
+      "n_chunks": 73,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1550,
+      "server_ms": 115,
+      "in_tok": 11339
+     }
+    },
+    {
+     "id": "needle_12k-9",
+     "gold": false,
+     "depth": 0.855,
+     "approx_tokens": 12126,
+     "noul": {
+      "p": 0.6899299025535583,
+      "s": 0.00963282585144043,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.11358515918254852,
+      "s": 0.008940935134887695,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1727,
+      "server_ms": 139,
+      "in_tok": 11420
+     }
+    },
+    {
+     "id": "needle_12k-10",
+     "gold": true,
+     "depth": 0.843,
+     "approx_tokens": 12026,
+     "noul": {
+      "p": 0.9866583943367004,
+      "s": 0.009457111358642578,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9035162329673767,
+      "s": 0.010550975799560547,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1676,
+      "server_ms": 145,
+      "in_tok": 11108
+     }
+    },
+    {
+     "id": "needle_12k-11",
+     "gold": false,
+     "depth": 0.676,
+     "approx_tokens": 12035,
+     "noul": {
+      "p": 0.7420235276222229,
+      "s": 0.010374307632446289,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.10244575887918472,
+      "s": 0.009141921997070312,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1515,
+      "server_ms": 106,
+      "in_tok": 11367
+     }
+    },
+    {
+     "id": "needle_12k-12",
+     "gold": true,
+     "depth": 0.169,
+     "approx_tokens": 12103,
+     "noul": {
+      "p": 0.9923201203346252,
+      "s": 0.009905099868774414,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.941555917263031,
+      "s": 0.009124994277954102,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1876,
+      "server_ms": 210,
+      "in_tok": 11261
+     }
+    },
+    {
+     "id": "needle_12k-13",
+     "gold": false,
+     "depth": 0.646,
+     "approx_tokens": 12254,
+     "noul": {
+      "p": 0.8961473107337952,
+      "s": 0.009516000747680664,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.23823975026607513,
+      "s": 0.009042978286743164,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1841,
+      "server_ms": 130,
+      "in_tok": 11395
+     }
+    },
+    {
+     "id": "needle_12k-14",
+     "gold": true,
+     "depth": 0.812,
+     "approx_tokens": 12094,
+     "noul": {
+      "p": 0.9900153279304504,
+      "s": 0.009843826293945312,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9575524926185608,
+      "s": 0.009038925170898438,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1786,
+      "server_ms": 137,
+      "in_tok": 11468
+     }
+    },
+    {
+     "id": "needle_12k-15",
+     "gold": false,
+     "depth": 0.027,
+     "approx_tokens": 12146,
+     "noul": {
+      "p": 0.7319507598876953,
+      "s": 0.009868144989013672,
+      "n_chunks": 74,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.6572592854499817,
+      "s": 0.010383129119873047,
+      "n_chunks": 74,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1577,
+      "server_ms": 125,
+      "in_tok": 11233
+     }
+    },
+    {
+     "id": "needle_12k-16",
+     "gold": true,
+     "depth": 0.382,
+     "approx_tokens": 12044,
+     "noul": {
+      "p": 0.9755182266235352,
+      "s": 0.00973200798034668,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.692378580570221,
+      "s": 0.009027719497680664,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1523,
+      "server_ms": 96,
+      "in_tok": 11145
+     }
+    },
+    {
+     "id": "needle_12k-17",
+     "gold": false,
+     "depth": 0.677,
+     "approx_tokens": 12022,
+     "noul": {
+      "p": 0.8883252143859863,
+      "s": 0.009517908096313477,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.5295787453651428,
+      "s": 0.008919000625610352,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1596,
+      "server_ms": 115,
+      "in_tok": 10905
+     }
+    },
+    {
+     "id": "needle_12k-18",
+     "gold": true,
+     "depth": 0.455,
+     "approx_tokens": 12142,
+     "noul": {
+      "p": 0.9773320555686951,
+      "s": 0.009666681289672852,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9573864936828613,
+      "s": 0.009287357330322266,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1609,
+      "server_ms": 172,
+      "in_tok": 11434
+     }
+    },
+    {
+     "id": "needle_12k-19",
+     "gold": false,
+     "depth": 0.4,
+     "approx_tokens": 12314,
+     "noul": {
+      "p": 0.4972746670246124,
+      "s": 0.009793996810913086,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.7681291699409485,
+      "s": 0.009052038192749023,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1570,
+      "server_ms": 153,
+      "in_tok": 11372
+     }
+    },
+    {
+     "id": "needle_12k-20",
+     "gold": true,
+     "depth": 0.621,
+     "approx_tokens": 12067,
+     "noul": {
+      "p": 0.9895852208137512,
+      "s": 0.009562969207763672,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.7065041065216064,
+      "s": 0.008844852447509766,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1712,
+      "server_ms": 215,
+      "in_tok": 11230
+     }
+    },
+    {
+     "id": "needle_12k-21",
+     "gold": false,
+     "depth": 0.957,
+     "approx_tokens": 12214,
+     "noul": {
+      "p": 0.9612511396408081,
+      "s": 0.009551763534545898,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.3802785873413086,
+      "s": 0.009763240814208984,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1635,
+      "server_ms": 164,
+      "in_tok": 11501
+     }
+    },
+    {
+     "id": "needle_12k-22",
+     "gold": true,
+     "depth": 0.132,
+     "approx_tokens": 12068,
+     "noul": {
+      "p": 0.9873142838478088,
+      "s": 0.011250972747802734,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9491983652114868,
+      "s": 0.00993204116821289,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1634,
+      "server_ms": 170,
+      "in_tok": 11155
+     }
+    },
+    {
+     "id": "needle_12k-23",
+     "gold": false,
+     "depth": 0.028,
+     "approx_tokens": 12098,
+     "noul": {
+      "p": 0.9596710205078125,
+      "s": 0.010050058364868164,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8220242857933044,
+      "s": 0.009150981903076172,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1560,
+      "server_ms": 146,
+      "in_tok": 11395
+     }
+    },
+    {
+     "id": "needle_12k-24",
+     "gold": true,
+     "depth": 0.123,
+     "approx_tokens": 12143,
+     "noul": {
+      "p": 0.9943027496337891,
+      "s": 0.009361028671264648,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8352704048156738,
+      "s": 0.008835077285766602,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1594,
+      "server_ms": 129,
+      "in_tok": 11165
+     }
+    },
+    {
+     "id": "needle_12k-25",
+     "gold": false,
+     "depth": 0.846,
+     "approx_tokens": 12083,
+     "noul": {
+      "p": 0.9528968334197998,
+      "s": 0.009647846221923828,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.2569189667701721,
+      "s": 0.008929014205932617,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1567,
+      "server_ms": 102,
+      "in_tok": 11210
+     }
+    },
+    {
+     "id": "needle_12k-26",
+     "gold": true,
+     "depth": 0.167,
+     "approx_tokens": 12036,
+     "noul": {
+      "p": 0.9921509027481079,
+      "s": 0.010410070419311523,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9181906580924988,
+      "s": 0.009023904800415039,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1952,
+      "server_ms": 168,
+      "in_tok": 11010
+     }
+    },
+    {
+     "id": "needle_12k-27",
+     "gold": false,
+     "depth": 0.471,
+     "approx_tokens": 12296,
+     "noul": {
+      "p": 0.9817208051681519,
+      "s": 0.00990605354309082,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.5629777908325195,
+      "s": 0.009176015853881836,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1531,
+      "server_ms": 139,
+      "in_tok": 11274
+     }
+    },
+    {
+     "id": "needle_12k-28",
+     "gold": true,
+     "depth": 0.959,
+     "approx_tokens": 12059,
+     "noul": {
+      "p": 0.9861745834350586,
+      "s": 0.010337114334106445,
+      "n_chunks": 74,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8533653020858765,
+      "s": 0.00909280776977539,
+      "n_chunks": 74,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1582,
+      "server_ms": 177,
+      "in_tok": 11152
+     }
+    },
+    {
+     "id": "needle_12k-29",
+     "gold": false,
+     "depth": 0.318,
+     "approx_tokens": 12197,
+     "noul": {
+      "p": 0.9710381031036377,
+      "s": 0.010013818740844727,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.2973027229309082,
+      "s": 0.009148836135864258,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1596,
+      "server_ms": 127,
+      "in_tok": 11563
+     }
+    },
+    {
+     "id": "needle_12k-30",
+     "gold": true,
+     "depth": 0.736,
+     "approx_tokens": 12074,
+     "noul": {
+      "p": 0.9932457804679871,
+      "s": 0.009582996368408203,
+      "n_chunks": 73,
+      "n_scored": 1,
+      "in_tok": 140
+     },
+     "choice": {
+      "p": 0.9828952550888062,
+      "s": 0.008928060531616211,
+      "n_chunks": 73,
+      "n_scored": 1,
+      "in_tok": 110
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1696,
+      "server_ms": 113,
+      "in_tok": 11053
+     }
+    },
+    {
+     "id": "needle_12k-31",
+     "gold": false,
+     "depth": 0.815,
+     "approx_tokens": 12075,
+     "noul": {
+      "p": 0.8635514378547668,
+      "s": 0.00962686538696289,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.27995458245277405,
+      "s": 0.010790824890136719,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1645,
+      "server_ms": 139,
+      "in_tok": 11357
+     }
+    },
+    {
+     "id": "needle_12k-32",
+     "gold": true,
+     "depth": 0.057,
+     "approx_tokens": 12100,
+     "noul": {
+      "p": 0.981333315372467,
+      "s": 0.011248111724853516,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8964352607727051,
+      "s": 0.009631156921386719,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1811,
+      "server_ms": 214,
+      "in_tok": 11235
+     }
+    },
+    {
+     "id": "needle_12k-33",
+     "gold": false,
+     "depth": 0.681,
+     "approx_tokens": 12046,
+     "noul": {
+      "p": 0.8734156489372253,
+      "s": 0.009962081909179688,
+      "n_chunks": 73,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.13669341802597046,
+      "s": 0.009023904800415039,
+      "n_chunks": 73,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1671,
+      "server_ms": 223,
+      "in_tok": 11143
+     }
+    },
+    {
+     "id": "needle_12k-34",
+     "gold": true,
+     "depth": 0.746,
+     "approx_tokens": 12032,
+     "noul": {
+      "p": 0.9930082559585571,
+      "s": 0.009733915328979492,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9866320490837097,
+      "s": 0.009040117263793945,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1590,
+      "server_ms": 157,
+      "in_tok": 11207
+     }
+    },
+    {
+     "id": "needle_12k-35",
+     "gold": false,
+     "depth": 0.516,
+     "approx_tokens": 12106,
+     "noul": {
+      "p": 0.9199100136756897,
+      "s": 0.009664058685302734,
+      "n_chunks": 65,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.26003676652908325,
+      "s": 0.008926868438720703,
+      "n_chunks": 65,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1668,
+      "server_ms": 168,
+      "in_tok": 11381
+     }
+    },
+    {
+     "id": "needle_12k-36",
+     "gold": true,
+     "depth": 0.362,
+     "approx_tokens": 12233,
+     "noul": {
+      "p": 0.9892796874046326,
+      "s": 0.009784221649169922,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.932283341884613,
+      "s": 0.009446144104003906,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1776,
+      "server_ms": 135,
+      "in_tok": 11356
+     }
+    },
+    {
+     "id": "needle_12k-37",
+     "gold": false,
+     "depth": 0.761,
+     "approx_tokens": 12179,
+     "noul": {
+      "p": 0.9227786660194397,
+      "s": 0.009857892990112305,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.6063271760940552,
+      "s": 0.00912618637084961,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1781,
+      "server_ms": 191,
+      "in_tok": 11555
+     }
+    },
+    {
+     "id": "needle_12k-38",
+     "gold": true,
+     "depth": 0.603,
+     "approx_tokens": 12280,
+     "noul": {
+      "p": 0.9850561618804932,
+      "s": 0.009804010391235352,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9613984227180481,
+      "s": 0.009268045425415039,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1732,
+      "server_ms": 236,
+      "in_tok": 11580
+     }
+    },
+    {
+     "id": "needle_12k-39",
+     "gold": false,
+     "depth": 0.794,
+     "approx_tokens": 12026,
+     "noul": {
+      "p": 0.8940005302429199,
+      "s": 0.009419918060302734,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.7999624013900757,
+      "s": 0.010644912719726562,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1774,
+      "server_ms": 195,
+      "in_tok": 11091
+     }
+    },
+    {
+     "id": "needle_12k-40",
+     "gold": true,
+     "depth": 0.214,
+     "approx_tokens": 12206,
+     "noul": {
+      "p": 0.9882792234420776,
+      "s": 0.009905815124511719,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9465354681015015,
+      "s": 0.008939027786254883,
+      "n_chunks": 71,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1712,
+      "server_ms": 126,
+      "in_tok": 11437
+     }
+    },
+    {
+     "id": "needle_12k-41",
+     "gold": false,
+     "depth": 0.955,
+     "approx_tokens": 12038,
+     "noul": {
+      "p": 0.8259528279304504,
+      "s": 0.009646892547607422,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.36526820063591003,
+      "s": 0.01016092300415039,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1537,
+      "server_ms": 109,
+      "in_tok": 11024
+     }
+    },
+    {
+     "id": "needle_12k-42",
+     "gold": true,
+     "depth": 0.468,
+     "approx_tokens": 12064,
+     "noul": {
+      "p": 0.992098331451416,
+      "s": 0.010298728942871094,
+      "n_chunks": 78,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.937728226184845,
+      "s": 0.009135007858276367,
+      "n_chunks": 78,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1818,
+      "server_ms": 134,
+      "in_tok": 11305
+     }
+    },
+    {
+     "id": "needle_12k-43",
+     "gold": false,
+     "depth": 0.797,
+     "approx_tokens": 12128,
+     "noul": {
+      "p": 0.9451371431350708,
+      "s": 0.009557008743286133,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.43596217036247253,
+      "s": 0.008795738220214844,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1780,
+      "server_ms": 122,
+      "in_tok": 11321
+     }
+    },
+    {
+     "id": "needle_12k-44",
+     "gold": true,
+     "depth": 0.926,
+     "approx_tokens": 12028,
+     "noul": {
+      "p": 0.9903889298439026,
+      "s": 0.009505033493041992,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.921970546245575,
+      "s": 0.008929967880249023,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1740,
+      "server_ms": 172,
+      "in_tok": 11467
+     }
+    },
+    {
+     "id": "needle_12k-45",
+     "gold": false,
+     "depth": 0.121,
+     "approx_tokens": 12092,
+     "noul": {
+      "p": 0.9731346964836121,
+      "s": 0.00964498519897461,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.2722797393798828,
+      "s": 0.009447813034057617,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1696,
+      "server_ms": 156,
+      "in_tok": 11085
+     }
+    },
+    {
+     "id": "needle_12k-46",
+     "gold": true,
+     "depth": 0.348,
+     "approx_tokens": 12193,
+     "noul": {
+      "p": 0.988229513168335,
+      "s": 0.010000944137573242,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9248842000961304,
+      "s": 0.009073019027709961,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1672,
+      "server_ms": 170,
+      "in_tok": 11089
+     }
+    },
+    {
+     "id": "needle_12k-47",
+     "gold": false,
+     "depth": 0.891,
+     "approx_tokens": 12052,
+     "noul": {
+      "p": 0.9517276287078857,
+      "s": 0.009690046310424805,
+      "n_chunks": 65,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.06663559377193451,
+      "s": 0.008931875228881836,
+      "n_chunks": 65,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1644,
+      "server_ms": 168,
+      "in_tok": 11223
+     }
+    },
+    {
+     "id": "needle_12k-48",
+     "gold": true,
+     "depth": 0.815,
+     "approx_tokens": 12215,
+     "noul": {
+      "p": 0.9818867444992065,
+      "s": 0.01007533073425293,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9211289286613464,
+      "s": 0.008862018585205078,
+      "n_chunks": 66,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1555,
+      "server_ms": 129,
+      "in_tok": 11409
+     }
+    },
+    {
+     "id": "needle_12k-49",
+     "gold": false,
+     "depth": 0.485,
+     "approx_tokens": 12163,
+     "noul": {
+      "p": 0.3670608401298523,
+      "s": 0.009663105010986328,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.24269992113113403,
+      "s": 0.008959293365478516,
+      "n_chunks": 69,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1585,
+      "server_ms": 169,
+      "in_tok": 11382
+     }
+    },
+    {
+     "id": "needle_12k-50",
+     "gold": true,
+     "depth": 0.769,
+     "approx_tokens": 12250,
+     "noul": {
+      "p": 0.9922424554824829,
+      "s": 0.009824991226196289,
+      "n_chunks": 79,
+      "n_scored": 1,
+      "in_tok": 140
+     },
+     "choice": {
+      "p": 0.8514278531074524,
+      "s": 0.009125947952270508,
+      "n_chunks": 79,
+      "n_scored": 1,
+      "in_tok": 110
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1695,
+      "server_ms": 163,
+      "in_tok": 11423
+     }
+    },
+    {
+     "id": "needle_12k-51",
+     "gold": false,
+     "depth": 0.463,
+     "approx_tokens": 12043,
+     "noul": {
+      "p": 0.93071448802948,
+      "s": 0.009266853332519531,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.29964083433151245,
+      "s": 0.008784770965576172,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1564,
+      "server_ms": 158,
+      "in_tok": 11152
+     }
+    },
+    {
+     "id": "needle_12k-52",
+     "gold": true,
+     "depth": 0.704,
+     "approx_tokens": 12068,
+     "noul": {
+      "p": 0.9868077635765076,
+      "s": 0.009490251541137695,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9011889100074768,
+      "s": 0.009109973907470703,
+      "n_chunks": 72,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1619,
+      "server_ms": 192,
+      "in_tok": 11597
+     }
+    },
+    {
+     "id": "needle_12k-53",
+     "gold": false,
+     "depth": 0.167,
+     "approx_tokens": 12110,
+     "noul": {
+      "p": 0.8662179708480835,
+      "s": 0.00939488410949707,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.13089057803153992,
+      "s": 0.008728265762329102,
+      "n_chunks": 67,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1824,
+      "server_ms": 410,
+      "in_tok": 11250
+     }
+    },
+    {
+     "id": "needle_12k-54",
+     "gold": true,
+     "depth": 0.791,
+     "approx_tokens": 12038,
+     "noul": {
+      "p": 0.9892680048942566,
+      "s": 0.009265899658203125,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9657541513442993,
+      "s": 0.008682966232299805,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1545,
+      "server_ms": 119,
+      "in_tok": 11445
+     }
+    },
+    {
+     "id": "needle_12k-55",
+     "gold": false,
+     "depth": 0.174,
+     "approx_tokens": 12170,
+     "noul": {
+      "p": 0.8582882285118103,
+      "s": 0.009390115737915039,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.4774062931537628,
+      "s": 0.008891105651855469,
+      "n_chunks": 70,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1508,
+      "server_ms": 98,
+      "in_tok": 11398
+     }
+    },
+    {
+     "id": "needle_12k-56",
+     "gold": true,
+     "depth": 0.055,
+     "approx_tokens": 12097,
+     "noul": {
+      "p": 0.9869173765182495,
+      "s": 0.009683847427368164,
+      "n_chunks": 74,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8755786418914795,
+      "s": 0.00905299186706543,
+      "n_chunks": 74,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1558,
+      "server_ms": 141,
+      "in_tok": 10988
+     }
+    },
+    {
+     "id": "needle_12k-57",
+     "gold": false,
+     "depth": 0.731,
+     "approx_tokens": 12171,
+     "noul": {
+      "p": 0.5222551226615906,
+      "s": 0.009517908096313477,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.35980504751205444,
+      "s": 0.008885622024536133,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1531,
+      "server_ms": 122,
+      "in_tok": 11209
+     }
+    },
+    {
+     "id": "needle_12k-58",
+     "gold": true,
+     "depth": 0.955,
+     "approx_tokens": 12123,
+     "noul": {
+      "p": 0.9732189178466797,
+      "s": 0.009588003158569336,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.845391035079956,
+      "s": 0.008838891983032227,
+      "n_chunks": 68,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1613,
+      "server_ms": 161,
+      "in_tok": 11176
+     }
+    },
+    {
+     "id": "needle_12k-59",
+     "gold": false,
+     "depth": 0.264,
+     "approx_tokens": 12087,
+     "noul": {
+      "p": 0.9705100059509277,
+      "s": 0.009679794311523438,
+      "n_chunks": 73,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.3073982894420624,
+      "s": 0.009059906005859375,
+      "n_chunks": 73,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1564,
+      "server_ms": 97,
+      "in_tok": 11357
+     }
+    }
+   ]
+  },
+  "24k": {
+   "stats": {
+    "noul": {
+     "n": 60,
+     "acc@0.5": 0.5333333333333333,
+     "auc": 0.9944444444444445,
+     "auc_lo": 0.9777777777777777,
+     "auc_hi": 1.0,
+     "recall@spec90": 1.0,
+     "mean_p_pos": 0.9871516843636831,
+     "mean_p_neg": 0.859355961283048,
+     "s_per_doc": 0.01800933281580607,
+     "n_chunks": 125.36666666666666,
+     "n_scored": 1.0
+    },
+    "choice": {
+     "n": 60,
+     "acc@0.5": 0.8833333333333333,
+     "auc": 0.9933333333333333,
+     "auc_lo": 0.9777777777777777,
+     "auc_hi": 1.0,
+     "recall@spec90": 0.9333333333333333,
+     "mean_p_pos": 0.9063636263211569,
+     "mean_p_neg": 0.37115817293524744,
+     "s_per_doc": 0.017551624774932863,
+     "n_chunks": 125.36666666666666,
+     "n_scored": 1.0
+    },
+    "jev": {
+     "n": 60,
+     "acc@0.5": 1.0,
+     "auc": 1.0,
+     "auc_lo": 1.0,
+     "auc_hi": 1.0,
+     "recall@spec90": 1.0,
+     "mean_p_pos": 0.9846666666666667,
+     "mean_p_neg": 0.034666666666666665,
+     "s_per_doc": null,
+     "n_chunks": null,
+     "n_scored": null
+    }
+   },
+   "rows": [
+    {
+     "id": "needle_24k-0",
+     "gold": true,
+     "depth": 0.816,
+     "approx_tokens": 21748,
+     "noul": {
+      "p": 0.990456759929657,
+      "s": 0.019044160842895508,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8654749989509583,
+      "s": 0.018645763397216797,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1825,
+      "server_ms": 197,
+      "in_tok": 19578
+     }
+    },
+    {
+     "id": "needle_24k-1",
+     "gold": false,
+     "depth": 0.089,
+     "approx_tokens": 21921,
+     "noul": {
+      "p": 0.9690212607383728,
+      "s": 0.018062829971313477,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 140
+     },
+     "choice": {
+      "p": 0.15861310064792633,
+      "s": 0.01911306381225586,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 110
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1845,
+      "server_ms": 206,
+      "in_tok": 20062
+     }
+    },
+    {
+     "id": "needle_24k-2",
+     "gold": true,
+     "depth": 0.639,
+     "approx_tokens": 22013,
+     "noul": {
+      "p": 0.9775171279907227,
+      "s": 0.018050193786621094,
+      "n_chunks": 120,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9341273903846741,
+      "s": 0.01692795753479004,
+      "n_chunks": 120,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 2060,
+      "server_ms": 154,
+      "in_tok": 19885
+     }
+    },
+    {
+     "id": "needle_24k-3",
+     "gold": false,
+     "depth": 0.705,
+     "approx_tokens": 21979,
+     "noul": {
+      "p": 0.9492002129554749,
+      "s": 0.017669200897216797,
+      "n_chunks": 133,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.41897353529930115,
+      "s": 0.0167238712310791,
+      "n_chunks": 133,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1683,
+      "server_ms": 245,
+      "in_tok": 20389
+     }
+    },
+    {
+     "id": "needle_24k-4",
+     "gold": true,
+     "depth": 0.05,
+     "approx_tokens": 21974,
+     "noul": {
+      "p": 0.986357569694519,
+      "s": 0.01732921600341797,
+      "n_chunks": 120,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.97133868932724,
+      "s": 0.01661086082458496,
+      "n_chunks": 120,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1633,
+      "server_ms": 212,
+      "in_tok": 20158
+     }
+    },
+    {
+     "id": "needle_24k-5",
+     "gold": false,
+     "depth": 0.608,
+     "approx_tokens": 21998,
+     "noul": {
+      "p": 0.9731835722923279,
+      "s": 0.01756906509399414,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.46332138776779175,
+      "s": 0.01927495002746582,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.06,
+      "wall_ms": 3178,
+      "server_ms": 156,
+      "in_tok": 20260
+     }
+    },
+    {
+     "id": "needle_24k-6",
+     "gold": true,
+     "depth": 0.234,
+     "approx_tokens": 21924,
+     "noul": {
+      "p": 0.991554319858551,
+      "s": 0.017750978469848633,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.909352719783783,
+      "s": 0.016887664794921875,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1874,
+      "server_ms": 277,
+      "in_tok": 20340
+     }
+    },
+    {
+     "id": "needle_24k-7",
+     "gold": false,
+     "depth": 0.402,
+     "approx_tokens": 21946,
+     "noul": {
+      "p": 0.9323892593383789,
+      "s": 0.01839590072631836,
+      "n_chunks": 128,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.3241359293460846,
+      "s": 0.01733112335205078,
+      "n_chunks": 128,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1744,
+      "server_ms": 184,
+      "in_tok": 20319
+     }
+    },
+    {
+     "id": "needle_24k-8",
+     "gold": true,
+     "depth": 0.106,
+     "approx_tokens": 21856,
+     "noul": {
+      "p": 0.9860324263572693,
+      "s": 0.01997065544128418,
+      "n_chunks": 133,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9444641470909119,
+      "s": 0.01840996742248535,
+      "n_chunks": 133,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1692,
+      "server_ms": 225,
+      "in_tok": 20207
+     }
+    },
+    {
+     "id": "needle_24k-9",
+     "gold": false,
+     "depth": 0.861,
+     "approx_tokens": 21914,
+     "noul": {
+      "p": 0.6899299025535583,
+      "s": 0.017527103424072266,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.11358515918254852,
+      "s": 0.01720905303955078,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1632,
+      "server_ms": 191,
+      "in_tok": 20130
+     }
+    },
+    {
+     "id": "needle_24k-10",
+     "gold": true,
+     "depth": 0.843,
+     "approx_tokens": 21971,
+     "noul": {
+      "p": 0.9866583943367004,
+      "s": 0.01779794692993164,
+      "n_chunks": 128,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9035162329673767,
+      "s": 0.016380786895751953,
+      "n_chunks": 128,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1611,
+      "server_ms": 162,
+      "in_tok": 20036
+     }
+    },
+    {
+     "id": "needle_24k-11",
+     "gold": false,
+     "depth": 0.675,
+     "approx_tokens": 22000,
+     "noul": {
+      "p": 0.7420235276222229,
+      "s": 0.017345905303955078,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.10244575887918472,
+      "s": 0.01665186882019043,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 2008,
+      "server_ms": 190,
+      "in_tok": 20443
+     }
+    },
+    {
+     "id": "needle_24k-12",
+     "gold": true,
+     "depth": 0.171,
+     "approx_tokens": 21880,
+     "noul": {
+      "p": 0.9923201203346252,
+      "s": 0.017575979232788086,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.941555917263031,
+      "s": 0.016520023345947266,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1760,
+      "server_ms": 243,
+      "in_tok": 19830
+     }
+    },
+    {
+     "id": "needle_24k-13",
+     "gold": false,
+     "depth": 0.647,
+     "approx_tokens": 21771,
+     "noul": {
+      "p": 0.8961473107337952,
+      "s": 0.017007112503051758,
+      "n_chunks": 120,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.23823975026607513,
+      "s": 0.01648402214050293,
+      "n_chunks": 120,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1645,
+      "server_ms": 164,
+      "in_tok": 19899
+     }
+    },
+    {
+     "id": "needle_24k-14",
+     "gold": true,
+     "depth": 0.814,
+     "approx_tokens": 21990,
+     "noul": {
+      "p": 0.9900153279304504,
+      "s": 0.01735401153564453,
+      "n_chunks": 119,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9575524926185608,
+      "s": 0.017174959182739258,
+      "n_chunks": 119,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1798,
+      "server_ms": 157,
+      "in_tok": 20539
+     }
+    },
+    {
+     "id": "needle_24k-15",
+     "gold": false,
+     "depth": 0.031,
+     "approx_tokens": 21971,
+     "noul": {
+      "p": 0.7319507598876953,
+      "s": 0.017659902572631836,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.6572592854499817,
+      "s": 0.01640605926513672,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1968,
+      "server_ms": 228,
+      "in_tok": 19836
+     }
+    },
+    {
+     "id": "needle_24k-16",
+     "gold": true,
+     "depth": 0.379,
+     "approx_tokens": 21964,
+     "noul": {
+      "p": 0.9755182266235352,
+      "s": 0.01747894287109375,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.692378580570221,
+      "s": 0.01822376251220703,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 2118,
+      "server_ms": 317,
+      "in_tok": 20094
+     }
+    },
+    {
+     "id": "needle_24k-17",
+     "gold": false,
+     "depth": 0.683,
+     "approx_tokens": 21964,
+     "noul": {
+      "p": 0.8883252143859863,
+      "s": 0.017686128616333008,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.5295787453651428,
+      "s": 0.018651247024536133,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1577,
+      "server_ms": 161,
+      "in_tok": 19802
+     }
+    },
+    {
+     "id": "needle_24k-18",
+     "gold": true,
+     "depth": 0.455,
+     "approx_tokens": 21934,
+     "noul": {
+      "p": 0.9773320555686951,
+      "s": 0.017590045928955078,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9573864936828613,
+      "s": 0.0165560245513916,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1748,
+      "server_ms": 196,
+      "in_tok": 19899
+     }
+    },
+    {
+     "id": "needle_24k-19",
+     "gold": false,
+     "depth": 0.408,
+     "approx_tokens": 21682,
+     "noul": {
+      "p": 0.4972746670246124,
+      "s": 0.017810821533203125,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.7681291699409485,
+      "s": 0.019444942474365234,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1668,
+      "server_ms": 175,
+      "in_tok": 19739
+     }
+    },
+    {
+     "id": "needle_24k-20",
+     "gold": true,
+     "depth": 0.624,
+     "approx_tokens": 21863,
+     "noul": {
+      "p": 0.9895852208137512,
+      "s": 0.0189821720123291,
+      "n_chunks": 118,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.7065041065216064,
+      "s": 0.01781773567199707,
+      "n_chunks": 118,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1615,
+      "server_ms": 196,
+      "in_tok": 20016
+     }
+    },
+    {
+     "id": "needle_24k-21",
+     "gold": false,
+     "depth": 0.952,
+     "approx_tokens": 22010,
+     "noul": {
+      "p": 0.9612511396408081,
+      "s": 0.017726898193359375,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.3802785873413086,
+      "s": 0.016895294189453125,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1693,
+      "server_ms": 274,
+      "in_tok": 20198
+     }
+    },
+    {
+     "id": "needle_24k-22",
+     "gold": true,
+     "depth": 0.133,
+     "approx_tokens": 22005,
+     "noul": {
+      "p": 0.9873142838478088,
+      "s": 0.017767906188964844,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9491983652114868,
+      "s": 0.01665806770324707,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 2044,
+      "server_ms": 228,
+      "in_tok": 19918
+     }
+    },
+    {
+     "id": "needle_24k-23",
+     "gold": false,
+     "depth": 0.031,
+     "approx_tokens": 21880,
+     "noul": {
+      "p": 0.9596710205078125,
+      "s": 0.017848968505859375,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8220242857933044,
+      "s": 0.0191190242767334,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1906,
+      "server_ms": 170,
+      "in_tok": 20027
+     }
+    },
+    {
+     "id": "needle_24k-24",
+     "gold": true,
+     "depth": 0.123,
+     "approx_tokens": 21900,
+     "noul": {
+      "p": 0.9943027496337891,
+      "s": 0.017117023468017578,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8352704048156738,
+      "s": 0.0162508487701416,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1601,
+      "server_ms": 192,
+      "in_tok": 19804
+     }
+    },
+    {
+     "id": "needle_24k-25",
+     "gold": false,
+     "depth": 0.851,
+     "approx_tokens": 22010,
+     "noul": {
+      "p": 0.9528968334197998,
+      "s": 0.01744699478149414,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.2569189667701721,
+      "s": 0.018244028091430664,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1627,
+      "server_ms": 165,
+      "in_tok": 20176
+     }
+    },
+    {
+     "id": "needle_24k-26",
+     "gold": true,
+     "depth": 0.171,
+     "approx_tokens": 22013,
+     "noul": {
+      "p": 0.9921509027481079,
+      "s": 0.018069744110107422,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9181906580924988,
+      "s": 0.016291141510009766,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1754,
+      "server_ms": 162,
+      "in_tok": 19772
+     }
+    },
+    {
+     "id": "needle_24k-27",
+     "gold": false,
+     "depth": 0.477,
+     "approx_tokens": 21957,
+     "noul": {
+      "p": 0.9817208051681519,
+      "s": 0.01779007911682129,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.5629777908325195,
+      "s": 0.016501188278198242,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.02,
+      "wall_ms": 1667,
+      "server_ms": 258,
+      "in_tok": 20098
+     }
+    },
+    {
+     "id": "needle_24k-28",
+     "gold": true,
+     "depth": 0.962,
+     "approx_tokens": 21880,
+     "noul": {
+      "p": 0.9861745834350586,
+      "s": 0.01715683937072754,
+      "n_chunks": 132,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8533653020858765,
+      "s": 0.016410112380981445,
+      "n_chunks": 132,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1542,
+      "server_ms": 153,
+      "in_tok": 19865
+     }
+    },
+    {
+     "id": "needle_24k-29",
+     "gold": false,
+     "depth": 0.325,
+     "approx_tokens": 22008,
+     "noul": {
+      "p": 0.9710381031036377,
+      "s": 0.017941951751708984,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.2973027229309082,
+      "s": 0.01904773712158203,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1746,
+      "server_ms": 258,
+      "in_tok": 20263
+     }
+    },
+    {
+     "id": "needle_24k-30",
+     "gold": true,
+     "depth": 0.735,
+     "approx_tokens": 21987,
+     "noul": {
+      "p": 0.9932457804679871,
+      "s": 0.017704010009765625,
+      "n_chunks": 133,
+      "n_scored": 1,
+      "in_tok": 140
+     },
+     "choice": {
+      "p": 0.9828952550888062,
+      "s": 0.0167999267578125,
+      "n_chunks": 133,
+      "n_scored": 1,
+      "in_tok": 110
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1625,
+      "server_ms": 194,
+      "in_tok": 19764
+     }
+    },
+    {
+     "id": "needle_24k-31",
+     "gold": false,
+     "depth": 0.805,
+     "approx_tokens": 21889,
+     "noul": {
+      "p": 0.8635514378547668,
+      "s": 0.017339229583740234,
+      "n_chunks": 119,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.27995458245277405,
+      "s": 0.016533851623535156,
+      "n_chunks": 119,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1864,
+      "server_ms": 176,
+      "in_tok": 20288
+     }
+    },
+    {
+     "id": "needle_24k-32",
+     "gold": true,
+     "depth": 0.05,
+     "approx_tokens": 21860,
+     "noul": {
+      "p": 0.981333315372467,
+      "s": 0.0176849365234375,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8964352607727051,
+      "s": 0.01645493507385254,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1746,
+      "server_ms": 239,
+      "in_tok": 19963
+     }
+    },
+    {
+     "id": "needle_24k-33",
+     "gold": false,
+     "depth": 0.68,
+     "approx_tokens": 21987,
+     "noul": {
+      "p": 0.8734156489372253,
+      "s": 0.01727294921875,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.13669341802597046,
+      "s": 0.016403913497924805,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1797,
+      "server_ms": 294,
+      "in_tok": 20124
+     }
+    },
+    {
+     "id": "needle_24k-34",
+     "gold": true,
+     "depth": 0.744,
+     "approx_tokens": 21838,
+     "noul": {
+      "p": 0.9930082559585571,
+      "s": 0.01680898666381836,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9866320490837097,
+      "s": 0.017999887466430664,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1603,
+      "server_ms": 188,
+      "in_tok": 20074
+     }
+    },
+    {
+     "id": "needle_24k-35",
+     "gold": false,
+     "depth": 0.516,
+     "approx_tokens": 22000,
+     "noul": {
+      "p": 0.9199100136756897,
+      "s": 0.018350839614868164,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.26003676652908325,
+      "s": 0.016763925552368164,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1567,
+      "server_ms": 162,
+      "in_tok": 20277
+     }
+    },
+    {
+     "id": "needle_24k-36",
+     "gold": true,
+     "depth": 0.363,
+     "approx_tokens": 21964,
+     "noul": {
+      "p": 0.9892796874046326,
+      "s": 0.017381906509399414,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.932283341884613,
+      "s": 0.0168609619140625,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1881,
+      "server_ms": 181,
+      "in_tok": 20206
+     }
+    },
+    {
+     "id": "needle_24k-37",
+     "gold": false,
+     "depth": 0.762,
+     "approx_tokens": 21904,
+     "noul": {
+      "p": 0.9227786660194397,
+      "s": 0.017235994338989258,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.6063271760940552,
+      "s": 0.01734781265258789,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 1613,
+      "server_ms": 191,
+      "in_tok": 20065
+     }
+    },
+    {
+     "id": "needle_24k-38",
+     "gold": true,
+     "depth": 0.605,
+     "approx_tokens": 21960,
+     "noul": {
+      "p": 0.9850561618804932,
+      "s": 0.01931905746459961,
+      "n_chunks": 130,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9613984227180481,
+      "s": 0.018555164337158203,
+      "n_chunks": 130,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1625,
+      "server_ms": 200,
+      "in_tok": 20213
+     }
+    },
+    {
+     "id": "needle_24k-39",
+     "gold": false,
+     "depth": 0.8,
+     "approx_tokens": 22000,
+     "noul": {
+      "p": 0.8940005302429199,
+      "s": 0.017313003540039062,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.7999624013900757,
+      "s": 0.016525983810424805,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.05,
+      "wall_ms": 1902,
+      "server_ms": 192,
+      "in_tok": 19904
+     }
+    },
+    {
+     "id": "needle_24k-40",
+     "gold": true,
+     "depth": 0.218,
+     "approx_tokens": 21979,
+     "noul": {
+      "p": 0.9882792234420776,
+      "s": 0.01724410057067871,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9465354681015015,
+      "s": 0.01826310157775879,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1643,
+      "server_ms": 208,
+      "in_tok": 20206
+     }
+    },
+    {
+     "id": "needle_24k-41",
+     "gold": false,
+     "depth": 0.96,
+     "approx_tokens": 21849,
+     "noul": {
+      "p": 0.8259528279304504,
+      "s": 0.018213748931884766,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.36526820063591003,
+      "s": 0.018587112426757812,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.06,
+      "wall_ms": 1757,
+      "server_ms": 184,
+      "in_tok": 19709
+     }
+    },
+    {
+     "id": "needle_24k-42",
+     "gold": true,
+     "depth": 0.473,
+     "approx_tokens": 21978,
+     "noul": {
+      "p": 0.992098331451416,
+      "s": 0.018243074417114258,
+      "n_chunks": 132,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.937728226184845,
+      "s": 0.01823282241821289,
+      "n_chunks": 132,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1875,
+      "server_ms": 365,
+      "in_tok": 20170
+     }
+    },
+    {
+     "id": "needle_24k-43",
+     "gold": false,
+     "depth": 0.79,
+     "approx_tokens": 21623,
+     "noul": {
+      "p": 0.9451371431350708,
+      "s": 0.017835140228271484,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.43596217036247253,
+      "s": 0.016920089721679688,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1878,
+      "server_ms": 434,
+      "in_tok": 19672
+     }
+    },
+    {
+     "id": "needle_24k-44",
+     "gold": true,
+     "depth": 0.929,
+     "approx_tokens": 21982,
+     "noul": {
+      "p": 0.9903889298439026,
+      "s": 0.019675016403198242,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.921970546245575,
+      "s": 0.01775979995727539,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 2688,
+      "server_ms": 227,
+      "in_tok": 20253
+     }
+    },
+    {
+     "id": "needle_24k-45",
+     "gold": false,
+     "depth": 0.123,
+     "approx_tokens": 21860,
+     "noul": {
+      "p": 0.9731346964836121,
+      "s": 0.01758098602294922,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.2722797393798828,
+      "s": 0.016595840454101562,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1909,
+      "server_ms": 282,
+      "in_tok": 19684
+     }
+    },
+    {
+     "id": "needle_24k-46",
+     "gold": true,
+     "depth": 0.347,
+     "approx_tokens": 21881,
+     "noul": {
+      "p": 0.988229513168335,
+      "s": 0.018150806427001953,
+      "n_chunks": 119,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9248842000961304,
+      "s": 0.016632080078125,
+      "n_chunks": 119,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1864,
+      "server_ms": 264,
+      "in_tok": 19804
+     }
+    },
+    {
+     "id": "needle_24k-47",
+     "gold": false,
+     "depth": 0.888,
+     "approx_tokens": 21972,
+     "noul": {
+      "p": 0.9517276287078857,
+      "s": 0.017634868621826172,
+      "n_chunks": 117,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.06663559377193451,
+      "s": 0.01698923110961914,
+      "n_chunks": 117,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.04,
+      "wall_ms": 2317,
+      "server_ms": 195,
+      "in_tok": 20101
+     }
+    },
+    {
+     "id": "needle_24k-48",
+     "gold": true,
+     "depth": 0.818,
+     "approx_tokens": 21968,
+     "noul": {
+      "p": 0.9818867444992065,
+      "s": 0.018201112747192383,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9211289286613464,
+      "s": 0.01652383804321289,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 2087,
+      "server_ms": 251,
+      "in_tok": 20385
+     }
+    },
+    {
+     "id": "needle_24k-49",
+     "gold": false,
+     "depth": 0.475,
+     "approx_tokens": 21950,
+     "noul": {
+      "p": 0.3670608401298523,
+      "s": 0.017753124237060547,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.24269992113113403,
+      "s": 0.01757025718688965,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 2015,
+      "server_ms": 181,
+      "in_tok": 20127
+     }
+    },
+    {
+     "id": "needle_24k-50",
+     "gold": true,
+     "depth": 0.774,
+     "approx_tokens": 21978,
+     "noul": {
+      "p": 0.9922424554824829,
+      "s": 0.01729607582092285,
+      "n_chunks": 134,
+      "n_scored": 1,
+      "in_tok": 140
+     },
+     "choice": {
+      "p": 0.8514278531074524,
+      "s": 0.018439054489135742,
+      "n_chunks": 134,
+      "n_scored": 1,
+      "in_tok": 110
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1768,
+      "server_ms": 175,
+      "in_tok": 20384
+     }
+    },
+    {
+     "id": "needle_24k-51",
+     "gold": false,
+     "depth": 0.463,
+     "approx_tokens": 21924,
+     "noul": {
+      "p": 0.93071448802948,
+      "s": 0.019896984100341797,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.29964083433151245,
+      "s": 0.01725292205810547,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1747,
+      "server_ms": 222,
+      "in_tok": 20347
+     }
+    },
+    {
+     "id": "needle_24k-52",
+     "gold": true,
+     "depth": 0.71,
+     "approx_tokens": 21852,
+     "noul": {
+      "p": 0.9868077635765076,
+      "s": 0.0185086727142334,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9011889100074768,
+      "s": 0.01741194725036621,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 2172,
+      "server_ms": 234,
+      "in_tok": 20292
+     }
+    },
+    {
+     "id": "needle_24k-53",
+     "gold": false,
+     "depth": 0.176,
+     "approx_tokens": 22008,
+     "noul": {
+      "p": 0.8662179708480835,
+      "s": 0.017809152603149414,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.13089057803153992,
+      "s": 0.018915653228759766,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1660,
+      "server_ms": 251,
+      "in_tok": 20053
+     }
+    },
+    {
+     "id": "needle_24k-54",
+     "gold": true,
+     "depth": 0.784,
+     "approx_tokens": 21945,
+     "noul": {
+      "p": 0.9892680048942566,
+      "s": 0.01768326759338379,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.9657541513442993,
+      "s": 0.017575979232788086,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.98,
+      "wall_ms": 1991,
+      "server_ms": 217,
+      "in_tok": 20559
+     }
+    },
+    {
+     "id": "needle_24k-55",
+     "gold": false,
+     "depth": 0.18,
+     "approx_tokens": 21915,
+     "noul": {
+      "p": 0.8582882285118103,
+      "s": 0.017267942428588867,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.4774062931537628,
+      "s": 0.01623702049255371,
+      "n_chunks": 123,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1818,
+      "server_ms": 182,
+      "in_tok": 19980
+     }
+    },
+    {
+     "id": "needle_24k-56",
+     "gold": true,
+     "depth": 0.048,
+     "approx_tokens": 21964,
+     "noul": {
+      "p": 0.9869173765182495,
+      "s": 0.018767118453979492,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.8755786418914795,
+      "s": 0.020307064056396484,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1744,
+      "server_ms": 216,
+      "in_tok": 19755
+     }
+    },
+    {
+     "id": "needle_24k-57",
+     "gold": false,
+     "depth": 0.732,
+     "approx_tokens": 21988,
+     "noul": {
+      "p": 0.5222551226615906,
+      "s": 0.021380186080932617,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.35980504751205444,
+      "s": 0.021427154541015625,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.06,
+      "wall_ms": 1627,
+      "server_ms": 182,
+      "in_tok": 19827
+     }
+    },
+    {
+     "id": "needle_24k-58",
+     "gold": true,
+     "depth": 0.959,
+     "approx_tokens": 21863,
+     "noul": {
+      "p": 0.9732189178466797,
+      "s": 0.02183985710144043,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.845391035079956,
+      "s": 0.019325971603393555,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.99,
+      "wall_ms": 1708,
+      "server_ms": 204,
+      "in_tok": 19763
+     }
+    },
+    {
+     "id": "needle_24k-59",
+     "gold": false,
+     "depth": 0.27,
+     "approx_tokens": 21928,
+     "noul": {
+      "p": 0.9705100059509277,
+      "s": 0.01864314079284668,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 136
+     },
+     "choice": {
+      "p": 0.3073982894420624,
+      "s": 0.019021034240722656,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "in_tok": 106
+     },
+     "jev": {
+      "p": 0.03,
+      "wall_ms": 1792,
+      "server_ms": 259,
+      "in_tok": 20030
+     }
+    }
+   ]
+  }
+ },
+ "config": {
+  "chunk_tokens": 750,
+  "agg": "max",
+  "mode": "paragraphs",
+  "device": "mps",
+  "prefilter": "bm25",
+  "top_k": 1
+ }
+}

@@ -68,4 +68,37 @@ print(f"   noul={n['noul']:.3f} (max over chunks {[round(x['p'][1],2) for x in n
 print(f"   choice={c['choice']} conf={c['confidence']:.3f} gates={[round(x['gate'],2) for x in c['chunks']]}")
 r2 = cj.ask(text, {"c": Q_CHOICE}, agg={"c": "loglinear"}); r3 = cj.ask(text, {"c": Q_CHOICE}, agg={"c": "stack"})
 print(f"   loglinear={r2['answers']['c']['choice']}  stack={r3['answers']['c']['choice']}")
+
+# 6. prefilter: BM25 hands Laya only the chunk that matters, and Laya verifies it
+from chunklaya import bm25_rank
+assert bm25_rank(["the cat sat", "a dog barked", "cat and cat again"], "cat")[:2] == [2, 0]
+needle = "The access code for the teal harbor locker is 4417."
+paras = arts[:40] + [needle] + arts[40:70]
+text2 = "\n\n".join(paras)
+def q(code):
+    return {"type": "noul", "instructions": f"Does the text state that the access code for the teal harbor locker is {code}?",
+            "criteria": {"true": f"The text says the access code for the teal harbor locker is exactly {code}.",
+                         "false": f"The text gives a different code for the teal harbor locker, or none at all."}}
+def det(code):
+    return {"type": "choice", "instructions": f"Does this passage state that the access code for the teal harbor locker is {code}?",
+            "criteria": {"yes": f"It says the code for the teal harbor locker is exactly {code}.",
+                         "no": f"It gives a code other than {code}, or no code."}}
+pf = ChunkLaya(agent, 750, mode="paragraphs", prefilter="bm25", top_k=1)
+for label, kw in (("noul", {}), ("choice detector", {"detectors": {"q": (det("4417"), "yes")}})):
+    hit = pf.ask(text2, {"q": q("4417")}, **kw)
+    kw_miss = {"detectors": {"q": (det("9911"), "yes")}} if kw else {}
+    miss = pf.ask(text2, {"q": q("9911")}, **kw_miss)
+    for r in (hit, miss):
+        a = r["answers"]["q"]
+        assert r["prefilter"] == "bm25" and r["n_chunks"] > 1 and a["n_scored"] == 1 and len(a["chunks"]) == 1
+        assert a["agg"] == "max", a["agg"]     # not passthrough: one passage was selected out of many
+        assert needle in pf.chunks(text2)[a["chunks"][0]["index"]].text, "bm25 did not pick the needle chunk"
+    h, m_ = hit["answers"]["q"]["noul"], miss["answers"]["q"]["noul"]
+    # the noul alone orders the two but is a soft digit verifier (README: P(yes|mismatch) ~0.86);
+    # the choice detector is the recipe, and separates them cleanly
+    assert h > m_ if not kw else h > 0.5 > m_, (label, h, m_)
+    print(f"6. prefilter [{label}]: {hit['n_chunks']} chunks -> 1 scored; match={h:.3f} mismatch={m_:.3f}")
+full = ChunkLaya(agent, 750, mode="paragraphs").ask(text2, {"q": q("4417")})
+assert full["answers"]["q"]["n_scored"] == full["n_chunks"] and full["prefilter"] is None
+print("   without prefilter every chunk is scored, as before")
 print("all smoke tests passed")

@@ -7,6 +7,7 @@ from laya.common import confidence_from_probs
 from .aggregate import choice_loglinear, choice_mixture, noul_any, noul_max, noul_mean, score_expected
 from .batch import predict_many
 from .chunk import Chunk, chunk_paragraphs, chunk_text
+from .prefilter import bm25_rank, question_query
 
 GATE_TEMPLATE = ("Does this text contain the information needed to answer the following question? "
                  "Question: {instructions}")
@@ -20,21 +21,39 @@ class ChunkLaya:
     stride         window step; <= chunk_tokens/2 puts every token near some window's start
     gate           "auto"  → relevance noul per chunk for choice/score; none for noul (it is its own gate)
                    True/False → force on/off;  str → custom template with {instructions}
+    prefilter      None → Laya scores every chunk;  "bm25" → rank chunks against the question text and
+                   score only the top `top_k`. Recommended for "does X occur anywhere" over long input:
+                   locating is a retrieval job, verifying is Laya's, and splitting them is what matches
+                   Jev on the needle benchmark (README). Keep top_k small -- with `max` aggregation each
+                   extra chunk is another chance for a false positive.
     """
 
     def __init__(self, agent, chunk_tokens: int = 750, stride: Optional[int] = None,
-                 batch_size: int = 16, gate: Union[str, bool] = "auto", mode: str = "tokens", cache=None):
+                 batch_size: int = 16, gate: Union[str, bool] = "auto", mode: str = "tokens", cache=None,
+                 prefilter: Optional[str] = None, top_k: int = 1):
         """mode: "tokens" → fixed windows of chunk_tokens every stride;  "paragraphs" → one blank-line-
         separated unit per chunk (chunk_tokens is then only the fallback cap for an oversized paragraph)."""
         if mode not in ("tokens", "paragraphs"):
             raise ValueError(mode)
         self.agent, self.chunk_tokens, self.stride = agent, chunk_tokens, stride or chunk_tokens // 2
         self.batch_size, self.gate, self.mode, self.cache = batch_size, gate, mode, cache
+        if prefilter not in (None, "bm25"):
+            raise ValueError(prefilter)
+        if top_k < 1:
+            raise ValueError("top_k must be >= 1")
+        self.prefilter, self.top_k = prefilter, top_k
 
     def chunks(self, text: str) -> List[Chunk]:
         if self.mode == "paragraphs":
             return chunk_paragraphs(self.agent.tok, text, self.chunk_tokens)
         return chunk_text(self.agent.tok, text, self.chunk_tokens, self.stride)
+
+    def _select(self, chunks: List[Chunk], qdef: Dict) -> List[Chunk]:
+        """The chunks Laya will score for this question, in document order."""
+        if self.prefilter is None or len(chunks) <= self.top_k:
+            return chunks
+        keep = sorted(bm25_rank([c.text for c in chunks], question_query(qdef))[: self.top_k])
+        return [chunks[i] for i in keep]
 
     def _use_gate(self, qdef: Dict) -> bool:
         if self.gate == "auto":
@@ -64,32 +83,39 @@ class ChunkLaya:
         agg = {**DEFAULT_AGG, **{k: v for k, v in (agg or {}).items()}}
         m = len(chunks)
 
-        # one batched pass: (answer row, optional gate row) per chunk per question
-        pairs, index = [], []
+        # one batched pass: (answer row, optional gate row) per selected chunk per question.
+        # The prefilter selects per question, so each question has its own chunk list.
+        pairs, index, sel = [], [], {}
         detectors = detectors or {}
         for qid, qdef in questions.items():
-            g = self._use_gate(qdef) and m > 1
+            C = sel[qid] = self._select(chunks, qdef)
+            mq = len(C)
+            g = self._use_gate(qdef) and mq > 1
             det = detectors.get(qid)
             if det is not None and qdef["type"] != "noul":
                 raise ValueError("detectors apply to noul questions only")
+            # Passthrough is for a state that fit in one window. A prefilter keeping one chunk of many is
+            # not that: the chunk is a passage, so the per-passage detector still applies.
             row_q = det[0] if (det is not None and m > 1) else qdef
-            for c in chunks:
-                pairs.append((c.text, row_q)); index.append((qid, c.index, "ans"))
+            for j, c in enumerate(C):
+                pairs.append((c.text, row_q)); index.append((qid, j, "ans"))
                 if g:
-                    pairs.append((c.text, self._gate_q(qdef))); index.append((qid, c.index, "gate"))
+                    pairs.append((c.text, self._gate_q(qdef))); index.append((qid, j, "gate"))
         res = predict_many(self.agent, pairs, self.batch_size, max_len=max_len, cache=self.cache)
-        per: Dict[str, Dict[str, list]] = {qid: {"ans": [None] * m, "gate": [None] * m} for qid in questions}
-        for (qid, ci, kind), r in zip(index, res):
-            per[qid][kind][ci] = r
+        per: Dict[str, Dict[str, list]] = {qid: {"ans": [None] * len(sel[qid]), "gate": [None] * len(sel[qid])}
+                                           for qid in questions}
+        for (qid, j, kind), r in zip(index, res):
+            per[qid][kind][j] = r
 
         answers, total_tokens = {}, sum(r["seq_len"] for r in res)
         for qid, qdef in questions.items():
+            C, mq = sel[qid], len(sel[qid])
             A, G, t = per[qid]["ans"], per[qid]["gate"], qdef["type"]
             w = [g["noul"] for g in G] if G[0] is not None else None
             mode = agg.get(qid, agg[t])
             detail = [{"index": c.index, "tok_start": c.tok_start, "tok_end": c.tok_end,
                        "p": [float(x) for x in a["p"]], "gate": (None if w is None else float(w[i]))}
-                      for i, (c, a) in enumerate(zip(chunks, A))]
+                      for i, (c, a) in enumerate(zip(C, A))]
             if m == 1:                                   # passthrough: the state fit in one window
                 ans = {k: v for k, v in A[0].items() if k not in ("p", "keys", "seq_len")}
             elif t == "noul":
@@ -112,11 +138,11 @@ class ChunkLaya:
                     ans["choice"] = keys[int(p.argmax())]
                 else:
                     ans["score"], ans["legend"] = score_expected(D, w)[0], A[0]["legend"]
-            ans.update(agg=mode if m > 1 else "passthrough", chunks=detail)
+            ans.update(agg=mode if m > 1 else "passthrough", n_scored=mq, chunks=detail)
             answers[qid] = ans
 
         return {"model": "chunklaya", "answers": answers, "n_chunks": m, "mode": self.mode,
-                "chunk_tokens": self.chunk_tokens, "stride": self.stride,
+                "chunk_tokens": self.chunk_tokens, "stride": self.stride, "prefilter": self.prefilter,
                 "usage": {"input_tokens": int(total_tokens), "output_tokens": 0}}
 
     def _stack(self, qdef: Dict, A: list, w: Optional[list], max_len: Optional[int]) -> Dict[str, Any]:
