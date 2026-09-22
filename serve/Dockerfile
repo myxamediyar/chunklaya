@@ -13,7 +13,8 @@ FROM pytorch/pytorch:2.14.0-cuda12.6-cudnn9-runtime
 ARG LAYA_REVISION=1c5edc17a7acd8701df6fc341c0d179f1c62c982
 ARG GIT_SHA=unknown
 
-ENV PIP_NO_CACHE_DIR=1 PYTHONUNBUFFERED=1 USE_TF=0 TOKENIZERS_PARALLELISM=false
+# The image marks its system Python as externally managed (PEP 668); this is the image, so pip may install into it.
+ENV PIP_NO_CACHE_DIR=1 PIP_BREAK_SYSTEM_PACKAGES=1 PYTHONUNBUFFERED=1 USE_TF=0 TOKENIZERS_PARALLELISM=false
 
 RUN pip install "fastapi==0.116.1" "uvicorn[standard]==0.35.0" "laya==0.3.4" "transformers==4.56.2" "huggingface_hub>=0.20"
 
