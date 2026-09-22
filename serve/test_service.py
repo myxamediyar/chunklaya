@@ -295,9 +295,11 @@ class ServiceWithoutTokenTests(unittest.TestCase):
         finally:
             os.environ.clear(); os.environ.update(env)
 
-    def test_bm25_query_names_the_labels_not_none(self):
+    def test_bm25_query_uses_meanings_not_label_names_or_none(self):
         q = service.bm25_query({"instructions": "Which department?", "criteria": {"billing": None, "technical": "network and hardware"}})
-        self.assertIn("billing", q); self.assertIn("network and hardware", q); self.assertNotIn("None", q)
+        self.assertIn("Which department?", q); self.assertIn("network and hardware", q)
+        self.assertNotIn("None", q); self.assertNotIn("billing", q); self.assertNotIn("technical ", q + " ")
+        self.assertEqual(service.bm25_query({"instructions": "How urgent?", "criteria": ["low", "high"]}), "How urgent? low high")
 
 
 if __name__ == "__main__":

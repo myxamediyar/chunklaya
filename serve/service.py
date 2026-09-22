@@ -523,19 +523,19 @@ def create_app(runtime_factory: Callable[[], Runtime], token: Optional[str] = No
 # --- the real runtime ------------------------------------------------------
 
 def bm25_query(qdef: dict) -> str:
-    """What the question says, for ranking passages: instructions, the labels, and any label meanings.
+    """What the question says, for ranking passages: the instructions and any label meanings.
 
-    chunklaya's own query joins `str(v)` over criteria values, which for a
-    caller's `{label: null}` criteria contributes the word "None" and drops the
-    label itself.
+    Label *names* are deliberately left out. A passage that happens to contain
+    the word "technical" is not the passage the question is about, and putting
+    names in the query hands Laya exactly that passage, with certainty (the
+    first live run flipped a billing answer to technical this way). Meanings are
+    what the author's `question_query` uses; the only change here is that a
+    `{label: null}` criterion contributes nothing instead of the word "None".
     """
     parts = [qdef.get("instructions", "")]
     criteria = qdef.get("criteria")
     if isinstance(criteria, dict):
-        for label, meaning in criteria.items():
-            parts.append(str(label))
-            if meaning is not None:
-                parts.append(str(meaning))
+        parts.extend(str(meaning) for meaning in criteria.values() if meaning is not None)
     elif isinstance(criteria, (list, tuple)):
         parts.extend(str(c) for c in criteria)
     return " ".join(parts)

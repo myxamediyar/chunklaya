@@ -62,10 +62,38 @@ and `detail: true` to return per-passage scores and token offsets under
 `answers[qid].chunks`.
 
 One difference from calling the harness directly: for `locate`, the BM25
-query is built from the instructions, the label names, and any label
-meanings. `question_query` in `prefilter.py` joins `str(v)` over the criteria
-values, which for `{label: null}` criteria contributes the word "None" and
-drops the label. Laya itself sees the question unchanged.
+query is the instructions plus any label *meanings*, never the label names.
+`question_query` in `prefilter.py` joins `str(v)` over the criteria values,
+which for `{label: null}` criteria contributes the word "None"; the service
+skips those. Names are left out on purpose: the first live run put them in,
+and a passage that merely contained the word "technical" was handed to Laya
+as the answer, with certainty. Laya itself sees the question unchanged.
+
+### What the first live run showed
+
+An RTX A5000 pod, 9 vCPU, measured from a laptop through the RunPod proxy
+(`timing` is the service's own clock; "client" includes the network):
+
+| Request | index | ask | client |
+|---|---|---|---|
+| 3-paragraph document, scan, cold | 0.7 ms | 179 ms | 910 ms |
+| same, cached | — | 25 ms | 303 ms |
+| 1.09M characters (6,500 passages), locate, cold, 1.1 MB upload | 535 ms | 132 ms | 2.1 s |
+| same document, cached, one question | — | 29 ms | 771 ms |
+
+Two things about asking, both reproduced from the top-level README's results:
+
+- **A lookup wants `detectors`.** On the exact passage holding a planted
+  fact ("the access code for the teal harbor locker is 4417"), the default
+  `noul` verifier answered 0.10; a described `choice` detector
+  (`{"yes": "the passage gives 4417 as the locker's access code", "no": "it
+  does not"}`, read as P(yes)) answered 0.98. BM25 had found the passage both
+  times. Send `detectors: {"<noul qid>": [<that choice question>, "yes"]}`.
+- **`locate` is not for categorization.** Asked "what is this document
+  mostly about?" over one BM25-chosen passage, Laya returned exactly 0.5/0.5
+  — its answer for a passage about neither label. With `top_k: 3` the
+  mixture reached 0.93. Categorical questions belong to `scan`, or to
+  `locate` with a `top_k` large enough to see representative passages.
 
 Refusals carry `{error: {code, message}}`, and a `detail` string on 422.
 `429` and `503` set `Retry-After`. `504` means the request passed
