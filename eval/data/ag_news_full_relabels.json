@@ -1,0 +1,545 @@
+{
+ "source": "eval/data/ag_news_full.json (row = index into rows)",
+ "what": "the 77 non-Sports-labelled rows of the AG News test split that laya-multilingual's 4-way choice scores P(Sports) > 0.2, read and labelled by hand on 2026-09-22 (Claude, in the session that produced results/2026-09-22-scale-semantic). is_sports = the story's subject is a sporting event, team, athlete's play or career, or sports body; an athlete's criminal trial, a sports company's finances or a video game is not.",
+ "rows": [
+  {
+   "row": 3688,
+   "ag_label": "World",
+   "p_sports": 1.0,
+   "is_sports": true,
+   "head": "Ljubicic Downs Hanescu at Open De Moselle Top-seeded Ivan Ljubicic of Croatia be"
+  },
+  {
+   "row": 967,
+   "ag_label": "World",
+   "p_sports": 0.9999,
+   "is_sports": true,
+   "head": "Maddux Wins No. 302, Baker Wins No. 1,000 Greg Maddux pitched the Chicago Cubs i"
+  },
+  {
+   "row": 3953,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.9999,
+   "is_sports": true,
+   "head": "Toughest athlete is female and unknown You probably haven't heard about one of t"
+  },
+  {
+   "row": 747,
+   "ag_label": "World",
+   "p_sports": 0.9998,
+   "is_sports": true,
+   "head": "Argentina Beats U.S. Men's Basketball Team Argentina defeated the United States "
+  },
+  {
+   "row": 6150,
+   "ag_label": "World",
+   "p_sports": 0.9998,
+   "is_sports": true,
+   "head": "England humble Sprinboks Charlie Hodgson scores 27 points as England overwhelm t"
+  },
+  {
+   "row": 1617,
+   "ag_label": "World",
+   "p_sports": 0.9998,
+   "is_sports": true,
+   "head": "At Last, Success on the Road for Lions The Detroit Lions went three full seasons"
+  },
+  {
+   "row": 912,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.9998,
+   "is_sports": false,
+   "head": "Bryant Makes First Appearance at Trial (AP) AP - NBA star Kobe Bryant arrived at"
+  },
+  {
+   "row": 4029,
+   "ag_label": "World",
+   "p_sports": 0.9997,
+   "is_sports": true,
+   "head": "USC, Miami Top BCS Standings, Not Okla. Southern California took the top spot Mo"
+  },
+  {
+   "row": 2028,
+   "ag_label": "World",
+   "p_sports": 0.9997,
+   "is_sports": true,
+   "head": "Ryder Cup: Europe close on victory Another good day at Oakland Hills sees Europe"
+  },
+  {
+   "row": 3805,
+   "ag_label": "World",
+   "p_sports": 0.9997,
+   "is_sports": true,
+   "head": "Munro, Morris Face Off in NLCS Game 2 ST. LOUIS - The Houston Astros put their h"
+  },
+  {
+   "row": 3900,
+   "ag_label": "World",
+   "p_sports": 0.9996,
+   "is_sports": true,
+   "head": "Rugby: Kiwis earn draw New Zealand hold Australia 16-16 in the first game of the"
+  },
+  {
+   "row": 6089,
+   "ag_label": "World",
+   "p_sports": 0.9996,
+   "is_sports": true,
+   "head": "Football: Brazil legend's UK debut Brazil football great Socrates is set to make"
+  },
+  {
+   "row": 6185,
+   "ag_label": "Business",
+   "p_sports": 0.9995,
+   "is_sports": false,
+   "head": "Special to ESPN.com It #39;s the age old question:  quot;What do you give to the"
+  },
+  {
+   "row": 5128,
+   "ag_label": "World",
+   "p_sports": 0.9994,
+   "is_sports": true,
+   "head": "Argentina Basketball Coach Magnano Quits Ruben Magnano, who coached Argentina to"
+  },
+  {
+   "row": 4669,
+   "ag_label": "World",
+   "p_sports": 0.9992,
+   "is_sports": true,
+   "head": "Henman Sails at the Swiss Indoors &lt;p&gt;&lt;/p&gt;&lt;p&gt; By Mark Ledsom&lt"
+  },
+  {
+   "row": 1956,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.9984,
+   "is_sports": false,
+   "head": "Sandia Motor Speedway for Sale on eBay (AP) AP - And the race is off! Only 29 da"
+  },
+  {
+   "row": 5686,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.9983,
+   "is_sports": false,
+   "head": "GAME UNDER FIRE Attacking police officers, racial slurs, bloody beatings of inno"
+  },
+  {
+   "row": 1599,
+   "ag_label": "World",
+   "p_sports": 0.997,
+   "is_sports": false,
+   "head": "Two gored to death in Spanish bull-run Two Spanish men were gored to death by fi"
+  },
+  {
+   "row": 3570,
+   "ag_label": "World",
+   "p_sports": 0.9969,
+   "is_sports": true,
+   "head": "Legendary all-rounder Miller dies Keith Miller, arguably Australia's greatest  a"
+  },
+  {
+   "row": 1098,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.9956,
+   "is_sports": true,
+   "head": "The Bahamas - the real medal winner of the Athens Olympics A different way of ca"
+  },
+  {
+   "row": 6951,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.9954,
+   "is_sports": false,
+   "head": "Hawks Evicted From New York City Perch (AP) AP - Pale Male the city hawk was evi"
+  },
+  {
+   "row": 7467,
+   "ag_label": "World",
+   "p_sports": 0.9954,
+   "is_sports": false,
+   "head": "Daily Mail hits back at Blunkett The Daily Mail today dismissed David Blunkett #"
+  },
+  {
+   "row": 3604,
+   "ag_label": "World",
+   "p_sports": 0.9946,
+   "is_sports": false,
+   "head": "World ; Bigley: I want to live a simple life, the final plea World News, The nea"
+  },
+  {
+   "row": 7238,
+   "ag_label": "World",
+   "p_sports": 0.9944,
+   "is_sports": true,
+   "head": "Bangladesh boss slams detractors Bangladesh's coach says they still deserve Test"
+  },
+  {
+   "row": 3077,
+   "ag_label": "Business",
+   "p_sports": 0.9941,
+   "is_sports": true,
+   "head": "Brewers buyer expected to step out of the shadows Monday MILWAUKEE - Paul Attana"
+  },
+  {
+   "row": 3899,
+   "ag_label": "World",
+   "p_sports": 0.9934,
+   "is_sports": true,
+   "head": "Warne takes six but India establish handy lead (Reuters) Reuters - World test wi"
+  },
+  {
+   "row": 3661,
+   "ag_label": "World",
+   "p_sports": 0.9919,
+   "is_sports": true,
+   "head": "Cricket: Tendulkar to miss test Sachin Tendulkar is almost certain to miss Thurs"
+  },
+  {
+   "row": 6248,
+   "ag_label": "Business",
+   "p_sports": 0.9909,
+   "is_sports": false,
+   "head": "Study Ranks St. Louis as Fourth Most Dangerous City A new study ranks St. Louis "
+  },
+  {
+   "row": 5941,
+   "ag_label": "World",
+   "p_sports": 0.9888,
+   "is_sports": true,
+   "head": "Cricket: NZ suffer Franklin blow New Zealand bowler James Franklin misses the fi"
+  },
+  {
+   "row": 4302,
+   "ag_label": "World",
+   "p_sports": 0.9885,
+   "is_sports": true,
+   "head": "Sri Lanka off to positive start Kumar Sangakkara's unbeaten fifty revives Sri La"
+  },
+  {
+   "row": 6267,
+   "ag_label": "Business",
+   "p_sports": 0.987,
+   "is_sports": true,
+   "head": "Banks seek court ruling over F1 Three banks go to the High Court in London seeki"
+  },
+  {
+   "row": 79,
+   "ag_label": "World",
+   "p_sports": 0.9857,
+   "is_sports": true,
+   "head": "Live: Olympics day four Richard Faulds and Stephen Parry are going for gold for "
+  },
+  {
+   "row": 3063,
+   "ag_label": "World",
+   "p_sports": 0.9844,
+   "is_sports": true,
+   "head": "US football: Patriots' historic win New England win a record-tying 18th straight"
+  },
+  {
+   "row": 676,
+   "ag_label": "World",
+   "p_sports": 0.9833,
+   "is_sports": true,
+   "head": "US edge out Brazil for gold The United States beat Brazil 2-1 in extra time to w"
+  },
+  {
+   "row": 355,
+   "ag_label": "World",
+   "p_sports": 0.9817,
+   "is_sports": true,
+   "head": "Greek weightlifter awaits verdict Greek weightlifter Leonidas Sampanis will find"
+  },
+  {
+   "row": 4089,
+   "ag_label": "Business",
+   "p_sports": 0.9814,
+   "is_sports": false,
+   "head": "Start of Ebbers Trial Delayed NEW YORK -- A federal judge has delayed the trial "
+  },
+  {
+   "row": 4234,
+   "ag_label": "World",
+   "p_sports": 0.9732,
+   "is_sports": true,
+   "head": "Cricket: Pakistan edge ahead Pakistan take a slim lead over Sri Lanka by the end"
+  },
+  {
+   "row": 574,
+   "ag_label": "World",
+   "p_sports": 0.9684,
+   "is_sports": false,
+   "head": "Bryant Prosecutors Say Some Data Tainted DENVER - Crucial DNA evidence tested by"
+  },
+  {
+   "row": 2656,
+   "ag_label": "World",
+   "p_sports": 0.9644,
+   "is_sports": true,
+   "head": "Cowboys Defeat Redskins 21-18 LANDOVER, Md. - Bill Parcells celebrated the touch"
+  },
+  {
+   "row": 348,
+   "ag_label": "World",
+   "p_sports": 0.9634,
+   "is_sports": true,
+   "head": "Unknown Nesterenko Makes World Headlines (Reuters) Reuters - Belarus' Yuliya Nes"
+  },
+  {
+   "row": 5659,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.9594,
+   "is_sports": false,
+   "head": "This week in game news They risked hypothermia and fought off the effects of sle"
+  },
+  {
+   "row": 4815,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.9493,
+   "is_sports": false,
+   "head": "Blame player, not game It was like nothing youd ever exercised your thumbs to be"
+  },
+  {
+   "row": 4549,
+   "ag_label": "World",
+   "p_sports": 0.9453,
+   "is_sports": true,
+   "head": "Australia 362-7 v India, third test - close (Reuters) Reuters - Australia were 3"
+  },
+  {
+   "row": 2758,
+   "ag_label": "World",
+   "p_sports": 0.9437,
+   "is_sports": true,
+   "head": "Cricket: Dubai global academy The International Cricket Council are to open a gl"
+  },
+  {
+   "row": 4036,
+   "ag_label": "Business",
+   "p_sports": 0.933,
+   "is_sports": true,
+   "head": "BASS moving headquarters to Florida The Bass Anglers Sportsman Society is moving"
+  },
+  {
+   "row": 6510,
+   "ag_label": "Business",
+   "p_sports": 0.9275,
+   "is_sports": false,
+   "head": "Time to look overseas for a healthier 401(k)  I change the mutual funds in my 40"
+  },
+  {
+   "row": 3746,
+   "ag_label": "World",
+   "p_sports": 0.924,
+   "is_sports": true,
+   "head": "Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the Worl"
+  },
+  {
+   "row": 4137,
+   "ag_label": "World",
+   "p_sports": 0.9156,
+   "is_sports": true,
+   "head": "F1: British Grand Prix ruled out Jackie Stewart rejects Bernie Ecclestone's clai"
+  },
+  {
+   "row": 1377,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.9149,
+   "is_sports": false,
+   "head": "Groups Offers Beer for Blood Donations (AP) AP - Some in Michigan who roll up th"
+  },
+  {
+   "row": 5107,
+   "ag_label": "World",
+   "p_sports": 0.903,
+   "is_sports": false,
+   "head": "New EU Executive Chief Announces Revamped Team The incoming head of the European"
+  },
+  {
+   "row": 4782,
+   "ag_label": "Business",
+   "p_sports": 0.8797,
+   "is_sports": false,
+   "head": "Racing in an Evening Gown (Forbes.com) Forbes.com - Not every driver was dressed"
+  },
+  {
+   "row": 951,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.8332,
+   "is_sports": false,
+   "head": "Hall of Shame   Hall of Fame We spotlight people and products that pester us...a"
+  },
+  {
+   "row": 3265,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.8124,
+   "is_sports": true,
+   "head": "How to take the perfect penalty A sports psychologist says how footballers shoul"
+  },
+  {
+   "row": 881,
+   "ag_label": "Business",
+   "p_sports": 0.812,
+   "is_sports": false,
+   "head": "Scaffold collapse survivors improving One of the men who survived Friday #39;s f"
+  },
+  {
+   "row": 6093,
+   "ag_label": "World",
+   "p_sports": 0.7952,
+   "is_sports": true,
+   "head": "Football: Spanish FA apologises The Spanish FA apologises to its English counter"
+  },
+  {
+   "row": 5903,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.7424,
+   "is_sports": false,
+   "head": "Study: Posture found able to communicate fear A fight breaks out, and even thoug"
+  },
+  {
+   "row": 3684,
+   "ag_label": "Business",
+   "p_sports": 0.7396,
+   "is_sports": false,
+   "head": "Lazard adversaries edge closer to a deal Bruce Wasserstein, head of Lazard, coul"
+  },
+  {
+   "row": 2587,
+   "ag_label": "World",
+   "p_sports": 0.7328,
+   "is_sports": false,
+   "head": "Greek School Bus Crash Kills Seven, Injures 24  KAMMENA VOURLA, Greece (Reuters)"
+  },
+  {
+   "row": 2173,
+   "ag_label": "World",
+   "p_sports": 0.7236,
+   "is_sports": true,
+   "head": "India seeks new TV bids The Indian Board re-opens the bidding for TV rights afte"
+  },
+  {
+   "row": 6145,
+   "ag_label": "World",
+   "p_sports": 0.631,
+   "is_sports": false,
+   "head": "World's oldest man dies aged 113 The world's oldest man, who gave up  driving at"
+  },
+  {
+   "row": 3186,
+   "ag_label": "World",
+   "p_sports": 0.6026,
+   "is_sports": true,
+   "head": "Tennis: Night final for Aus Open The centenary Australian Open will be the first"
+  },
+  {
+   "row": 3008,
+   "ag_label": "Business",
+   "p_sports": 0.5645,
+   "is_sports": false,
+   "head": "G7 fails to reach debt deal Hopes of a deal to write off completely the debts of"
+  },
+  {
+   "row": 3,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.5053,
+   "is_sports": false,
+   "head": "Prediction Unit Helps Forecast Wildfires (AP) AP - It's barely dawn when Mike Fi"
+  },
+  {
+   "row": 4027,
+   "ag_label": "World",
+   "p_sports": 0.4993,
+   "is_sports": true,
+   "head": "Tennis: Davenport to play on Lindsay Davenport says she plans to play in the Aus"
+  },
+  {
+   "row": 1976,
+   "ag_label": "World",
+   "p_sports": 0.3778,
+   "is_sports": true,
+   "head": "Show lights up Paralympics The XII Paralympics begins in Athens, after a spectac"
+  },
+  {
+   "row": 3203,
+   "ag_label": "Business",
+   "p_sports": 0.3502,
+   "is_sports": false,
+   "head": "Minot officials give preliminary approval to Wal-Mart Supercenter MINOT, ND - Ci"
+  },
+  {
+   "row": 7077,
+   "ag_label": "World",
+   "p_sports": 0.3313,
+   "is_sports": true,
+   "head": "Pakistan on back foot in four dayer (AFP) AFP - Pakistan was still struggling at"
+  },
+  {
+   "row": 2300,
+   "ag_label": "World",
+   "p_sports": 0.2783,
+   "is_sports": false,
+   "head": "Job-Loss Panic Rises in Western Europe (AP) AP - Stephane Zervos first suspected"
+  },
+  {
+   "row": 5637,
+   "ag_label": "World",
+   "p_sports": 0.2768,
+   "is_sports": false,
+   "head": "New Ivory Coast Violence Shatters French Connection Chanting  quot;We want the F"
+  },
+  {
+   "row": 5780,
+   "ag_label": "World",
+   "p_sports": 0.2533,
+   "is_sports": false,
+   "head": "Man Sets Himself on Fire Near White House (AP) AP - A man set himself afire Mond"
+  },
+  {
+   "row": 7030,
+   "ag_label": "Business",
+   "p_sports": 0.2487,
+   "is_sports": false,
+   "head": "Without Batting An Eyelash : A very French welcome for a new &lt;b&gt;...&lt;/b&"
+  },
+  {
+   "row": 6072,
+   "ag_label": "Business",
+   "p_sports": 0.2476,
+   "is_sports": false,
+   "head": "Nike co-founder stepping down president effective December 28 after more than a "
+  },
+  {
+   "row": 215,
+   "ag_label": "Sci/Tech",
+   "p_sports": 0.2293,
+   "is_sports": false,
+   "head": "Hurricane center #39;s projection on Charley not far off, data show FORT LAUDERD"
+  },
+  {
+   "row": 87,
+   "ag_label": "World",
+   "p_sports": 0.2268,
+   "is_sports": false,
+   "head": "Fischer's Fiancee: Marriage Plans Genuine (AP) AP - Former chess champion Bobby "
+  },
+  {
+   "row": 7219,
+   "ag_label": "World",
+   "p_sports": 0.2216,
+   "is_sports": false,
+   "head": "Poes condition worsens--doctors (2nd UPDATE) MOVIE actor Fernando Poe Jr. #39;s "
+  },
+  {
+   "row": 3304,
+   "ag_label": "Business",
+   "p_sports": 0.2193,
+   "is_sports": false,
+   "head": "Howard Stern moves radio show to Sirius Shock jock Howard Stern announced Wednes"
+  },
+  {
+   "row": 2046,
+   "ag_label": "Business",
+   "p_sports": 0.2085,
+   "is_sports": false,
+   "head": "Malls setting curfews for unchaperoned teens COLUMBUS, Ohio -- It's 10 on a Frid"
+  }
+ ]
+}
