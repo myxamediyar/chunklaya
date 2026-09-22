@@ -94,6 +94,10 @@ Two things about asking, both reproduced from the top-level README's results:
   — its answer for a passage about neither label. With `top_k: 3` the
   mixture reached 0.93. Categorical questions belong to `scan`, or to
   `locate` with a `top_k` large enough to see representative passages.
+  Label meanings only help retrieval when their words occur in the text
+  verbatim: the harness's BM25 tokenises on `[a-z0-9]+` with no stemming
+  and no stopword list, so "refunds" does not match "refund", and a query
+  whose only hit is "and" ranks the one paragraph that contains "and".
 
 Refusals carry `{error: {code, message}}`, and a `detail` string on 422.
 `429` and `503` set `Retry-After`. `504` means the request passed
