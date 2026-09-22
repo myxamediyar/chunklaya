@@ -1,0 +1,51 @@
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 2388.83it/s]
+loaded on mps in 23s; filler pool 17864 unique contexts, 3.42M tokens
+
+=== 24k (~24,000 tokens) ===
+  10/60  46s elapsed  (0.0s/doc bm25@1, 126 chunks)
+  20/60  48s elapsed  (0.0s/doc bm25@1, 119 chunks)
+  30/60  49s elapsed  (0.0s/doc bm25@1, 125 chunks)
+  40/60  50s elapsed  (0.0s/doc bm25@1, 128 chunks)
+  50/60  52s elapsed  (0.0s/doc bm25@1, 122 chunks)
+  60/60  53s elapsed  (0.0s/doc bm25@1, 126 chunks)
+  one document: 126 chunks, 20,144 tokens; chunking 0.0s, BM25 0.0s
+  bm25@1  n=60  acc@0.5=0.883  AUC=0.993 [0.978,1.000]  rec@spec90=0.933  chunks=127 scored=1  0.02s/doc
+  bm25@5  n=60  acc@0.5=0.500  AUC=0.608 [0.461,0.753]  rec@spec90=0.067  chunks=127 scored=5  0.11s/doc
+  full    n=10  acc@0.5=0.500  AUC=0.280 [0.000,0.640]  rec@spec90=0.000  chunks=127 scored=127  2.17s/doc
+
+=== 100k (~100,000 tokens) ===
+  10/60  121s elapsed  (0.1s/doc bm25@1, 518 chunks)
+  20/60  124s elapsed  (0.1s/doc bm25@1, 518 chunks)
+  30/60  127s elapsed  (0.1s/doc bm25@1, 524 chunks)
+  40/60  129s elapsed  (0.1s/doc bm25@1, 536 chunks)
+  50/60  132s elapsed  (0.1s/doc bm25@1, 514 chunks)
+  60/60  134s elapsed  (0.1s/doc bm25@1, 526 chunks)
+  one document: 530 chunks, 83,463 tokens; chunking 0.1s, BM25 0.0s
+  bm25@1  n=60  acc@0.5=0.883  AUC=0.993 [0.978,1.000]  rec@spec90=0.933  chunks=524 scored=1  0.09s/doc
+  bm25@5  n=60  acc@0.5=0.500  AUC=0.450 [0.302,0.602]  rec@spec90=0.100  chunks=524 scored=5  0.16s/doc
+  full    n=10  acc@0.5=0.500  AUC=0.400 [0.040,0.800]  rec@spec90=0.000  chunks=521 scored=521  6.56s/doc
+
+=== 300k (~300,000 tokens) ===
+  10/60  312s elapsed  (0.3s/doc bm25@1, 1546 chunks)
+  20/60  318s elapsed  (0.3s/doc bm25@1, 1555 chunks)
+  30/60  324s elapsed  (0.3s/doc bm25@1, 1573 chunks)
+  40/60  331s elapsed  (0.3s/doc bm25@1, 1606 chunks)
+  50/60  337s elapsed  (0.3s/doc bm25@1, 1564 chunks)
+  60/60  343s elapsed  (0.3s/doc bm25@1, 1564 chunks)
+  one document: 1577 chunks, 251,326 tokens; chunking 0.2s, BM25 0.1s
+  bm25@1  n=60  acc@0.5=0.883  AUC=0.993 [0.978,1.000]  rec@spec90=0.933  chunks=1568 scored=1  0.28s/doc
+  bm25@5  n=60  acc@0.5=0.500  AUC=0.561 [0.403,0.711]  rec@spec90=0.167  chunks=1568 scored=5  0.34s/doc
+  full    n=10  acc@0.5=0.500  AUC=0.240 [0.000,0.600]  rec@spec90=0.000  chunks=1568 scored=1568  17.12s/doc
+
+=== 1m (~1,000,000 tokens) ===
+  10/60  363s elapsed  (0.9s/doc bm25@1, 5190 chunks)
+  20/60  383s elapsed  (0.9s/doc bm25@1, 5189 chunks)
+  30/60  402s elapsed  (0.9s/doc bm25@1, 5230 chunks)
+  40/60  421s elapsed  (0.9s/doc bm25@1, 5254 chunks)
+  50/60  441s elapsed  (0.9s/doc bm25@1, 5226 chunks)
+  60/60  460s elapsed  (0.9s/doc bm25@1, 5230 chunks)
+  one document: 5224 chunks, 840,899 tokens; chunking 0.7s, BM25 0.2s
+  bm25@1  n=60  acc@0.5=0.883  AUC=0.993 [0.978,1.000]  rec@spec90=0.933  chunks=5213 scored=1  0.92s/doc
+  bm25@5  n=60  acc@0.5=0.500  AUC=0.509 [0.365,0.651]  rec@spec90=0.067  chunks=5213 scored=5  1.02s/doc
+
+wrote /Users/mukhamediyar/Developer/garlic/chunklaya/results/2026-09-22-needle-scale/results.json | total 460s

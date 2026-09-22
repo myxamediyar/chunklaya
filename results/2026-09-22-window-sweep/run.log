@@ -1,0 +1,27 @@
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 456.87it/s]
+loaded on mps in 23s; cfg max_len=1024 head_max_len=256
+
+=== Exp 2: needle noul, ~3800 tok haystack ===
+  detector: choice
+  raw@4096: 0 ms/state, seq≈3794
+  chunked para: 3 ms/state, 70 chunks/state
+  chunked 256/128: 292 ms/state, 29 chunks/state
+  chunked 200/100: 301 ms/state, 37 chunks/state
+  chunked 128/64: 320 ms/state, 58 chunks/state
+
+  AUC needle-present vs absent, bootstrap 95% CI (n=100/cell); recall@spec90 in brackets
+  arm                                      start                        middle                           end  none q50  tok/doc  in band
+  raw4096               0.902 [0.85,0.94] r=0.82      0.511 [0.43,0.59] r=0.10      0.518 [0.44,0.60] r=0.12     0.000     3794     2.0%
+  max_para              0.882 [0.83,0.93] r=0.53      0.882 [0.83,0.93] r=0.53      0.882 [0.83,0.93] r=0.53     0.982     6884     0.2%
+  any_para              0.879 [0.83,0.92] r=0.57      0.879 [0.83,0.92] r=0.57      0.879 [0.83,0.92] r=0.57     0.983     6884     0.5%
+  max_256/128           0.735 [0.66,0.80] r=0.22      0.677 [0.60,0.75] r=0.20      0.624 [0.55,0.70] r=0.16     0.018     8667     7.0%
+  any_256/128           0.733 [0.65,0.80] r=0.23      0.679 [0.60,0.75] r=0.21      0.625 [0.55,0.70] r=0.16     0.031     8667     7.8%
+  max_200/100           0.698 [0.61,0.77] r=0.24      0.698 [0.63,0.77] r=0.26      0.618 [0.54,0.69] r=0.17     0.088     9052     9.5%
+  any_200/100           0.701 [0.62,0.77] r=0.30      0.697 [0.63,0.77] r=0.26      0.620 [0.54,0.69] r=0.18     0.109     9052     8.0%
+  max_128/64            0.682 [0.60,0.75] r=0.20      0.719 [0.65,0.79] r=0.27      0.722 [0.65,0.79] r=0.32     0.585    10066     9.2%
+  any_128/64            0.682 [0.60,0.75] r=0.25      0.725 [0.65,0.79] r=0.35      0.718 [0.65,0.79] r=0.30     0.692    10066     7.2%
+  'in band' = share of all documents whose score falls in [0.3, 0.7] — the fraction a classifier.dev-style smart tier would escalate
+
+cache: 28693 rows cached, 52012 hits / 25716 misses this session
+
+written results/2026-09-22-window-sweep/results.json  |  total 390s

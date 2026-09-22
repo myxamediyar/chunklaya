@@ -1,0 +1,32 @@
+loaded in 83s; pool 5659 (36 Laya false positives), 100 needles, 500 train sports articles
+cosine to 'sports and athletics':  train sports q05 0.462 q50 0.522 | test needles q05 0.465 q50 0.541 | pool q50 0.451 q99 0.539
+Laya FPs > 0.9 (16): cosine q50 0.505 max 0.584; 13 of them pass the gate at 0.462; needles passing: 97/100; pool passing: 2125/5659
+   P=0.9998 cos=0.525 PASS Bryant Makes First Appearance at Trial (AP) AP - NBA star Ko
+   P=0.9995 cos=0.584 PASS Special to ESPN.com It #39;s the age old question:  quot;Wha
+   P=0.9984 cos=0.471 PASS Sandia Motor Speedway for Sale on eBay (AP) AP - And the rac
+   P=0.9983 cos=0.506 PASS GAME UNDER FIRE Attacking police officers, racial slurs, blo
+   P=0.9970 cos=0.577 PASS Two gored to death in Spanish bull-run Two Spanish men were 
+   P=0.9954 cos=0.481 PASS Hawks Evicted From New York City Perch (AP) AP - Pale Male t
+   P=0.9954 cos=0.453 cut  Daily Mail hits back at Blunkett The Daily Mail today dismis
+   P=0.9946 cos=0.490 PASS World ; Bigley: I want to live a simple life, the final plea
+   P=0.9909 cos=0.449 cut  Study Ranks St. Louis as Fourth Most Dangerous City A new st
+   P=0.9814 cos=0.423 cut  Start of Ebbers Trial Delayed NEW YORK -- A federal judge ha
+   P=0.9684 cos=0.504 PASS Bryant Prosecutors Say Some Data Tainted DENVER - Crucial DN
+   P=0.9594 cos=0.530 PASS This week in game news They risked hypothermia and fought of
+   P=0.9493 cos=0.522 PASS Blame player, not game It was like nothing youd ever exercis
+   P=0.9275 cos=0.552 PASS Time to look overseas for a healthier 401(k)  I change the m
+   P=0.9149 cos=0.538 PASS Groups Offers Beer for Blood Donations (AP) AP - Some in Mic
+   P=0.9030 cos=0.471 PASS New EU Executive Chief Announces Revamped Team The incoming 
+
+      m             arm          AUC [95% CI]  r@spec90  none q50  none q90  needle q50
+     70              4w   0.980 [0.96,0.99]      0.95     0.065     0.995       1.000
+     70   4w+dense gate   0.962 [0.93,0.99]      0.92     0.015     0.995       1.000
+    300              4w   0.943 [0.91,0.97]      0.74     0.959     0.999       1.000
+    300   4w+dense gate   0.932 [0.90,0.96]      0.72     0.915     0.999       1.000
+   1000              4w   0.865 [0.81,0.91]      0.63     0.998     1.000       1.000
+   1000   4w+dense gate   0.862 [0.81,0.91]      0.63     0.998     1.000       1.000
+   3000              4w   0.785 [0.72,0.84]      0.78     1.000     1.000       1.000
+   3000   4w+dense gate   0.781 [0.71,0.84]      0.78     1.000     1.000       1.000
+   5600              4w   0.785 [0.73,0.83]      1.00     1.000     1.000       1.000
+   5600   4w+dense gate   0.780 [0.73,0.82]      1.00     1.000     1.000       1.000
+written /Users/mukhamediyar/Developer/garlic/chunklaya/results/2026-09-22-tail-dense/results.json | total 84s

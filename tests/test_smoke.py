@@ -101,4 +101,22 @@ for label, kw in (("noul", {}), ("choice detector", {"detectors": {"q": (det("44
 full = ChunkLaya(agent, 750, mode="paragraphs").ask(text2, {"q": q("4417")})
 assert full["answers"]["q"]["n_scored"] == full["n_chunks"] and full["prefilter"] is None
 print("   without prefilter every chunk is scored, as before")
+
+# 7. index once, ask many: BM25Index keeps bm25_rank's semantics, and ask(index) == ask(text)
+from chunklaya import BM25Index, ChunkIndex
+docs = ["the cat sat", "a dog barked", "cat and cat again", "", "dog dog cat"]
+for query in ("cat", "cat cat", "dog cat", "zebra", ""):
+    assert BM25Index(docs).rank(query) == bm25_rank(docs, query), query
+idx = pf.index(text2)
+assert isinstance(idx, ChunkIndex) and len(idx) == hit["n_chunks"] and idx._bm25 is None
+for code in ("4417", "9911"):
+    a = pf.ask(idx, {"q": q(code)}, detectors={"q": (det(code), "yes")})["answers"]["q"]
+    b = pf.ask(text2, {"q": q(code)}, detectors={"q": (det(code), "yes")})["answers"]["q"]
+    assert a["noul"] == b["noul"] and a["chunks"] == b["chunks"], code
+assert idx._bm25 is not None                                   # built on first prefiltered ask, once
+try:
+    ChunkLaya(agent, 512, mode="paragraphs", prefilter="bm25").ask(idx, {"q": q("4417")}); assert False
+except ValueError:
+    pass                                                        # an index from a different chunker is refused
+print(f"7. ChunkIndex: {len(idx)} chunks, indexed once, same answers as asking the text")
 print("all smoke tests passed")
