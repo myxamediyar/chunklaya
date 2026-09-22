@@ -1,0 +1,17 @@
+# The image needs the package, its metadata, and serve/. Everything else is
+# experiments and their outputs.
+.git
+.github
+.venv
+__pycache__
+*.pyc
+*.egg-info
+.cache
+.DS_Store
+results
+eval
+tests
+third_party
+tasks
+WRITEUP.md
+requirements.txt
