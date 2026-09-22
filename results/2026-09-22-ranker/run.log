@@ -1,0 +1,44 @@
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 2525.17it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 11626.66it/s]
+loaded in 25s on mps; dense=BAAI/bge-small-en-v1.5
+pool: 877 non-sports; clean pool: 863 (dropped 14 with Laya P(Sports) > 0.2)  [28693 rows cached, 877 hits / 0 misses this session]
+
+=== pool: exp2 (~70) ===
+  ranker  query       R@1    R@3    R@5   R@10   R@20   R@50  med rank     m
+  bm25    noul       0.00   0.06   0.09   0.15   0.24   0.68        44    70
+  dense   noul       0.16   0.28   0.37   0.51   0.74   0.94         9    70
+  hybrid  noul       0.03   0.10   0.15   0.27   0.59   0.92        17    70
+  bm25    choice     0.01   0.02   0.06   0.12   0.24   0.78        38    70
+  dense   choice     0.01   0.06   0.09   0.19   0.34   0.79        28    70
+  hybrid  choice     0.01   0.02   0.07   0.16   0.35   0.73        30    70
+  bm25    option     0.03   0.10   0.14   0.17   0.31   0.77        43    70
+  dense   option     0.29   0.62   0.72   0.86   0.92   0.99         2    70
+  hybrid  option     0.15   0.22   0.27   0.39   0.85   0.99        11    70
+
+=== pool: full (877) ===
+  ranker  query       R@1    R@3    R@5   R@10   R@20   R@50  med rank     m
+  bm25    noul       0.00   0.00   0.00   0.06   0.06   0.09       572   878
+  dense   noul       0.00   0.07   0.13   0.17   0.25   0.32       112   878
+  hybrid  noul       0.00   0.04   0.05   0.06   0.11   0.26       194   878
+  bm25    choice     0.00   0.00   0.00   0.01   0.01   0.02       458   878
+  dense   choice     0.00   0.00   0.00   0.01   0.04   0.08       394   878
+  hybrid  choice     0.00   0.01   0.01   0.01   0.01   0.04       380   878
+  bm25    option     0.00   0.02   0.06   0.06   0.09   0.11       633   878
+  dense   option     0.01   0.05   0.17   0.24   0.41   0.69        21   878
+  hybrid  option     0.01   0.11   0.13   0.20   0.24   0.47        51   878
+
+=== pool: clean (863) ===
+  ranker  query       R@1    R@3    R@5   R@10   R@20   R@50  med rank     m
+  bm25    noul       0.00   0.00   0.00   0.06   0.06   0.09       565   864
+  dense   noul       0.00   0.07   0.16   0.21   0.26   0.32       106   864
+  hybrid  noul       0.00   0.05   0.05   0.06   0.11   0.28       184   864
+  bm25    choice     0.00   0.01   0.01   0.01   0.01   0.02       452   864
+  dense   choice     0.00   0.00   0.00   0.01   0.04   0.08       386   864
+  hybrid  choice     0.01   0.01   0.01   0.01   0.01   0.04       373   864
+  bm25    option     0.00   0.05   0.06   0.06   0.09   0.11       622   864
+  dense   option     0.01   0.05   0.18   0.28   0.62   0.71        16   864
+  hybrid  option     0.01   0.13   0.15   0.20   0.24   0.56        44   864
+
+dense encoder: 980 passages in 3.0s = 3.0 ms/passage
+written /Users/mukhamediyar/Developer/garlic/chunklaya/results/2026-09-22-ranker/results.json | total 38s

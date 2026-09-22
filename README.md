@@ -1,8 +1,21 @@
-# chunklaya
+# chunklaya — unbounded-context System 1
+
+**A decision model with no context limit. Tested at 1,000,000 tokens.**
 
 Long-input harness for [Laya](https://github.com/NandhaKishorM/laya), the open-weights System 1
 decision model: typed questions — `noul`, `choice`, `score` — answered over one piece of text in a
 single forward pass, no autoregression. It's the open answer to TypeSafe's closed Jev.
+
+Nothing in the harness scales with document length: chunk, locate the passage the question is about,
+and spend exactly one forward pass on it. On the public Jev needle benchmark that holds from 24k
+tokens to 1M — **AUC 0.993 at every size, unchanged to three decimals**, one passage scored, 0.9 s for
+a million-token document and 15 ms per question after it's indexed. Jev itself stops at 32k.
+
+The honest boundary, measured in the same runs: that's a *lookup* — a question naming something you
+can search for. A *categorical* question ("is there any sports story in here?") has nothing to rank
+on, so every passage gets scored, and the answer is then only as good as the detector's
+false-positive rate times the number of passages — good to a few hundred passages, decaying after
+(0.985 at 70, 0.785 at 5600). Both curves are below, with the things that didn't fix the second one.
 
 Laya's checkpoints are configured for 512–1024 tokens, and Jev reads 32k. So what happens if you just
 feed Laya more text? Not what you'd guess. The encoder handles long input fine — it's pretrained to
@@ -13,8 +26,7 @@ give it. A fact buried in the middle of a long document is effectively invisible
 This repo measures that failure precisely, then fixes it: chunk the input into passages, screen each
 one, combine the results — or, when the question names something you can search for, locate the one
 passage that matters and let Laya read just that. Tested on 400 documents with real confidence
-intervals, at no extra cost over just cranking up the context window, and now against Jev on a
-public needle benchmark (below).
+intervals, at no extra cost over just cranking up the context window.
 
 The narrative version is in [WRITEUP.md](WRITEUP.md), if you want the story instead of the reference.
 
@@ -23,9 +35,11 @@ The narrative version is in [WRITEUP.md](WRITEUP.md), if you want the story inst
 | | Plain Laya | + chunklaya |
 |---|---|---|
 | Classify or rate a long, coherent document | Fine up to 4096 tokens once you raise `max_len` (0.98–0.99 acc) | No change needed |
-| Find whether something occurs anywhere in a long, multi-part input | Chance past the first ~200 tokens (AUC 0.51, CI includes 0.5) | 0.88 at every position, no filtering; 1.000 once known label noise is removed |
+| Find whether something occurs anywhere in a long, multi-part input | Chance past the first ~200 tokens (AUC 0.51, CI includes 0.5) | 0.88 at every position, no filtering; 0.985 with AG News's mislabeled articles hand-removed |
 | How precise the per-passage detector is | The default `noul` question misses 2 of 3 true positives, even on one clean passage | Swap to a described `choice` question: 0.3% false positives |
 | Look up a named fact in a long document (the Jev needle benchmark) | Chance past the opening | `prefilter="bm25"`: AUC 0.993 at 1k, 12k and 24k against Jev's 1.000, one passage scored |
+| The same lookup at 100k, 300k, 1M tokens | Can't be asked | 0.993 at every size, 0.9 s/doc at 1M; `index` once and it's 15 ms per question |
+| "Does X occur anywhere" over thousands of passages | — | Holds to ~300 passages (0.94), then the detector's own false-positive tail takes over: 0.79 at 5600 |
 | Cost vs. one long raw call | — | About the same (483 vs 469 ms/doc) |
 
 What's actually in the package:
@@ -43,6 +57,9 @@ What's actually in the package:
 - **`prefilter="bm25"`** (`prefilter.py`) — rank the chunks against the question text and score only
   the top `top_k`. Locating a passage and judging it are different jobs; this hands the first to a
   ranker and keeps Laya on the second. Stdlib BM25, no forward pass.
+- **`ChunkLaya.index`** (`harness.py`) — chunk a text once, build its BM25 postings once, and pass the
+  `ChunkIndex` to `ask` instead of the text. At 1M tokens that's the difference between 0.98 s and
+  0.015 s per question, because chunking and indexing were all of the cost.
 - **`aggregate.py`** — `max`, noisy-OR, and mean for combining `noul` scores across chunks; mixture and
   log-linear pooling for `choice`/`score`.
 - **`PredictionCache`** (`cache.py`) — caches every prediction to disk, keyed by the exact input.
@@ -77,6 +94,13 @@ out = cj.ask(long_document,
              detectors={"has_sports": (CATEGORY, "Sports")})
 out["answers"]["has_sports"]["noul"]      # document-level P(true)
 out["answers"]["has_sports"]["chunks"]    # per-passage scores and offsets
+
+# A named fact in a very long document: locate with BM25, verify one passage. Index once if it
+# will take more than one question.
+cj = ChunkLaya(agent, mode="paragraphs", prefilter="bm25", top_k=1)
+idx = cj.index(million_token_document)                      # ~1 s at 1M tokens, once
+cj.ask(idx, {"q": {"type": "noul", "instructions": "Does the text state that the access code for the teal harbor locker is 4417?"}},
+       detectors={"q": (VERIFY_4417, "yes")})              # ~15 ms: one forward pass
 ```
 
 ## Results
@@ -228,6 +252,79 @@ sports story among non-sports news — has no key phrase to rank on, so there th
 detector remains the recipe. Whether an embedding ranker does for that case what BM25 does for this
 one is the next experiment.
 
+### Update 2: a million tokens, and where the categorical case stops
+
+Two questions were left open above: whether the locate step keeps working as the document grows past
+anything Jev can read, and whether something like it exists for a needle with nothing to search for.
+Both were run on 2026-09-22; scripts are in `eval/`, every row in `results/2026-09-22-*`.
+
+**The lexical needle is flat to 1M tokens.** The benchmark's own 60 needles (same seed, colors, codes
+and depths), in haystacks of *unique* SQuAD-train paragraphs so nothing repeats, `prefilter="bm25",
+top_k=1`, choice detector:
+
+| | 24k | 100k | 300k | 1M |
+|---|---|---|---|---|
+| tokens actually in the document | 20k | 83k | 251k | 841k |
+| chunks | 126 | 530 | 1577 | 5224 |
+| **AUC** | **0.993** [0.98, 1.00] | **0.993** | **0.993** | **0.993** |
+| accuracy @ 0.5 | 0.883 | 0.883 | 0.883 | 0.883 |
+| Laya passes | 1 | 1 | 1 | 1 |
+| s/doc (of which chunk + BM25) | 0.02 | 0.09 (0.1) | 0.28 (0.3) | 0.92 (0.9) |
+
+Identical to three decimals, and identical accuracy: BM25 put the needle first in every document at
+every size, so Laya saw the same passage every time and the length did nothing. Scoring every chunk
+instead is at chance from 24k on (0.28–0.40, n=10) and 17 s/doc by 300k; `top_k=5` is also at
+chance (0.45–0.61) — on the mismatched-code items the four unrelated passages BM25 adds outscore the
+needle, so for this verifier `top_k` is 1, not a knob. At 1M tokens the 0.92 s is chunking (0.7 s)
+and BM25 (0.2 s); `ChunkLaya.index` does both once, after which ten questions took 0.15 s
+(`results/2026-09-22-index-timing`).
+
+**The categorical needle has a ceiling, and it's the detector's.** The sports needle from the
+headline table, in haystacks of m passages drawn from the whole AG News test split. Paragraph mode
+scores each passage on its own, so a document's score is a function of its passages' cached scores;
+every arm below is computed that way, and checked against `ChunkLaya.ask` to 0.00e+00. The pool is
+the honest one: AG News's mislabeled sports stories are out (41 of them, hand-labeled in
+`eval/data/ag_news_full_relabels.json`), and Laya's own 36 false positives stay in.
+
+| passages m | 70 | 300 | 1000 | 3000 | 5600 |
+|---|---|---|---|---|---|
+| ≈ tokens | 4k | 16k | 55k | 165k | 310k |
+| **every passage scored, `max`** | **0.985** | **0.943** | **0.879** | **0.820** | **0.785** |
+| bge-small ranks, Laya scores top 20 | 0.951 | 0.818 | 0.765 | 0.645 | 0.575 |
+| bge-small ranks, Laya scores top 100 | — | 0.925 | 0.812 | 0.696 | 0.690 |
+| needle-free document's median score | 0.085 | 0.915 | 0.998 | 1.000 | 1.000 |
+
+The needle scores 1.000 at every m. What moves is the needle-free document: the 4-way `choice`
+rates 36 of 5659 genuinely non-sports passages above 0.2, 16 above 0.9, and one — the Kobe Bryant
+sexual-assault trial — at 0.9998. By 3000 passages one of those is in nearly every haystack, and
+`max` can't tell it from the needle. That's the false-positive-times-m term from the first section,
+with the rate now measured: 0.28% at 0.9. Note the Laya-cleaned pool the headline's clean table used
+would show 1.000 at every m here, and that's circular — nothing left in a pool cleaned at 0.2 can
+outscore 0.2 — which is why the relabeling was done by hand.
+
+Things that don't fix it, each tried on the same haystacks (`results/2026-09-22-tail*`):
+
+- *Retrieval.* bge-small against "sports and athletics" puts the needle in its top 20 for 92% of
+  70-passage haystacks and 62% of 863-passage ones (BM25: 31% and 9% — a category isn't a phrase).
+  Ranking first then loses recall without touching the tail, so it's below full scan at every m.
+- *Rephrasing the detector.* A 2-way choice, a 5-way with an explicit "adjacent: an athlete's
+  trial, a sports brand, a video game" class, a strict 4-way: same tail (12–38 passages above 0.9,
+  max 0.999). Same weights, same mistakes. The best of them, averaging the 4-way and 2-way, buys
+  0.785 → 0.853 at m=5600 for twice the passes.
+- *A different model as a second opinion.* Gate on bge-small's cosine to "sports", threshold set on
+  train-split sports articles: 13 of the 16 high false positives pass it. On that axis the pool's
+  99th percentile (0.539) is the needles' median (0.541).
+- *Smaller windows.* Matching `chunk_tokens` to the ~200-token decay knee (256/128, 200/100,
+  128/64) scores 0.62–0.73 against paragraph mode's 0.88 on the headline task. The head needs the
+  passage to *start* at offset 0, not merely to be near it, and a window of mixed content dilutes a
+  `choice`. Token windows are out for existence questions at any size.
+
+So the honest statement is: a categorical existence question with this checkpoint holds to a few
+hundred passages, and past that the answer is only as good as the detector's tail. The fixes are
+outside the harness — a head fine-tuned on sports-adjacent negatives, or escalating the handful of
+passages Laya rates above 0.9 to a larger judge, classifier.dev's smart-tier move — and neither has
+been run.
+
 ## How to use it, in practice
 
 ```
@@ -242,7 +339,11 @@ Whole-document question (classify it, rate it)
       false-alarm rate per document — that's the number to optimize, not the needle detection itself
     → if the question names something searchable (a name, a code, a phrase), add
       prefilter="bm25", top_k=1: Laya scores one passage instead of all of them, and the
-      false-alarm term above goes away
+      false-alarm term above goes away — measured flat to 1M tokens; keep top_k at 1
+    → if it doesn't (a category, a theme), score every passage and expect the answer to hold to
+      a few hundred of them; past that, the detector's false-positive tail sets the answer
+    → one text, many questions: idx = cj.index(text), then cj.ask(idx, ...) — the chunking and
+      the BM25 index are the whole per-question cost at length
 
 Whole-document question over something that doesn't fit even 4096 tokens
     → ChunkLaya(mode="tokens", chunk_tokens=750, stride=375), aggregate with "mixture" or "loglinear"
@@ -257,8 +358,9 @@ chunklaya/
   cache.py       PredictionCache — on-disk cache keyed by (state, question, window, checkpoint)
   chunk.py       chunk_text (overlapping token windows) and chunk_paragraphs (one passage per chunk)
   aggregate.py   noul_max / noul_any / noul_mean, choice_mixture / choice_loglinear, score_expected
-  prefilter.py   bm25_rank — the locate step behind prefilter="bm25"
-  harness.py     ChunkLaya.ask(state, questions, agg=, detectors=) — same shape as laya.Agent.predict
+  prefilter.py   BM25Index / bm25_rank — the locate step behind prefilter="bm25"
+  harness.py     ChunkLaya.ask(state, questions, agg=, detectors=) — same shape as laya.Agent.predict;
+                 ChunkLaya.index(text) → ChunkIndex, chunked and indexed once for many asks
 eval/
   needle_data.py     deterministic test-state builders
   fetch_data.py      how eval/data/ag_news.json was built
@@ -267,7 +369,12 @@ eval/
   exp_detector.py    Finding 4 — comparing detector questions
   exp_needle_vs_jev.py   the Jev comparison: jev-decision-bench's needle tasks, with and without the prefilter
   run_jev_needle.py      the same tasks against TypeSafe's API, with your own key
-  analyze_maxlen.py, jev_needle_by_depth.py, metrics.py
+  exp_needle_scale.py    Update 2: the same needle at 24k / 100k / 300k / 1M tokens
+  exp_scale_semantic.py  Update 2: the sports needle vs haystack size, full scan and dense top-k
+  exp_ranker.py          recall@k of BM25 / bge-small / hybrid on the sports needle
+  exp_tail.py, exp_tail_dense.py   detector rephrasings and a dense gate against the false-positive tail
+  fetch_scale_data.py    the full AG News test split and SQuAD contexts behind Update 2 (gitignored, 17 MB)
+  jev_questions.py, dense_ranker.py, analyze_maxlen.py, jev_needle_by_depth.py, metrics.py
 results/         one folder per run — see results/README.md
 tests/test_smoke.py   equivalence and correctness checks against the live model, ~1 min
 third_party/     the needle-task builders behind the Jev comparison — someone else's code, their
@@ -284,6 +391,10 @@ third_party/     the needle-task builders behind the Jev comparison — someone 
 .venv/bin/python eval/exp_detector.py                                                          # ~1 min
 .venv/bin/python eval/exp_needle_vs_jev.py --arms noul,choice --prefilter bm25 --top-k 1        # the Jev table, ~1 min
 .venv/bin/python eval/exp_needle_vs_jev.py                                                     # every chunk scored, ~6 min
+.venv/bin/python eval/fetch_scale_data.py                                                      # once, for the runs below
+.venv/bin/python eval/exp_needle_scale.py --sizes 24k,100k,300k,1m                             # the 1M-token table, ~8 min
+.venv/bin/python eval/exp_scale_semantic.py --n 100                                            # the AUC-vs-m table, ~1 min after the pool is cached
+.venv/bin/python eval/exp_chunked.py --n 100 --exp 2 --configs para,256/128,200/100,128/64 --detector choice   # small windows, ~7 min
 ```
 
 Timings are for an M4 Pro on MPS in fp32. If an MPS op isn't implemented, set
@@ -293,10 +404,12 @@ Timings are for an M4 Pro on MPS in fp32. If an MPS op isn't implemented, set
 
 - The Jev column is the benchmark author's run. `eval/run_jev_needle.py` reruns it from a TypeSafe
   key, and can put Jev on our semantic needle, which no public number covers.
-- `prefilter="bm25"` is lexical. A question with nothing to search for — the sports needle — still
-  scores every passage; an embedding ranker for that case is untested.
+- The categorical ceiling (Update 2) is the detector's false-positive tail, and nothing tried inside
+  the harness moves it. The two untested fixes are a head fine-tuned on sports-adjacent negatives
+  and escalating the passages Laya rates above 0.9 to a larger judge.
 - Real long documents (contracts, transcripts) won't split as cleanly on blank lines as news articles
-  do. That's the next thing worth testing.
+  do, and token windows don't substitute (Update 2). A sentence- or turn-boundary chunker is the
+  next thing worth testing.
 - The mixture/log-linear aggregation was only tested where every chunk agrees. Disagreeing chunks are
   untested.
 - Everything here uses one detector (sports/not-sports) on one kind of passage (news articles). The
@@ -311,5 +424,7 @@ Timings are for an M4 Pro on MPS in fp32. If an MPS op isn't implemented, set
 Apache 2.0 (see [LICENSE](LICENSE)) — same as Laya. `third_party/` is someone else's code under its
 own MIT license (see `third_party/LICENSE-jev-decision-bench`); Apache 2.0 doesn't extend to those
 files. `eval/data/ag_news.json` is a 1200-row sample of the AG News test split from the Hugging Face
-mirror `fancyzhx/ag_news`. `results/jev-decision-bench-needle/` is someone else's published output, kept
+mirror `fancyzhx/ag_news`; `eval/fetch_scale_data.py` regenerates the full split and the SQuAD v1.1
+contexts (`rajpurkar/squad`) that Update 2 uses, and `eval/data/ag_news_full_relabels.json` is our
+hand labeling of 77 of its rows. `results/jev-decision-bench-needle/` is someone else's published output, kept
 here under its original MIT license so the comparisons above can be checked.

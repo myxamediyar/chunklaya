@@ -1,0 +1,23 @@
+loaded on mps in 22s
+1. predict_many matches agent.predict for choice / noul / score
+2. batch of 12 vs singles: max |Δp| = 2.98e-07
+3. chunk_text(750,375) → 11 chunks, sizes [750, 750, 750, 750, 750, 750, 750, 750, 750, 750, 500]
+3. chunk_text(750,750) → 6 chunks, sizes [750, 750, 750, 750, 750, 500]
+3. chunk_text(512,256) → 16 chunks, sizes [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 410]
+3. chunk_text(1024,512) → 8 chunks, sizes [1024, 1024, 1024, 1024, 1024, 1024, 1024, 666]
+4. passthrough on 1-chunk input matches agent.predict
+5. long input: 11 chunks, 42332 tokens in, 3.0s
+   noul=0.605 (max over chunks [0.0, 0.0, 0.0, 0.0, 0.16, 0.41, 0.38, 0.61, 0.59, 0.12, 0.57])
+   choice=World conf=0.210 gates=[0.05, 0.01, 0.02, 0.04, 0.08, 0.08, 0.01, 0.08, 0.94, 0.94, 0.04]
+   loglinear=World  stack=Sci/Tech
+6. prefilter [noul]: 71 chunks -> 1 scored; match=0.967 mismatch=0.803
+6. prefilter [choice detector]: 71 chunks -> 1 scored; match=0.964 mismatch=0.056
+   without prefilter every chunk is scored, as before
+7. ChunkIndex: 71 chunks, indexed once, same answers as asking the text
+all smoke tests passed
+smoke exit 0
+
+1M-token document (5224 chunks), 10 questions:
+  ask(text) x10          9.77s  = 0.98s/question
+  index                  0.67s  (chunking) + 0.26s (BM25 postings), once
+  ask(index) x10         0.15s  = 0.015s/question

@@ -1,0 +1,5634 @@
+{
+ "sizes": {
+  "24k": {
+   "stats": {
+    "breakdown": {
+     "n_chunks": 126,
+     "tokens": 20144,
+     "s_chunk": 0.029242753982543945,
+     "s_rank": 0.005053043365478516
+    },
+    "bm25@1": {
+     "n": 60,
+     "acc@0.5": 0.8833333333333333,
+     "auc": 0.9933333333333333,
+     "auc_lo": 0.9777777777777777,
+     "auc_hi": 1.0,
+     "recall@spec90": 0.9333333333333333,
+     "s_per_doc": 0.02384696404139201,
+     "n_chunks": 126.76666666666667,
+     "n_scored": 1
+    },
+    "bm25@5": {
+     "n": 60,
+     "acc@0.5": 0.5,
+     "auc": 0.6077777777777778,
+     "auc_lo": 0.46108333333333335,
+     "auc_hi": 0.753361111111111,
+     "recall@spec90": 0.06666666666666667,
+     "s_per_doc": 0.11478843291600545,
+     "n_chunks": 126.76666666666667,
+     "n_scored": 5
+    },
+    "full": {
+     "n": 10,
+     "acc@0.5": 0.5,
+     "auc": 0.28,
+     "auc_lo": 0.0,
+     "auc_hi": 0.64,
+     "recall@spec90": 0.0,
+     "s_per_doc": 2.17337589263916,
+     "n_chunks": 126.7,
+     "n_scored": 126.7
+    }
+   },
+   "rows": [
+    {
+     "i": 0,
+     "gold": true,
+     "depth": 0.816,
+     "approx_tokens": 24126,
+     "bm25@1": {
+      "p": 0.8654749989509583,
+      "s": 0.0194699764251709,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9504461288452148,
+      "s": 0.2216172218322754,
+      "n_chunks": 126,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9947611689567566,
+      "s": 2.190558910369873,
+      "n_chunks": 126,
+      "n_scored": 126
+     }
+    },
+    {
+     "i": 1,
+     "gold": false,
+     "depth": 0.09090909090909091,
+     "approx_tokens": 24015,
+     "bm25@1": {
+      "p": 0.15861310064792633,
+      "s": 0.024698734283447266,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9480103254318237,
+      "s": 0.17156386375427246,
+      "n_chunks": 122,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.996224045753479,
+      "s": 2.1144142150878906,
+      "n_chunks": 122,
+      "n_scored": 122
+     }
+    },
+    {
+     "i": 2,
+     "gold": true,
+     "depth": 0.640625,
+     "approx_tokens": 24045,
+     "bm25@1": {
+      "p": 0.9341273903846741,
+      "s": 0.02967977523803711,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.979225754737854,
+      "s": 0.11232519149780273,
+      "n_chunks": 129,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9900977611541748,
+      "s": 2.150383949279785,
+      "n_chunks": 129,
+      "n_scored": 129
+     }
+    },
+    {
+     "i": 3,
+     "gold": false,
+     "depth": 0.704,
+     "approx_tokens": 24098,
+     "bm25@1": {
+      "p": 0.41897353529930115,
+      "s": 0.02516484260559082,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8480615615844727,
+      "s": 0.1010599136352539,
+      "n_chunks": 126,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9774571657180786,
+      "s": 2.131917953491211,
+      "n_chunks": 126,
+      "n_scored": 126
+     }
+    },
+    {
+     "i": 4,
+     "gold": true,
+     "depth": 0.0546875,
+     "approx_tokens": 24081,
+     "bm25@1": {
+      "p": 0.97133868932724,
+      "s": 0.026290178298950195,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.97133868932724,
+      "s": 0.09476685523986816,
+      "n_chunks": 129,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9939621090888977,
+      "s": 2.3754451274871826,
+      "n_chunks": 129,
+      "n_scored": 129
+     }
+    },
+    {
+     "i": 5,
+     "gold": false,
+     "depth": 0.6015625,
+     "approx_tokens": 24014,
+     "bm25@1": {
+      "p": 0.46332138776779175,
+      "s": 0.036514997482299805,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9353739023208618,
+      "s": 0.17888402938842773,
+      "n_chunks": 129,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9949774146080017,
+      "s": 2.114865779876709,
+      "n_chunks": 129,
+      "n_scored": 129
+     }
+    },
+    {
+     "i": 6,
+     "gold": true,
+     "depth": 0.23140495867768596,
+     "approx_tokens": 24077,
+     "bm25@1": {
+      "p": 0.909352719783783,
+      "s": 0.026291847229003906,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9122403860092163,
+      "s": 0.10644984245300293,
+      "n_chunks": 122,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9877282381057739,
+      "s": 2.174225091934204,
+      "n_chunks": 122,
+      "n_scored": 122
+     }
+    },
+    {
+     "i": 7,
+     "gold": false,
+     "depth": 0.40625,
+     "approx_tokens": 24041,
+     "bm25@1": {
+      "p": 0.3241359293460846,
+      "s": 0.02473592758178711,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9974353909492493,
+      "s": 0.11557197570800781,
+      "n_chunks": 129,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9974353909492493,
+      "s": 2.193739891052246,
+      "n_chunks": 129,
+      "n_scored": 129
+     }
+    },
+    {
+     "i": 8,
+     "gold": true,
+     "depth": 0.109375,
+     "approx_tokens": 24187,
+     "bm25@1": {
+      "p": 0.9444641470909119,
+      "s": 0.02341318130493164,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9444641470909119,
+      "s": 0.08645129203796387,
+      "n_chunks": 129,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9854075312614441,
+      "s": 2.184309959411621,
+      "n_chunks": 129,
+      "n_scored": 129
+     }
+    },
+    {
+     "i": 9,
+     "gold": false,
+     "depth": 0.864,
+     "approx_tokens": 24208,
+     "bm25@1": {
+      "p": 0.11358515918254852,
+      "s": 0.02493596076965332,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8709062933921814,
+      "s": 0.11700987815856934,
+      "n_chunks": 126,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9906139373779297,
+      "s": 2.103898048400879,
+      "n_chunks": 126,
+      "n_scored": 126
+     }
+    },
+    {
+     "i": 10,
+     "gold": true,
+     "depth": 0.8416666666666667,
+     "approx_tokens": 24112,
+     "bm25@1": {
+      "p": 0.9035162329673767,
+      "s": 0.024435758590698242,
+      "n_chunks": 121,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.990218460559845,
+      "s": 0.11708593368530273,
+      "n_chunks": 121,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 11,
+     "gold": false,
+     "depth": 0.6692307692307692,
+     "approx_tokens": 24128,
+     "bm25@1": {
+      "p": 0.10244575887918472,
+      "s": 0.03068709373474121,
+      "n_chunks": 131,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9240695238113403,
+      "s": 0.10788893699645996,
+      "n_chunks": 131,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 12,
+     "gold": true,
+     "depth": 0.1746031746031746,
+     "approx_tokens": 24329,
+     "bm25@1": {
+      "p": 0.941555917263031,
+      "s": 0.0235440731048584,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.941555917263031,
+      "s": 0.10619974136352539,
+      "n_chunks": 127,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 13,
+     "gold": false,
+     "depth": 0.6507936507936508,
+     "approx_tokens": 24126,
+     "bm25@1": {
+      "p": 0.23823975026607513,
+      "s": 0.022761106491088867,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8682471513748169,
+      "s": 0.10953187942504883,
+      "n_chunks": 127,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 14,
+     "gold": true,
+     "depth": 0.8145161290322581,
+     "approx_tokens": 24134,
+     "bm25@1": {
+      "p": 0.9575524926185608,
+      "s": 0.022853851318359375,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9575524926185608,
+      "s": 0.12508273124694824,
+      "n_chunks": 125,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 15,
+     "gold": false,
+     "depth": 0.031746031746031744,
+     "approx_tokens": 24193,
+     "bm25@1": {
+      "p": 0.6572592854499817,
+      "s": 0.023164749145507812,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9822478890419006,
+      "s": 0.11414599418640137,
+      "n_chunks": 127,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 16,
+     "gold": true,
+     "depth": 0.37593984962406013,
+     "approx_tokens": 24124,
+     "bm25@1": {
+      "p": 0.692378580570221,
+      "s": 0.022604942321777344,
+      "n_chunks": 134,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9175687432289124,
+      "s": 0.09672904014587402,
+      "n_chunks": 134,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 17,
+     "gold": false,
+     "depth": 0.6776859504132231,
+     "approx_tokens": 24052,
+     "bm25@1": {
+      "p": 0.5295787453651428,
+      "s": 0.02312779426574707,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9825026988983154,
+      "s": 0.12338900566101074,
+      "n_chunks": 122,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 18,
+     "gold": true,
+     "depth": 0.456,
+     "approx_tokens": 24079,
+     "bm25@1": {
+      "p": 0.9573864936828613,
+      "s": 0.02261209487915039,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9573864936828613,
+      "s": 0.24853277206420898,
+      "n_chunks": 126,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 19,
+     "gold": false,
+     "depth": 0.4067796610169492,
+     "approx_tokens": 24078,
+     "bm25@1": {
+      "p": 0.7681291699409485,
+      "s": 0.022749900817871094,
+      "n_chunks": 119,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8837485313415527,
+      "s": 0.09968805313110352,
+      "n_chunks": 119,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 20,
+     "gold": true,
+     "depth": 0.6290322580645161,
+     "approx_tokens": 24061,
+     "bm25@1": {
+      "p": 0.7065041065216064,
+      "s": 0.022442102432250977,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8354018926620483,
+      "s": 0.10701704025268555,
+      "n_chunks": 125,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 21,
+     "gold": false,
+     "depth": 0.952755905511811,
+     "approx_tokens": 24051,
+     "bm25@1": {
+      "p": 0.3802785873413086,
+      "s": 0.022433042526245117,
+      "n_chunks": 128,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8593514561653137,
+      "s": 0.12564992904663086,
+      "n_chunks": 128,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 22,
+     "gold": true,
+     "depth": 0.1297709923664122,
+     "approx_tokens": 24157,
+     "bm25@1": {
+      "p": 0.9491983652114868,
+      "s": 0.02297496795654297,
+      "n_chunks": 132,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9609145522117615,
+      "s": 0.0975489616394043,
+      "n_chunks": 132,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 23,
+     "gold": false,
+     "depth": 0.032,
+     "approx_tokens": 24162,
+     "bm25@1": {
+      "p": 0.8220242857933044,
+      "s": 0.0226900577545166,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8628053069114685,
+      "s": 0.1036832332611084,
+      "n_chunks": 126,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 24,
+     "gold": true,
+     "depth": 0.12598425196850394,
+     "approx_tokens": 24016,
+     "bm25@1": {
+      "p": 0.8352704048156738,
+      "s": 0.023920059204101562,
+      "n_chunks": 128,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8352704048156738,
+      "s": 0.09972715377807617,
+      "n_chunks": 128,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 25,
+     "gold": false,
+     "depth": 0.8548387096774194,
+     "approx_tokens": 24022,
+     "bm25@1": {
+      "p": 0.2569189667701721,
+      "s": 0.02317190170288086,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9354013204574585,
+      "s": 0.10079002380371094,
+      "n_chunks": 125,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 26,
+     "gold": true,
+     "depth": 0.16793893129770993,
+     "approx_tokens": 24035,
+     "bm25@1": {
+      "p": 0.9181906580924988,
+      "s": 0.023288965225219727,
+      "n_chunks": 132,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9775271415710449,
+      "s": 0.08886289596557617,
+      "n_chunks": 132,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 27,
+     "gold": false,
+     "depth": 0.47619047619047616,
+     "approx_tokens": 24047,
+     "bm25@1": {
+      "p": 0.5629777908325195,
+      "s": 0.022383928298950195,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9024724960327148,
+      "s": 0.0966179370880127,
+      "n_chunks": 127,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 28,
+     "gold": true,
+     "depth": 0.9669421487603306,
+     "approx_tokens": 24083,
+     "bm25@1": {
+      "p": 0.8533653020858765,
+      "s": 0.024316787719726562,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8614137172698975,
+      "s": 0.17528915405273438,
+      "n_chunks": 122,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 29,
+     "gold": false,
+     "depth": 0.3225806451612903,
+     "approx_tokens": 24034,
+     "bm25@1": {
+      "p": 0.2973027229309082,
+      "s": 0.023288965225219727,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.929690957069397,
+      "s": 0.09241700172424316,
+      "n_chunks": 125,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 30,
+     "gold": true,
+     "depth": 0.736,
+     "approx_tokens": 24051,
+     "bm25@1": {
+      "p": 0.9828952550888062,
+      "s": 0.023366212844848633,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9938247203826904,
+      "s": 0.1092221736907959,
+      "n_chunks": 126,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 31,
+     "gold": false,
+     "depth": 0.8095238095238095,
+     "approx_tokens": 24141,
+     "bm25@1": {
+      "p": 0.27995458245277405,
+      "s": 0.023117780685424805,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9189669489860535,
+      "s": 0.10501885414123535,
+      "n_chunks": 127,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 32,
+     "gold": true,
+     "depth": 0.05263157894736842,
+     "approx_tokens": 24184,
+     "bm25@1": {
+      "p": 0.8964352607727051,
+      "s": 0.023021936416625977,
+      "n_chunks": 134,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8967165946960449,
+      "s": 0.09256982803344727,
+      "n_chunks": 134,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 33,
+     "gold": false,
+     "depth": 0.680672268907563,
+     "approx_tokens": 24088,
+     "bm25@1": {
+      "p": 0.13669341802597046,
+      "s": 0.023604869842529297,
+      "n_chunks": 120,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8239180445671082,
+      "s": 0.09384870529174805,
+      "n_chunks": 120,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 34,
+     "gold": true,
+     "depth": 0.7424242424242424,
+     "approx_tokens": 24047,
+     "bm25@1": {
+      "p": 0.9866320490837097,
+      "s": 0.02312612533569336,
+      "n_chunks": 133,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9866320490837097,
+      "s": 0.12337708473205566,
+      "n_chunks": 133,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 35,
+     "gold": false,
+     "depth": 0.5193798449612403,
+     "approx_tokens": 24106,
+     "bm25@1": {
+      "p": 0.26003676652908325,
+      "s": 0.02318120002746582,
+      "n_chunks": 130,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9729896783828735,
+      "s": 0.09333515167236328,
+      "n_chunks": 130,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 36,
+     "gold": true,
+     "depth": 0.3671875,
+     "approx_tokens": 24018,
+     "bm25@1": {
+      "p": 0.932283341884613,
+      "s": 0.022539138793945312,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9469241499900818,
+      "s": 0.09791088104248047,
+      "n_chunks": 129,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 37,
+     "gold": false,
+     "depth": 0.7642276422764228,
+     "approx_tokens": 24139,
+     "bm25@1": {
+      "p": 0.6063271760940552,
+      "s": 0.022401094436645508,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9518694877624512,
+      "s": 0.09551382064819336,
+      "n_chunks": 124,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 38,
+     "gold": true,
+     "depth": 0.6062992125984252,
+     "approx_tokens": 24100,
+     "bm25@1": {
+      "p": 0.9613984227180481,
+      "s": 0.02356410026550293,
+      "n_chunks": 128,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9681537747383118,
+      "s": 0.12354612350463867,
+      "n_chunks": 128,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 39,
+     "gold": false,
+     "depth": 0.7952755905511811,
+     "approx_tokens": 24103,
+     "bm25@1": {
+      "p": 0.7999624013900757,
+      "s": 0.0230252742767334,
+      "n_chunks": 128,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9488336443901062,
+      "s": 0.09540605545043945,
+      "n_chunks": 128,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 40,
+     "gold": true,
+     "depth": 0.216,
+     "approx_tokens": 24199,
+     "bm25@1": {
+      "p": 0.9465354681015015,
+      "s": 0.023540973663330078,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9465354681015015,
+      "s": 0.12122392654418945,
+      "n_chunks": 126,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 41,
+     "gold": false,
+     "depth": 0.959349593495935,
+     "approx_tokens": 24152,
+     "bm25@1": {
+      "p": 0.36526820063591003,
+      "s": 0.02345585823059082,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8718734383583069,
+      "s": 0.1174769401550293,
+      "n_chunks": 124,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 42,
+     "gold": true,
+     "depth": 0.47692307692307695,
+     "approx_tokens": 24055,
+     "bm25@1": {
+      "p": 0.937728226184845,
+      "s": 0.023638010025024414,
+      "n_chunks": 131,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.964455246925354,
+      "s": 0.11917591094970703,
+      "n_chunks": 131,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 43,
+     "gold": false,
+     "depth": 0.7933884297520661,
+     "approx_tokens": 24052,
+     "bm25@1": {
+      "p": 0.43596217036247253,
+      "s": 0.02318596839904785,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9890174865722656,
+      "s": 0.2088930606842041,
+      "n_chunks": 122,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 44,
+     "gold": true,
+     "depth": 0.9264705882352942,
+     "approx_tokens": 24117,
+     "bm25@1": {
+      "p": 0.921970546245575,
+      "s": 0.023452281951904297,
+      "n_chunks": 137,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.921970546245575,
+      "s": 0.10259413719177246,
+      "n_chunks": 137,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 45,
+     "gold": false,
+     "depth": 0.125,
+     "approx_tokens": 24130,
+     "bm25@1": {
+      "p": 0.2722797393798828,
+      "s": 0.022836923599243164,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9451848268508911,
+      "s": 0.09934520721435547,
+      "n_chunks": 129,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 46,
+     "gold": true,
+     "depth": 0.3492063492063492,
+     "approx_tokens": 24014,
+     "bm25@1": {
+      "p": 0.9248842000961304,
+      "s": 0.02263784408569336,
+      "n_chunks": 127,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9876157641410828,
+      "s": 0.1072840690612793,
+      "n_chunks": 127,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 47,
+     "gold": false,
+     "depth": 0.888,
+     "approx_tokens": 24071,
+     "bm25@1": {
+      "p": 0.06663559377193451,
+      "s": 0.02823019027709961,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.795063853263855,
+      "s": 0.09374189376831055,
+      "n_chunks": 126,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 48,
+     "gold": true,
+     "depth": 0.8125,
+     "approx_tokens": 24078,
+     "bm25@1": {
+      "p": 0.9211289286613464,
+      "s": 0.02273392677307129,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9728084206581116,
+      "s": 0.12666106224060059,
+      "n_chunks": 129,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 49,
+     "gold": false,
+     "depth": 0.4793388429752066,
+     "approx_tokens": 24081,
+     "bm25@1": {
+      "p": 0.24269992113113403,
+      "s": 0.022868871688842773,
+      "n_chunks": 122,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9859811067581177,
+      "s": 0.09290385246276855,
+      "n_chunks": 122,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 50,
+     "gold": true,
+     "depth": 0.7723577235772358,
+     "approx_tokens": 24069,
+     "bm25@1": {
+      "p": 0.8514278531074524,
+      "s": 0.022573232650756836,
+      "n_chunks": 124,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8514278531074524,
+      "s": 0.10377192497253418,
+      "n_chunks": 124,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 51,
+     "gold": false,
+     "depth": 0.46774193548387094,
+     "approx_tokens": 24089,
+     "bm25@1": {
+      "p": 0.29964083433151245,
+      "s": 0.023113012313842773,
+      "n_chunks": 125,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8645428419113159,
+      "s": 0.11970686912536621,
+      "n_chunks": 125,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 52,
+     "gold": true,
+     "depth": 0.7131782945736435,
+     "approx_tokens": 24128,
+     "bm25@1": {
+      "p": 0.9011889100074768,
+      "s": 0.022516965866088867,
+      "n_chunks": 130,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.936153769493103,
+      "s": 0.0918118953704834,
+      "n_chunks": 130,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 53,
+     "gold": false,
+     "depth": 0.175,
+     "approx_tokens": 24239,
+     "bm25@1": {
+      "p": 0.13089057803153992,
+      "s": 0.023383140563964844,
+      "n_chunks": 121,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9756941795349121,
+      "s": 0.09716033935546875,
+      "n_chunks": 121,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 54,
+     "gold": true,
+     "depth": 0.7894736842105263,
+     "approx_tokens": 24150,
+     "bm25@1": {
+      "p": 0.9657541513442993,
+      "s": 0.02275991439819336,
+      "n_chunks": 134,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9657541513442993,
+      "s": 0.13397884368896484,
+      "n_chunks": 134,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 55,
+     "gold": false,
+     "depth": 0.175,
+     "approx_tokens": 24138,
+     "bm25@1": {
+      "p": 0.4774062931537628,
+      "s": 0.0240938663482666,
+      "n_chunks": 121,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9373919367790222,
+      "s": 0.0885920524597168,
+      "n_chunks": 121,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 56,
+     "gold": true,
+     "depth": 0.05042016806722689,
+     "approx_tokens": 24121,
+     "bm25@1": {
+      "p": 0.8755786418914795,
+      "s": 0.024104833602905273,
+      "n_chunks": 120,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9697057008743286,
+      "s": 0.12117600440979004,
+      "n_chunks": 120,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 57,
+     "gold": false,
+     "depth": 0.7322834645669292,
+     "approx_tokens": 24077,
+     "bm25@1": {
+      "p": 0.35980504751205444,
+      "s": 0.024338960647583008,
+      "n_chunks": 128,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9880973696708679,
+      "s": 0.08802294731140137,
+      "n_chunks": 128,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 58,
+     "gold": true,
+     "depth": 0.953125,
+     "approx_tokens": 24146,
+     "bm25@1": {
+      "p": 0.845391035079956,
+      "s": 0.022969961166381836,
+      "n_chunks": 129,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9425122737884521,
+      "s": 0.08228802680969238,
+      "n_chunks": 129,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 59,
+     "gold": false,
+     "depth": 0.264,
+     "approx_tokens": 24059,
+     "bm25@1": {
+      "p": 0.3073982894420624,
+      "s": 0.022787809371948242,
+      "n_chunks": 126,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8848368525505066,
+      "s": 0.10017085075378418,
+      "n_chunks": 126,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    }
+   ]
+  },
+  "100k": {
+   "stats": {
+    "breakdown": {
+     "n_chunks": 530,
+     "tokens": 83463,
+     "s_chunk": 0.07419800758361816,
+     "s_rank": 0.01678299903869629
+    },
+    "bm25@1": {
+     "n": 60,
+     "acc@0.5": 0.8833333333333333,
+     "auc": 0.9933333333333333,
+     "auc_lo": 0.9777777777777777,
+     "auc_hi": 1.0,
+     "recall@spec90": 0.9333333333333333,
+     "s_per_doc": 0.09374491771062216,
+     "n_chunks": 523.7,
+     "n_scored": 1
+    },
+    "bm25@5": {
+     "n": 60,
+     "acc@0.5": 0.5,
+     "auc": 0.45,
+     "auc_lo": 0.30219444444444443,
+     "auc_hi": 0.6022222222222222,
+     "recall@spec90": 0.1,
+     "s_per_doc": 0.1597500443458557,
+     "n_chunks": 523.7,
+     "n_scored": 5
+    },
+    "full": {
+     "n": 10,
+     "acc@0.5": 0.5,
+     "auc": 0.4,
+     "auc_lo": 0.04,
+     "auc_hi": 0.8,
+     "recall@spec90": 0.0,
+     "s_per_doc": 6.560932374000549,
+     "n_chunks": 521.4,
+     "n_scored": 521.4
+    }
+   },
+   "rows": [
+    {
+     "i": 0,
+     "gold": true,
+     "depth": 0.8204158790170132,
+     "approx_tokens": 100015,
+     "bm25@1": {
+      "p": 0.8654749989509583,
+      "s": 0.08873605728149414,
+      "n_chunks": 530,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9504461288452148,
+      "s": 0.13327813148498535,
+      "n_chunks": 530,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9947611689567566,
+      "s": 6.558921813964844,
+      "n_chunks": 530,
+      "n_scored": 530
+     }
+    },
+    {
+     "i": 1,
+     "gold": false,
+     "depth": 0.08795411089866156,
+     "approx_tokens": 100136,
+     "bm25@1": {
+      "p": 0.15861310064792633,
+      "s": 0.09023094177246094,
+      "n_chunks": 524,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9848976731300354,
+      "s": 0.16919231414794922,
+      "n_chunks": 524,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9982028007507324,
+      "s": 6.6696250438690186,
+      "n_chunks": 524,
+      "n_scored": 524
+     }
+    },
+    {
+     "i": 2,
+     "gold": true,
+     "depth": 0.6375968992248062,
+     "approx_tokens": 100145,
+     "bm25@1": {
+      "p": 0.9341273903846741,
+      "s": 0.09352397918701172,
+      "n_chunks": 517,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9341273903846741,
+      "s": 0.13557815551757812,
+      "n_chunks": 517,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9964472651481628,
+      "s": 6.509917259216309,
+      "n_chunks": 517,
+      "n_scored": 517
+     }
+    },
+    {
+     "i": 3,
+     "gold": false,
+     "depth": 0.7036328871892925,
+     "approx_tokens": 100193,
+     "bm25@1": {
+      "p": 0.41897353529930115,
+      "s": 0.09481430053710938,
+      "n_chunks": 524,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.993485152721405,
+      "s": 0.14319205284118652,
+      "n_chunks": 524,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.993485152721405,
+      "s": 6.552649974822998,
+      "n_chunks": 524,
+      "n_scored": 524
+     }
+    },
+    {
+     "i": 4,
+     "gold": true,
+     "depth": 0.051923076923076926,
+     "approx_tokens": 100115,
+     "bm25@1": {
+      "p": 0.97133868932724,
+      "s": 0.09587383270263672,
+      "n_chunks": 521,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.97133868932724,
+      "s": 0.13918471336364746,
+      "n_chunks": 521,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9945089221000671,
+      "s": 6.521216869354248,
+      "n_chunks": 521,
+      "n_scored": 521
+     }
+    },
+    {
+     "i": 5,
+     "gold": false,
+     "depth": 0.6046065259117083,
+     "approx_tokens": 100296,
+     "bm25@1": {
+      "p": 0.46332138776779175,
+      "s": 0.09368491172790527,
+      "n_chunks": 522,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9353739023208618,
+      "s": 0.15992116928100586,
+      "n_chunks": 522,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9962508082389832,
+      "s": 6.499764919281006,
+      "n_chunks": 522,
+      "n_scored": 522
+     }
+    },
+    {
+     "i": 6,
+     "gold": true,
+     "depth": 0.23586744639376217,
+     "approx_tokens": 100305,
+     "bm25@1": {
+      "p": 0.909352719783783,
+      "s": 0.09575009346008301,
+      "n_chunks": 514,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.909352719783783,
+      "s": 0.20376110076904297,
+      "n_chunks": 514,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9963197708129883,
+      "s": 6.499990224838257,
+      "n_chunks": 514,
+      "n_scored": 514
+     }
+    },
+    {
+     "i": 7,
+     "gold": false,
+     "depth": 0.40417457305502846,
+     "approx_tokens": 100161,
+     "bm25@1": {
+      "p": 0.3241359293460846,
+      "s": 0.09122705459594727,
+      "n_chunks": 528,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9974353909492493,
+      "s": 0.13458514213562012,
+      "n_chunks": 528,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9974353909492493,
+      "s": 6.55767297744751,
+      "n_chunks": 528,
+      "n_scored": 528
+     }
+    },
+    {
+     "i": 8,
+     "gold": true,
+     "depth": 0.10679611650485436,
+     "approx_tokens": 100129,
+     "bm25@1": {
+      "p": 0.9444641470909119,
+      "s": 0.09550309181213379,
+      "n_chunks": 516,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9444641470909119,
+      "s": 0.14281702041625977,
+      "n_chunks": 516,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9864359498023987,
+      "s": 6.64303183555603,
+      "n_chunks": 516,
+      "n_scored": 516
+     }
+    },
+    {
+     "i": 9,
+     "gold": false,
+     "depth": 0.8607350096711799,
+     "approx_tokens": 100291,
+     "bm25@1": {
+      "p": 0.11358515918254852,
+      "s": 0.0967569351196289,
+      "n_chunks": 518,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9751821756362915,
+      "s": 0.13439512252807617,
+      "n_chunks": 518,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9914041757583618,
+      "s": 6.596532821655273,
+      "n_chunks": 518,
+      "n_scored": 518
+     }
+    },
+    {
+     "i": 10,
+     "gold": true,
+     "depth": 0.8428290766208252,
+     "approx_tokens": 100126,
+     "bm25@1": {
+      "p": 0.9035162329673767,
+      "s": 0.09361982345581055,
+      "n_chunks": 510,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9035162329673767,
+      "s": 0.17797088623046875,
+      "n_chunks": 510,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 11,
+     "gold": false,
+     "depth": 0.6729323308270677,
+     "approx_tokens": 100149,
+     "bm25@1": {
+      "p": 0.10244575887918472,
+      "s": 0.09528088569641113,
+      "n_chunks": 533,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9104351997375488,
+      "s": 0.16065716743469238,
+      "n_chunks": 533,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 12,
+     "gold": true,
+     "depth": 0.17115384615384616,
+     "approx_tokens": 100102,
+     "bm25@1": {
+      "p": 0.941555917263031,
+      "s": 0.09414482116699219,
+      "n_chunks": 521,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9642633199691772,
+      "s": 0.15142416954040527,
+      "n_chunks": 521,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 13,
+     "gold": false,
+     "depth": 0.6494252873563219,
+     "approx_tokens": 100089,
+     "bm25@1": {
+      "p": 0.23823975026607513,
+      "s": 0.09312701225280762,
+      "n_chunks": 523,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9885127544403076,
+      "s": 0.141768217086792,
+      "n_chunks": 523,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 14,
+     "gold": true,
+     "depth": 0.8102466793168881,
+     "approx_tokens": 100089,
+     "bm25@1": {
+      "p": 0.9575524926185608,
+      "s": 0.09341120719909668,
+      "n_chunks": 528,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9575524926185608,
+      "s": 0.1472313404083252,
+      "n_chunks": 528,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 15,
+     "gold": false,
+     "depth": 0.033962264150943396,
+     "approx_tokens": 100101,
+     "bm25@1": {
+      "p": 0.6572592854499817,
+      "s": 0.09305715560913086,
+      "n_chunks": 531,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9759221076965332,
+      "s": 0.1458299160003662,
+      "n_chunks": 531,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 16,
+     "gold": true,
+     "depth": 0.3768939393939394,
+     "approx_tokens": 100131,
+     "bm25@1": {
+      "p": 0.692378580570221,
+      "s": 0.09283804893493652,
+      "n_chunks": 529,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8530045747756958,
+      "s": 0.13147687911987305,
+      "n_chunks": 529,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 17,
+     "gold": false,
+     "depth": 0.6797642436149313,
+     "approx_tokens": 100015,
+     "bm25@1": {
+      "p": 0.5295787453651428,
+      "s": 0.09273505210876465,
+      "n_chunks": 510,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9825026988983154,
+      "s": 0.15296483039855957,
+      "n_chunks": 510,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 18,
+     "gold": true,
+     "depth": 0.45857418111753373,
+     "approx_tokens": 100032,
+     "bm25@1": {
+      "p": 0.9573864936828613,
+      "s": 0.09698891639709473,
+      "n_chunks": 520,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9573864936828613,
+      "s": 0.16899704933166504,
+      "n_chunks": 520,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 19,
+     "gold": false,
+     "depth": 0.40425531914893614,
+     "approx_tokens": 100114,
+     "bm25@1": {
+      "p": 0.7681291699409485,
+      "s": 0.09428620338439941,
+      "n_chunks": 518,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9467306137084961,
+      "s": 0.12075281143188477,
+      "n_chunks": 518,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 20,
+     "gold": true,
+     "depth": 0.6259398496240601,
+     "approx_tokens": 100296,
+     "bm25@1": {
+      "p": 0.7065041065216064,
+      "s": 0.09388065338134766,
+      "n_chunks": 533,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9628883004188538,
+      "s": 0.17310094833374023,
+      "n_chunks": 533,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 21,
+     "gold": false,
+     "depth": 0.9551656920077972,
+     "approx_tokens": 100225,
+     "bm25@1": {
+      "p": 0.3802785873413086,
+      "s": 0.09465813636779785,
+      "n_chunks": 514,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9567685723304749,
+      "s": 0.16896414756774902,
+      "n_chunks": 514,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 22,
+     "gold": true,
+     "depth": 0.13246268656716417,
+     "approx_tokens": 100183,
+     "bm25@1": {
+      "p": 0.9491983652114868,
+      "s": 0.09331512451171875,
+      "n_chunks": 537,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9491983652114868,
+      "s": 0.1748502254486084,
+      "n_chunks": 537,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 23,
+     "gold": false,
+     "depth": 0.030303030303030304,
+     "approx_tokens": 100023,
+     "bm25@1": {
+      "p": 0.8220242857933044,
+      "s": 0.09451699256896973,
+      "n_chunks": 529,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9885257482528687,
+      "s": 0.14905309677124023,
+      "n_chunks": 529,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 24,
+     "gold": true,
+     "depth": 0.124282982791587,
+     "approx_tokens": 100133,
+     "bm25@1": {
+      "p": 0.8352704048156738,
+      "s": 0.09571409225463867,
+      "n_chunks": 524,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9450280070304871,
+      "s": 0.1685633659362793,
+      "n_chunks": 524,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 25,
+     "gold": false,
+     "depth": 0.8521400778210116,
+     "approx_tokens": 100043,
+     "bm25@1": {
+      "p": 0.2569189667701721,
+      "s": 0.0942678451538086,
+      "n_chunks": 515,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9740133285522461,
+      "s": 0.17706799507141113,
+      "n_chunks": 515,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 26,
+     "gold": true,
+     "depth": 0.17077798861480076,
+     "approx_tokens": 100080,
+     "bm25@1": {
+      "p": 0.9181906580924988,
+      "s": 0.09676194190979004,
+      "n_chunks": 529,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9691829681396484,
+      "s": 0.16445016860961914,
+      "n_chunks": 529,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 27,
+     "gold": false,
+     "depth": 0.4755639097744361,
+     "approx_tokens": 100354,
+     "bm25@1": {
+      "p": 0.5629777908325195,
+      "s": 0.09555983543395996,
+      "n_chunks": 533,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.989081621170044,
+      "s": 0.16918587684631348,
+      "n_chunks": 533,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 28,
+     "gold": true,
+     "depth": 0.9632495164410058,
+     "approx_tokens": 100174,
+     "bm25@1": {
+      "p": 0.8533653020858765,
+      "s": 0.09439706802368164,
+      "n_chunks": 518,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9190760254859924,
+      "s": 0.17803001403808594,
+      "n_chunks": 518,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 29,
+     "gold": false,
+     "depth": 0.3231357552581262,
+     "approx_tokens": 100151,
+     "bm25@1": {
+      "p": 0.2973027229309082,
+      "s": 0.09644794464111328,
+      "n_chunks": 524,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9859054684638977,
+      "s": 0.1695699691772461,
+      "n_chunks": 524,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 30,
+     "gold": true,
+     "depth": 0.7346153846153847,
+     "approx_tokens": 100024,
+     "bm25@1": {
+      "p": 0.9828952550888062,
+      "s": 0.0936441421508789,
+      "n_chunks": 521,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9828952550888062,
+      "s": 0.15887904167175293,
+      "n_chunks": 521,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 31,
+     "gold": false,
+     "depth": 0.8087954110898662,
+     "approx_tokens": 100245,
+     "bm25@1": {
+      "p": 0.27995458245277405,
+      "s": 0.09534096717834473,
+      "n_chunks": 524,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9844143390655518,
+      "s": 0.160858154296875,
+      "n_chunks": 524,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 32,
+     "gold": true,
+     "depth": 0.05185185185185185,
+     "approx_tokens": 100069,
+     "bm25@1": {
+      "p": 0.8964352607727051,
+      "s": 0.09282207489013672,
+      "n_chunks": 541,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8964352607727051,
+      "s": 0.1657407283782959,
+      "n_chunks": 541,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 33,
+     "gold": false,
+     "depth": 0.6787072243346007,
+     "approx_tokens": 100063,
+     "bm25@1": {
+      "p": 0.13669341802597046,
+      "s": 0.09308981895446777,
+      "n_chunks": 527,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9763234257698059,
+      "s": 0.14621782302856445,
+      "n_chunks": 527,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 34,
+     "gold": true,
+     "depth": 0.7424242424242424,
+     "approx_tokens": 100069,
+     "bm25@1": {
+      "p": 0.9866320490837097,
+      "s": 0.09401869773864746,
+      "n_chunks": 529,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9866320490837097,
+      "s": 0.16014480590820312,
+      "n_chunks": 529,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 35,
+     "gold": false,
+     "depth": 0.5169811320754717,
+     "approx_tokens": 100015,
+     "bm25@1": {
+      "p": 0.26003676652908325,
+      "s": 0.09330892562866211,
+      "n_chunks": 531,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9145753979682922,
+      "s": 0.17167329788208008,
+      "n_chunks": 531,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 36,
+     "gold": true,
+     "depth": 0.3643410852713178,
+     "approx_tokens": 100099,
+     "bm25@1": {
+      "p": 0.932283341884613,
+      "s": 0.09222197532653809,
+      "n_chunks": 517,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9945183396339417,
+      "s": 0.16330432891845703,
+      "n_chunks": 517,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 37,
+     "gold": false,
+     "depth": 0.7615384615384615,
+     "approx_tokens": 100269,
+     "bm25@1": {
+      "p": 0.6063271760940552,
+      "s": 0.09253501892089844,
+      "n_chunks": 521,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9359688758850098,
+      "s": 0.2041947841644287,
+      "n_chunks": 521,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 38,
+     "gold": true,
+     "depth": 0.6053130929791272,
+     "approx_tokens": 100067,
+     "bm25@1": {
+      "p": 0.9613984227180481,
+      "s": 0.09167218208312988,
+      "n_chunks": 528,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9968963861465454,
+      "s": 0.15641307830810547,
+      "n_chunks": 528,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 39,
+     "gold": false,
+     "depth": 0.7981308411214953,
+     "approx_tokens": 100100,
+     "bm25@1": {
+      "p": 0.7999624013900757,
+      "s": 0.09212493896484375,
+      "n_chunks": 536,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9313475489616394,
+      "s": 0.15687012672424316,
+      "n_chunks": 536,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 40,
+     "gold": true,
+     "depth": 0.21714285714285714,
+     "approx_tokens": 100095,
+     "bm25@1": {
+      "p": 0.9465354681015015,
+      "s": 0.09441876411437988,
+      "n_chunks": 526,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9533719420433044,
+      "s": 0.14270305633544922,
+      "n_chunks": 526,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 41,
+     "gold": false,
+     "depth": 0.9608610567514677,
+     "approx_tokens": 100124,
+     "bm25@1": {
+      "p": 0.36526820063591003,
+      "s": 0.09646320343017578,
+      "n_chunks": 512,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9502633810043335,
+      "s": 0.16019105911254883,
+      "n_chunks": 512,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 42,
+     "gold": true,
+     "depth": 0.4748062015503876,
+     "approx_tokens": 100027,
+     "bm25@1": {
+      "p": 0.937728226184845,
+      "s": 0.0931088924407959,
+      "n_chunks": 517,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9746233820915222,
+      "s": 0.17496800422668457,
+      "n_chunks": 517,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 43,
+     "gold": false,
+     "depth": 0.7903846153846154,
+     "approx_tokens": 100129,
+     "bm25@1": {
+      "p": 0.43596217036247253,
+      "s": 0.0919952392578125,
+      "n_chunks": 521,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9139448404312134,
+      "s": 0.19102096557617188,
+      "n_chunks": 521,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 44,
+     "gold": true,
+     "depth": 0.9283018867924528,
+     "approx_tokens": 100164,
+     "bm25@1": {
+      "p": 0.921970546245575,
+      "s": 0.09385800361633301,
+      "n_chunks": 531,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9543282389640808,
+      "s": 0.16694021224975586,
+      "n_chunks": 531,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 45,
+     "gold": false,
+     "depth": 0.12572533849129594,
+     "approx_tokens": 100180,
+     "bm25@1": {
+      "p": 0.2722797393798828,
+      "s": 0.09268927574157715,
+      "n_chunks": 518,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9743645191192627,
+      "s": 0.17624616622924805,
+      "n_chunks": 518,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 46,
+     "gold": true,
+     "depth": 0.3474088291746641,
+     "approx_tokens": 100212,
+     "bm25@1": {
+      "p": 0.9248842000961304,
+      "s": 0.0926370620727539,
+      "n_chunks": 522,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9876157641410828,
+      "s": 0.1347181797027588,
+      "n_chunks": 522,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 47,
+     "gold": false,
+     "depth": 0.8853383458646616,
+     "approx_tokens": 100127,
+     "bm25@1": {
+      "p": 0.06663559377193451,
+      "s": 0.09216904640197754,
+      "n_chunks": 533,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8118575215339661,
+      "s": 0.1634199619293213,
+      "n_chunks": 533,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 48,
+     "gold": true,
+     "depth": 0.8155893536121673,
+     "approx_tokens": 100158,
+     "bm25@1": {
+      "p": 0.9211289286613464,
+      "s": 0.09269094467163086,
+      "n_chunks": 527,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9622111916542053,
+      "s": 0.16833925247192383,
+      "n_chunks": 527,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 49,
+     "gold": false,
+     "depth": 0.47953216374269003,
+     "approx_tokens": 100067,
+     "bm25@1": {
+      "p": 0.24269992113113403,
+      "s": 0.09254693984985352,
+      "n_chunks": 514,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9819847941398621,
+      "s": 0.1474931240081787,
+      "n_chunks": 514,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 50,
+     "gold": true,
+     "depth": 0.7715930902111324,
+     "approx_tokens": 100071,
+     "bm25@1": {
+      "p": 0.8514278531074524,
+      "s": 0.09277105331420898,
+      "n_chunks": 522,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8514278531074524,
+      "s": 0.16490411758422852,
+      "n_chunks": 522,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 51,
+     "gold": false,
+     "depth": 0.46449136276391556,
+     "approx_tokens": 100059,
+     "bm25@1": {
+      "p": 0.29964083433151245,
+      "s": 0.09177899360656738,
+      "n_chunks": 522,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8713471293449402,
+      "s": 0.16695117950439453,
+      "n_chunks": 522,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 52,
+     "gold": true,
+     "depth": 0.7115384615384616,
+     "approx_tokens": 100049,
+     "bm25@1": {
+      "p": 0.9011889100074768,
+      "s": 0.09234905242919922,
+      "n_chunks": 521,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9467464089393616,
+      "s": 0.19498491287231445,
+      "n_chunks": 521,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 53,
+     "gold": false,
+     "depth": 0.17267552182163187,
+     "approx_tokens": 100078,
+     "bm25@1": {
+      "p": 0.13089057803153992,
+      "s": 0.09250402450561523,
+      "n_chunks": 528,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9756941795349121,
+      "s": 0.12260603904724121,
+      "n_chunks": 528,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 54,
+     "gold": true,
+     "depth": 0.7881679389312977,
+     "approx_tokens": 100191,
+     "bm25@1": {
+      "p": 0.9657541513442993,
+      "s": 0.09181594848632812,
+      "n_chunks": 525,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9853836894035339,
+      "s": 0.17086005210876465,
+      "n_chunks": 525,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 55,
+     "gold": false,
+     "depth": 0.1765834932821497,
+     "approx_tokens": 100103,
+     "bm25@1": {
+      "p": 0.4774062931537628,
+      "s": 0.09485673904418945,
+      "n_chunks": 522,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9373919367790222,
+      "s": 0.16407394409179688,
+      "n_chunks": 522,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 56,
+     "gold": true,
+     "depth": 0.05078125,
+     "approx_tokens": 100108,
+     "bm25@1": {
+      "p": 0.8755786418914795,
+      "s": 0.09781098365783691,
+      "n_chunks": 513,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9892527461051941,
+      "s": 0.17230224609375,
+      "n_chunks": 513,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 57,
+     "gold": false,
+     "depth": 0.7354596622889306,
+     "approx_tokens": 100207,
+     "bm25@1": {
+      "p": 0.35980504751205444,
+      "s": 0.09497809410095215,
+      "n_chunks": 534,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9500962495803833,
+      "s": 0.14836502075195312,
+      "n_chunks": 534,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 58,
+     "gold": true,
+     "depth": 0.9576107899807321,
+     "approx_tokens": 100037,
+     "bm25@1": {
+      "p": 0.845391035079956,
+      "s": 0.09336304664611816,
+      "n_chunks": 520,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9583898186683655,
+      "s": 0.16188812255859375,
+      "n_chunks": 520,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 59,
+     "gold": false,
+     "depth": 0.26666666666666666,
+     "approx_tokens": 100015,
+     "bm25@1": {
+      "p": 0.3073982894420624,
+      "s": 0.09400105476379395,
+      "n_chunks": 526,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9523005485534668,
+      "s": 0.15991687774658203,
+      "n_chunks": 526,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    }
+   ]
+  },
+  "300k": {
+   "stats": {
+    "breakdown": {
+     "n_chunks": 1577,
+     "tokens": 251326,
+     "s_chunk": 0.22492194175720215,
+     "s_rank": 0.05278611183166504
+    },
+    "bm25@1": {
+     "n": 60,
+     "acc@0.5": 0.8833333333333333,
+     "auc": 0.9933333333333333,
+     "auc_lo": 0.9777777777777777,
+     "auc_hi": 1.0,
+     "recall@spec90": 0.9333333333333333,
+     "s_per_doc": 0.27581801017125446,
+     "n_chunks": 1567.7,
+     "n_scored": 1
+    },
+    "bm25@5": {
+     "n": 60,
+     "acc@0.5": 0.5,
+     "auc": 0.5611111111111111,
+     "auc_lo": 0.4032777777777778,
+     "auc_hi": 0.7111388888888889,
+     "recall@spec90": 0.16666666666666666,
+     "s_per_doc": 0.3409083803494771,
+     "n_chunks": 1567.7,
+     "n_scored": 5
+    },
+    "full": {
+     "n": 10,
+     "acc@0.5": 0.5,
+     "auc": 0.24,
+     "auc_lo": 0.0,
+     "auc_hi": 0.6,
+     "recall@spec90": 0.0,
+     "s_per_doc": 17.12285249233246,
+     "n_chunks": 1567.8,
+     "n_scored": 1567.8
+    }
+   },
+   "rows": [
+    {
+     "i": 0,
+     "gold": true,
+     "depth": 0.8197969543147208,
+     "approx_tokens": 300056,
+     "bm25@1": {
+      "p": 0.8654749989509583,
+      "s": 0.2761259078979492,
+      "n_chunks": 1577,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9717205762863159,
+      "s": 0.3646390438079834,
+      "n_chunks": 1577,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9971449971199036,
+      "s": 17.0846848487854,
+      "n_chunks": 1577,
+      "n_scored": 1577
+     }
+    },
+    {
+     "i": 1,
+     "gold": false,
+     "depth": 0.08690095846645367,
+     "approx_tokens": 300206,
+     "bm25@1": {
+      "p": 0.15861310064792633,
+      "s": 0.27939724922180176,
+      "n_chunks": 1567,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9720752835273743,
+      "s": 0.37078404426574707,
+      "n_chunks": 1567,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9982028007507324,
+      "s": 17.712584018707275,
+      "n_chunks": 1567,
+      "n_scored": 1567
+     }
+    },
+    {
+     "i": 2,
+     "gold": true,
+     "depth": 0.6376903553299492,
+     "approx_tokens": 300177,
+     "bm25@1": {
+      "p": 0.9341273903846741,
+      "s": 0.2806839942932129,
+      "n_chunks": 1577,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9597010016441345,
+      "s": 0.3511040210723877,
+      "n_chunks": 1577,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9964472651481628,
+      "s": 17.210134983062744,
+      "n_chunks": 1577,
+      "n_scored": 1577
+     }
+    },
+    {
+     "i": 3,
+     "gold": false,
+     "depth": 0.7040816326530612,
+     "approx_tokens": 300056,
+     "bm25@1": {
+      "p": 0.41897353529930115,
+      "s": 0.28322720527648926,
+      "n_chunks": 1569,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9424465298652649,
+      "s": 0.3370542526245117,
+      "n_chunks": 1569,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9963394403457642,
+      "s": 17.07991600036621,
+      "n_chunks": 1569,
+      "n_scored": 1569
+     }
+    },
+    {
+     "i": 4,
+     "gold": true,
+     "depth": 0.051233396584440226,
+     "approx_tokens": 300025,
+     "bm25@1": {
+      "p": 0.97133868932724,
+      "s": 0.27497386932373047,
+      "n_chunks": 1582,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.97133868932724,
+      "s": 0.33481693267822266,
+      "n_chunks": 1582,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9962922930717468,
+      "s": 17.061159133911133,
+      "n_chunks": 1582,
+      "n_scored": 1582
+     }
+    },
+    {
+     "i": 5,
+     "gold": false,
+     "depth": 0.6038461538461538,
+     "approx_tokens": 300106,
+     "bm25@1": {
+      "p": 0.46332138776779175,
+      "s": 0.28162193298339844,
+      "n_chunks": 1561,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9802911281585693,
+      "s": 0.34887099266052246,
+      "n_chunks": 1561,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9988967180252075,
+      "s": 16.990012168884277,
+      "n_chunks": 1561,
+      "n_scored": 1561
+     }
+    },
+    {
+     "i": 6,
+     "gold": true,
+     "depth": 0.23525641025641025,
+     "approx_tokens": 300023,
+     "bm25@1": {
+      "p": 0.909352719783783,
+      "s": 0.27478599548339844,
+      "n_chunks": 1561,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.909352719783783,
+      "s": 0.29917407035827637,
+      "n_chunks": 1561,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9963197708129883,
+      "s": 17.035212993621826,
+      "n_chunks": 1561,
+      "n_scored": 1561
+     }
+    },
+    {
+     "i": 7,
+     "gold": false,
+     "depth": 0.40420114576702737,
+     "approx_tokens": 300161,
+     "bm25@1": {
+      "p": 0.3241359293460846,
+      "s": 0.2755248546600342,
+      "n_chunks": 1572,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9486076831817627,
+      "s": 0.3565640449523926,
+      "n_chunks": 1572,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9982165694236755,
+      "s": 17.03668999671936,
+      "n_chunks": 1572,
+      "n_scored": 1572
+     }
+    },
+    {
+     "i": 8,
+     "gold": true,
+     "depth": 0.10607028753993611,
+     "approx_tokens": 300034,
+     "bm25@1": {
+      "p": 0.9444641470909119,
+      "s": 0.28339695930480957,
+      "n_chunks": 1566,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9444641470909119,
+      "s": 0.30512404441833496,
+      "n_chunks": 1566,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9938561320304871,
+      "s": 17.07769799232483,
+      "n_chunks": 1566,
+      "n_scored": 1566
+     }
+    },
+    {
+     "i": 9,
+     "gold": false,
+     "depth": 0.8601941747572815,
+     "approx_tokens": 300136,
+     "bm25@1": {
+      "p": 0.11358515918254852,
+      "s": 0.290316104888916,
+      "n_chunks": 1546,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9751821756362915,
+      "s": 0.31678104400634766,
+      "n_chunks": 1546,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     },
+     "full": {
+      "p": 0.9952983260154724,
+      "s": 16.94043278694153,
+      "n_chunks": 1546,
+      "n_scored": 1546
+     }
+    },
+    {
+     "i": 10,
+     "gold": true,
+     "depth": 0.8419333768778576,
+     "approx_tokens": 300015,
+     "bm25@1": {
+      "p": 0.9035162329673767,
+      "s": 0.269489049911499,
+      "n_chunks": 1532,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9035162329673767,
+      "s": 0.3051009178161621,
+      "n_chunks": 1532,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 11,
+     "gold": false,
+     "depth": 0.6722044728434505,
+     "approx_tokens": 300106,
+     "bm25@1": {
+      "p": 0.10244575887918472,
+      "s": 0.2716512680053711,
+      "n_chunks": 1566,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9651117920875549,
+      "s": 0.4609060287475586,
+      "n_chunks": 1566,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 12,
+     "gold": true,
+     "depth": 0.17223650385604114,
+     "approx_tokens": 300014,
+     "bm25@1": {
+      "p": 0.941555917263031,
+      "s": 0.27332496643066406,
+      "n_chunks": 1557,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9813018441200256,
+      "s": 0.3572847843170166,
+      "n_chunks": 1557,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 13,
+     "gold": false,
+     "depth": 0.648840206185567,
+     "approx_tokens": 300127,
+     "bm25@1": {
+      "p": 0.23823975026607513,
+      "s": 0.276947021484375,
+      "n_chunks": 1554,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9467280507087708,
+      "s": 0.388808012008667,
+      "n_chunks": 1554,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 14,
+     "gold": true,
+     "depth": 0.8108626198083068,
+     "approx_tokens": 300125,
+     "bm25@1": {
+      "p": 0.9575524926185608,
+      "s": 0.2806110382080078,
+      "n_chunks": 1566,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9575524926185608,
+      "s": 0.3653247356414795,
+      "n_chunks": 1566,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 15,
+     "gold": false,
+     "depth": 0.03393085787451985,
+     "approx_tokens": 300061,
+     "bm25@1": {
+      "p": 0.6572592854499817,
+      "s": 0.2761518955230713,
+      "n_chunks": 1563,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9489675164222717,
+      "s": 0.3355891704559326,
+      "n_chunks": 1563,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 16,
+     "gold": true,
+     "depth": 0.37683941138835575,
+     "approx_tokens": 300162,
+     "bm25@1": {
+      "p": 0.692378580570221,
+      "s": 0.27672410011291504,
+      "n_chunks": 1565,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9587754011154175,
+      "s": 0.3418409824371338,
+      "n_chunks": 1565,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 17,
+     "gold": false,
+     "depth": 0.6790518898142216,
+     "approx_tokens": 300198,
+     "bm25@1": {
+      "p": 0.5295787453651428,
+      "s": 0.28270697593688965,
+      "n_chunks": 1562,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9825026988983154,
+      "s": 0.3282601833343506,
+      "n_chunks": 1562,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 18,
+     "gold": true,
+     "depth": 0.4591315453384419,
+     "approx_tokens": 300032,
+     "bm25@1": {
+      "p": 0.9573864936828613,
+      "s": 0.27584409713745117,
+      "n_chunks": 1567,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9812109470367432,
+      "s": 0.3346421718597412,
+      "n_chunks": 1567,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 19,
+     "gold": false,
+     "depth": 0.40476190476190477,
+     "approx_tokens": 300350,
+     "bm25@1": {
+      "p": 0.7681291699409485,
+      "s": 0.2779500484466553,
+      "n_chunks": 1555,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9467306137084961,
+      "s": 0.3438589572906494,
+      "n_chunks": 1555,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 20,
+     "gold": true,
+     "depth": 0.6257901390644753,
+     "approx_tokens": 300036,
+     "bm25@1": {
+      "p": 0.7065041065216064,
+      "s": 0.27751708030700684,
+      "n_chunks": 1583,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9628883004188538,
+      "s": 0.34067678451538086,
+      "n_chunks": 1583,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 21,
+     "gold": false,
+     "depth": 0.9561290322580646,
+     "approx_tokens": 300096,
+     "bm25@1": {
+      "p": 0.3802785873413086,
+      "s": 0.2727699279785156,
+      "n_chunks": 1551,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9664688110351562,
+      "s": 0.3694589138031006,
+      "n_chunks": 1551,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 22,
+     "gold": true,
+     "depth": 0.13295526149968495,
+     "approx_tokens": 300130,
+     "bm25@1": {
+      "p": 0.9491983652114868,
+      "s": 0.2714681625366211,
+      "n_chunks": 1588,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9491983652114868,
+      "s": 0.3556361198425293,
+      "n_chunks": 1588,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 23,
+     "gold": false,
+     "depth": 0.02986022871664549,
+     "approx_tokens": 300159,
+     "bm25@1": {
+      "p": 0.8220242857933044,
+      "s": 0.27255797386169434,
+      "n_chunks": 1575,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9701914191246033,
+      "s": 0.3169369697570801,
+      "n_chunks": 1575,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 24,
+     "gold": true,
+     "depth": 0.12467866323907455,
+     "approx_tokens": 300099,
+     "bm25@1": {
+      "p": 0.8352704048156738,
+      "s": 0.26770496368408203,
+      "n_chunks": 1557,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9645270109176636,
+      "s": 0.33304715156555176,
+      "n_chunks": 1557,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 25,
+     "gold": false,
+     "depth": 0.8518049398353388,
+     "approx_tokens": 300224,
+     "bm25@1": {
+      "p": 0.2569189667701721,
+      "s": 0.2760481834411621,
+      "n_chunks": 1580,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9740133285522461,
+      "s": 0.3237118721008301,
+      "n_chunks": 1580,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 26,
+     "gold": true,
+     "depth": 0.16984732824427481,
+     "approx_tokens": 300177,
+     "bm25@1": {
+      "p": 0.9181906580924988,
+      "s": 0.27574992179870605,
+      "n_chunks": 1574,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9658146500587463,
+      "s": 0.3253970146179199,
+      "n_chunks": 1574,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 27,
+     "gold": false,
+     "depth": 0.4762210796915167,
+     "approx_tokens": 300133,
+     "bm25@1": {
+      "p": 0.5629777908325195,
+      "s": 0.27289915084838867,
+      "n_chunks": 1557,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.989081621170044,
+      "s": 0.3503081798553467,
+      "n_chunks": 1557,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 28,
+     "gold": true,
+     "depth": 0.9642160052049447,
+     "approx_tokens": 300097,
+     "bm25@1": {
+      "p": 0.8533653020858765,
+      "s": 0.26684999465942383,
+      "n_chunks": 1538,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9190760254859924,
+      "s": 0.3017721176147461,
+      "n_chunks": 1538,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 29,
+     "gold": false,
+     "depth": 0.3231552162849873,
+     "approx_tokens": 300080,
+     "bm25@1": {
+      "p": 0.2973027229309082,
+      "s": 0.27197813987731934,
+      "n_chunks": 1573,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9859054684638977,
+      "s": 0.30767107009887695,
+      "n_chunks": 1573,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 30,
+     "gold": true,
+     "depth": 0.7349397590361446,
+     "approx_tokens": 300141,
+     "bm25@1": {
+      "p": 0.9828952550888062,
+      "s": 0.2769746780395508,
+      "n_chunks": 1578,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9889963865280151,
+      "s": 0.3370518684387207,
+      "n_chunks": 1578,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 31,
+     "gold": false,
+     "depth": 0.8091895341416719,
+     "approx_tokens": 300037,
+     "bm25@1": {
+      "p": 0.27995458245277405,
+      "s": 0.27135205268859863,
+      "n_chunks": 1568,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9844143390655518,
+      "s": 0.3291800022125244,
+      "n_chunks": 1568,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 32,
+     "gold": true,
+     "depth": 0.05206349206349206,
+     "approx_tokens": 300173,
+     "bm25@1": {
+      "p": 0.8964352607727051,
+      "s": 0.27724218368530273,
+      "n_chunks": 1576,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9712218046188354,
+      "s": 0.3133060932159424,
+      "n_chunks": 1576,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 33,
+     "gold": false,
+     "depth": 0.6792690611216131,
+     "approx_tokens": 300310,
+     "bm25@1": {
+      "p": 0.13669341802597046,
+      "s": 0.2761709690093994,
+      "n_chunks": 1588,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.936363160610199,
+      "s": 0.33515286445617676,
+      "n_chunks": 1588,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 34,
+     "gold": true,
+     "depth": 0.7428206764518187,
+     "approx_tokens": 300144,
+     "bm25@1": {
+      "p": 0.9866320490837097,
+      "s": 0.2734367847442627,
+      "n_chunks": 1568,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9866320490837097,
+      "s": 0.3567769527435303,
+      "n_chunks": 1568,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 35,
+     "gold": false,
+     "depth": 0.5167827739075365,
+     "approx_tokens": 300141,
+     "bm25@1": {
+      "p": 0.26003676652908325,
+      "s": 0.27724385261535645,
+      "n_chunks": 1580,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.831719160079956,
+      "s": 0.36765503883361816,
+      "n_chunks": 1580,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 36,
+     "gold": true,
+     "depth": 0.36381074168797956,
+     "approx_tokens": 300016,
+     "bm25@1": {
+      "p": 0.932283341884613,
+      "s": 0.276364803314209,
+      "n_chunks": 1565,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9945183396339417,
+      "s": 0.33904004096984863,
+      "n_chunks": 1565,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 37,
+     "gold": false,
+     "depth": 0.7617212588310854,
+     "approx_tokens": 300174,
+     "bm25@1": {
+      "p": 0.6063271760940552,
+      "s": 0.27781200408935547,
+      "n_chunks": 1558,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9359688758850098,
+      "s": 0.3352839946746826,
+      "n_chunks": 1558,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 38,
+     "gold": true,
+     "depth": 0.6057692307692307,
+     "approx_tokens": 300053,
+     "bm25@1": {
+      "p": 0.9613984227180481,
+      "s": 0.2740480899810791,
+      "n_chunks": 1562,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9681537747383118,
+      "s": 0.36925721168518066,
+      "n_chunks": 1562,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 39,
+     "gold": false,
+     "depth": 0.7987538940809968,
+     "approx_tokens": 300069,
+     "bm25@1": {
+      "p": 0.7999624013900757,
+      "s": 0.27285003662109375,
+      "n_chunks": 1606,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9174109697341919,
+      "s": 0.35959315299987793,
+      "n_chunks": 1606,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 40,
+     "gold": true,
+     "depth": 0.21807838179519595,
+     "approx_tokens": 300083,
+     "bm25@1": {
+      "p": 0.9465354681015015,
+      "s": 0.2740509510040283,
+      "n_chunks": 1583,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9465354681015015,
+      "s": 0.33865904808044434,
+      "n_chunks": 1583,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 41,
+     "gold": false,
+     "depth": 0.9597701149425287,
+     "approx_tokens": 300151,
+     "bm25@1": {
+      "p": 0.36526820063591003,
+      "s": 0.27347397804260254,
+      "n_chunks": 1567,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8542523980140686,
+      "s": 0.3470120429992676,
+      "n_chunks": 1567,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 42,
+     "gold": true,
+     "depth": 0.47394852479598243,
+     "approx_tokens": 300036,
+     "bm25@1": {
+      "p": 0.937728226184845,
+      "s": 0.2725489139556885,
+      "n_chunks": 1594,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9746233820915222,
+      "s": 0.30539894104003906,
+      "n_chunks": 1594,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 43,
+     "gold": false,
+     "depth": 0.7902912621359224,
+     "approx_tokens": 300183,
+     "bm25@1": {
+      "p": 0.43596217036247253,
+      "s": 0.27217793464660645,
+      "n_chunks": 1546,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9598276019096375,
+      "s": 0.352794885635376,
+      "n_chunks": 1546,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 44,
+     "gold": true,
+     "depth": 0.9281627463445645,
+     "approx_tokens": 300013,
+     "bm25@1": {
+      "p": 0.921970546245575,
+      "s": 0.2730388641357422,
+      "n_chunks": 1574,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9937930107116699,
+      "s": 0.3466031551361084,
+      "n_chunks": 1574,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 45,
+     "gold": false,
+     "depth": 0.12572161642078256,
+     "approx_tokens": 300435,
+     "bm25@1": {
+      "p": 0.2722797393798828,
+      "s": 0.27919483184814453,
+      "n_chunks": 1560,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9756537079811096,
+      "s": 0.332639217376709,
+      "n_chunks": 1560,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 46,
+     "gold": true,
+     "depth": 0.3469648562300319,
+     "approx_tokens": 300224,
+     "bm25@1": {
+      "p": 0.9248842000961304,
+      "s": 0.27905797958374023,
+      "n_chunks": 1566,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9876157641410828,
+      "s": 0.3405897617340088,
+      "n_chunks": 1566,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 47,
+     "gold": false,
+     "depth": 0.8849840255591054,
+     "approx_tokens": 300074,
+     "bm25@1": {
+      "p": 0.06663559377193451,
+      "s": 0.2818453311920166,
+      "n_chunks": 1566,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.826233983039856,
+      "s": 0.37233591079711914,
+      "n_chunks": 1566,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 48,
+     "gold": true,
+     "depth": 0.8147448015122873,
+     "approx_tokens": 300230,
+     "bm25@1": {
+      "p": 0.9211289286613464,
+      "s": 0.2814311981201172,
+      "n_chunks": 1588,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9622111916542053,
+      "s": 0.3181779384613037,
+      "n_chunks": 1588,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 49,
+     "gold": false,
+     "depth": 0.47920665387076133,
+     "approx_tokens": 300098,
+     "bm25@1": {
+      "p": 0.24269992113113403,
+      "s": 0.2785489559173584,
+      "n_chunks": 1564,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9561927318572998,
+      "s": 0.36492300033569336,
+      "n_chunks": 1564,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 50,
+     "gold": true,
+     "depth": 0.7718291905672403,
+     "approx_tokens": 300258,
+     "bm25@1": {
+      "p": 0.8514278531074524,
+      "s": 0.2775120735168457,
+      "n_chunks": 1570,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8856210708618164,
+      "s": 0.35010313987731934,
+      "n_chunks": 1570,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 51,
+     "gold": false,
+     "depth": 0.46480659480025366,
+     "approx_tokens": 300154,
+     "bm25@1": {
+      "p": 0.29964083433151245,
+      "s": 0.2777671813964844,
+      "n_chunks": 1578,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9684487581253052,
+      "s": 0.3408699035644531,
+      "n_chunks": 1578,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 52,
+     "gold": true,
+     "depth": 0.7113076437144662,
+     "approx_tokens": 300111,
+     "bm25@1": {
+      "p": 0.9011889100074768,
+      "s": 0.2742178440093994,
+      "n_chunks": 1584,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9467464089393616,
+      "s": 0.3131248950958252,
+      "n_chunks": 1584,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 53,
+     "gold": false,
+     "depth": 0.17206349206349206,
+     "approx_tokens": 300289,
+     "bm25@1": {
+      "p": 0.13089057803153992,
+      "s": 0.27433276176452637,
+      "n_chunks": 1576,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9869019985198975,
+      "s": 0.35036683082580566,
+      "n_chunks": 1576,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 54,
+     "gold": true,
+     "depth": 0.7880921895006402,
+     "approx_tokens": 300127,
+     "bm25@1": {
+      "p": 0.9657541513442993,
+      "s": 0.26984214782714844,
+      "n_chunks": 1563,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9853836894035339,
+      "s": 0.32945799827575684,
+      "n_chunks": 1563,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 55,
+     "gold": false,
+     "depth": 0.17673521850899743,
+     "approx_tokens": 300461,
+     "bm25@1": {
+      "p": 0.4774062931537628,
+      "s": 0.2746748924255371,
+      "n_chunks": 1557,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.935762882232666,
+      "s": 0.3375248908996582,
+      "n_chunks": 1557,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 56,
+     "gold": true,
+     "depth": 0.05025773195876289,
+     "approx_tokens": 300190,
+     "bm25@1": {
+      "p": 0.8755786418914795,
+      "s": 0.27443814277648926,
+      "n_chunks": 1553,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9636707305908203,
+      "s": 0.3238711357116699,
+      "n_chunks": 1553,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 57,
+     "gold": false,
+     "depth": 0.7352185089974294,
+     "approx_tokens": 300069,
+     "bm25@1": {
+      "p": 0.35980504751205444,
+      "s": 0.27294206619262695,
+      "n_chunks": 1557,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9802846908569336,
+      "s": 0.325031042098999,
+      "n_chunks": 1557,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 58,
+     "gold": true,
+     "depth": 0.957078795643818,
+     "approx_tokens": 300023,
+     "bm25@1": {
+      "p": 0.845391035079956,
+      "s": 0.2726452350616455,
+      "n_chunks": 1562,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9583898186683655,
+      "s": 0.31250715255737305,
+      "n_chunks": 1562,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 59,
+     "gold": false,
+     "depth": 0.2667946257197697,
+     "approx_tokens": 300117,
+     "bm25@1": {
+      "p": 0.3073982894420624,
+      "s": 0.27484583854675293,
+      "n_chunks": 1564,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9190796613693237,
+      "s": 0.33907008171081543,
+      "n_chunks": 1564,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    }
+   ]
+  },
+  "1m": {
+   "stats": {
+    "breakdown": {
+     "n_chunks": 5224,
+     "tokens": 840899,
+     "s_chunk": 0.7427442073822021,
+     "s_rank": 0.18065905570983887
+    },
+    "bm25@1": {
+     "n": 60,
+     "acc@0.5": 0.8833333333333333,
+     "auc": 0.9933333333333333,
+     "auc_lo": 0.9777777777777777,
+     "auc_hi": 1.0,
+     "recall@spec90": 0.9333333333333333,
+     "s_per_doc": 0.9157591382662456,
+     "n_chunks": 5212.916666666667,
+     "n_scored": 1
+    },
+    "bm25@5": {
+     "n": 60,
+     "acc@0.5": 0.5,
+     "auc": 0.5088888888888888,
+     "auc_lo": 0.36544444444444446,
+     "auc_hi": 0.6511111111111111,
+     "recall@spec90": 0.06666666666666667,
+     "s_per_doc": 1.015405241648356,
+     "n_chunks": 5212.916666666667,
+     "n_scored": 5
+    }
+   },
+   "rows": [
+    {
+     "i": 0,
+     "gold": true,
+     "depth": 0.8199923400995787,
+     "approx_tokens": 1000034,
+     "bm25@1": {
+      "p": 0.8654749989509583,
+      "s": 0.9279172420501709,
+      "n_chunks": 5224,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9786454439163208,
+      "s": 1.0467898845672607,
+      "n_chunks": 5224,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 1,
+     "gold": false,
+     "depth": 0.08697318007662835,
+     "approx_tokens": 1000032,
+     "bm25@1": {
+      "p": 0.15861310064792633,
+      "s": 0.9334440231323242,
+      "n_chunks": 5222,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9943177103996277,
+      "s": 1.0412349700927734,
+      "n_chunks": 5222,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 2,
+     "gold": true,
+     "depth": 0.6380332886933231,
+     "approx_tokens": 1000022,
+     "bm25@1": {
+      "p": 0.9341273903846741,
+      "s": 0.9142770767211914,
+      "n_chunks": 5228,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9341273903846741,
+      "s": 1.0261149406433105,
+      "n_chunks": 5228,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 3,
+     "gold": false,
+     "depth": 0.7040246485653765,
+     "approx_tokens": 1000120,
+     "bm25@1": {
+      "p": 0.41897353529930115,
+      "s": 0.9121809005737305,
+      "n_chunks": 5194,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.875034749507904,
+      "s": 0.9834270477294922,
+      "n_chunks": 5194,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 4,
+     "gold": true,
+     "depth": 0.0509602586042974,
+     "approx_tokens": 1000080,
+     "bm25@1": {
+      "p": 0.97133868932724,
+      "s": 0.9229559898376465,
+      "n_chunks": 5260,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9802500009536743,
+      "s": 1.0219650268554688,
+      "n_chunks": 5260,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 5,
+     "gold": false,
+     "depth": 0.6039488966318235,
+     "approx_tokens": 1000044,
+     "bm25@1": {
+      "p": 0.46332138776779175,
+      "s": 0.9241752624511719,
+      "n_chunks": 5167,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9723792672157288,
+      "s": 1.0356371402740479,
+      "n_chunks": 5167,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 6,
+     "gold": true,
+     "depth": 0.2350681774534281,
+     "approx_tokens": 1000021,
+     "bm25@1": {
+      "p": 0.909352719783783,
+      "s": 0.9140958786010742,
+      "n_chunks": 5208,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.909352719783783,
+      "s": 1.0113179683685303,
+      "n_chunks": 5208,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 7,
+     "gold": false,
+     "depth": 0.4039938556067588,
+     "approx_tokens": 1000069,
+     "bm25@1": {
+      "p": 0.3241359293460846,
+      "s": 0.9008758068084717,
+      "n_chunks": 5209,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8531948924064636,
+      "s": 0.9843759536743164,
+      "n_chunks": 5209,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 8,
+     "gold": true,
+     "depth": 0.10592321049585182,
+     "approx_tokens": 1000099,
+     "bm25@1": {
+      "p": 0.9444641470909119,
+      "s": 0.9188640117645264,
+      "n_chunks": 5184,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9444641470909119,
+      "s": 1.0479540824890137,
+      "n_chunks": 5184,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 9,
+     "gold": false,
+     "depth": 0.8600886490653306,
+     "approx_tokens": 1000252,
+     "bm25@1": {
+      "p": 0.11358515918254852,
+      "s": 0.924375057220459,
+      "n_chunks": 5190,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9788863658905029,
+      "s": 1.0035219192504883,
+      "n_chunks": 5190,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 10,
+     "gold": true,
+     "depth": 0.8420848672737842,
+     "approx_tokens": 1000102,
+     "bm25@1": {
+      "p": 0.9035162329673767,
+      "s": 0.9139702320098877,
+      "n_chunks": 5162,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9035162329673767,
+      "s": 0.9986701011657715,
+      "n_chunks": 5162,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 11,
+     "gold": false,
+     "depth": 0.6719892266256252,
+     "approx_tokens": 1000094,
+     "bm25@1": {
+      "p": 0.10244575887918472,
+      "s": 0.9168519973754883,
+      "n_chunks": 5199,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9651117920875549,
+      "s": 1.0013549327850342,
+      "n_chunks": 5199,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 12,
+     "gold": true,
+     "depth": 0.17197696737044146,
+     "approx_tokens": 1000197,
+     "bm25@1": {
+      "p": 0.941555917263031,
+      "s": 0.8988618850708008,
+      "n_chunks": 5211,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9813018441200256,
+      "s": 1.014112949371338,
+      "n_chunks": 5211,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 13,
+     "gold": false,
+     "depth": 0.6489382054715899,
+     "approx_tokens": 1000093,
+     "bm25@1": {
+      "p": 0.23823975026607513,
+      "s": 0.9854750633239746,
+      "n_chunks": 5229,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8379281759262085,
+      "s": 1.0201771259307861,
+      "n_chunks": 5229,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 14,
+     "gold": true,
+     "depth": 0.811017597551645,
+     "approx_tokens": 1000204,
+     "bm25@1": {
+      "p": 0.9575524926185608,
+      "s": 0.919654369354248,
+      "n_chunks": 5229,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9575524926185608,
+      "s": 1.0166411399841309,
+      "n_chunks": 5229,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 15,
+     "gold": false,
+     "depth": 0.0340843443096476,
+     "approx_tokens": 1000089,
+     "bm25@1": {
+      "p": 0.6572592854499817,
+      "s": 0.9181251525878906,
+      "n_chunks": 5195,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.968855082988739,
+      "s": 0.9961779117584229,
+      "n_chunks": 5195,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 16,
+     "gold": true,
+     "depth": 0.3770207852193995,
+     "approx_tokens": 1000101,
+     "bm25@1": {
+      "p": 0.692378580570221,
+      "s": 0.9123051166534424,
+      "n_chunks": 5198,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8732739090919495,
+      "s": 1.0301339626312256,
+      "n_chunks": 5198,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 17,
+     "gold": false,
+     "depth": 0.6790830945558739,
+     "approx_tokens": 1000123,
+     "bm25@1": {
+      "p": 0.5295787453651428,
+      "s": 0.9069960117340088,
+      "n_chunks": 5237,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9825026988983154,
+      "s": 1.0137920379638672,
+      "n_chunks": 5237,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 18,
+     "gold": true,
+     "depth": 0.4590891547664994,
+     "approx_tokens": 1000100,
+     "bm25@1": {
+      "p": 0.9573864936828613,
+      "s": 0.9023330211639404,
+      "n_chunks": 5183,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9573864936828613,
+      "s": 1.0235209465026855,
+      "n_chunks": 5183,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 19,
+     "gold": false,
+     "depth": 0.40497301464919044,
+     "approx_tokens": 1000199,
+     "bm25@1": {
+      "p": 0.7681291699409485,
+      "s": 0.919856071472168,
+      "n_chunks": 5189,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9815317392349243,
+      "s": 1.0520799160003662,
+      "n_chunks": 5189,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 20,
+     "gold": true,
+     "depth": 0.6260007624857034,
+     "approx_tokens": 1000036,
+     "bm25@1": {
+      "p": 0.7065041065216064,
+      "s": 0.9094831943511963,
+      "n_chunks": 5247,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9628883004188538,
+      "s": 0.9698853492736816,
+      "n_chunks": 5247,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 21,
+     "gold": false,
+     "depth": 0.9559249951672144,
+     "approx_tokens": 1000017,
+     "bm25@1": {
+      "p": 0.3802785873413086,
+      "s": 0.9005420207977295,
+      "n_chunks": 5174,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9731672406196594,
+      "s": 0.9917418956756592,
+      "n_chunks": 5174,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 22,
+     "gold": true,
+     "depth": 0.13305455236647026,
+     "approx_tokens": 1000040,
+     "bm25@1": {
+      "p": 0.9491983652114868,
+      "s": 0.9027547836303711,
+      "n_chunks": 5262,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9491983652114868,
+      "s": 0.9690077304840088,
+      "n_chunks": 5262,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 23,
+     "gold": false,
+     "depth": 0.030053598774885146,
+     "approx_tokens": 1000119,
+     "bm25@1": {
+      "p": 0.8220242857933044,
+      "s": 0.907620906829834,
+      "n_chunks": 5225,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9925481677055359,
+      "s": 1.0194659233093262,
+      "n_chunks": 5225,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 24,
+     "gold": true,
+     "depth": 0.125,
+     "approx_tokens": 1000062,
+     "bm25@1": {
+      "p": 0.8352704048156738,
+      "s": 0.9196810722351074,
+      "n_chunks": 5193,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8352704048156738,
+      "s": 1.0249488353729248,
+      "n_chunks": 5193,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 25,
+     "gold": false,
+     "depth": 0.8520653218059558,
+     "approx_tokens": 1000019,
+     "bm25@1": {
+      "p": 0.2569189667701721,
+      "s": 0.9229309558868408,
+      "n_chunks": 5206,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9175436496734619,
+      "s": 1.0068929195404053,
+      "n_chunks": 5206,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 26,
+     "gold": true,
+     "depth": 0.17003269859588382,
+     "approx_tokens": 1000061,
+     "bm25@1": {
+      "p": 0.9181906580924988,
+      "s": 0.9240052700042725,
+      "n_chunks": 5201,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9747949838638306,
+      "s": 1.0085668563842773,
+      "n_chunks": 5201,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 27,
+     "gold": false,
+     "depth": 0.4759783029833398,
+     "approx_tokens": 1000046,
+     "bm25@1": {
+      "p": 0.5629777908325195,
+      "s": 0.9165768623352051,
+      "n_chunks": 5163,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9677006602287292,
+      "s": 1.007890224456787,
+      "n_chunks": 5163,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 28,
+     "gold": true,
+     "depth": 0.9639205093575149,
+     "approx_tokens": 1000046,
+     "bm25@1": {
+      "p": 0.8533653020858765,
+      "s": 0.9103519916534424,
+      "n_chunks": 5184,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9220524430274963,
+      "s": 1.036902904510498,
+      "n_chunks": 5184,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 29,
+     "gold": false,
+     "depth": 0.3230063109581182,
+     "approx_tokens": 1000339,
+     "bm25@1": {
+      "p": 0.2973027229309082,
+      "s": 0.9163587093353271,
+      "n_chunks": 5230,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.7503992915153503,
+      "s": 1.0622341632843018,
+      "n_chunks": 5230,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 30,
+     "gold": true,
+     "depth": 0.7350230414746544,
+     "approx_tokens": 1000070,
+     "bm25@1": {
+      "p": 0.9828952550888062,
+      "s": 0.9088959693908691,
+      "n_chunks": 5210,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9829068779945374,
+      "s": 1.0021770000457764,
+      "n_chunks": 5210,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 31,
+     "gold": false,
+     "depth": 0.8089866156787763,
+     "approx_tokens": 1000080,
+     "bm25@1": {
+      "p": 0.27995458245277405,
+      "s": 0.9150230884552002,
+      "n_chunks": 5231,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9844143390655518,
+      "s": 1.0233259201049805,
+      "n_chunks": 5231,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 32,
+     "gold": true,
+     "depth": 0.05204745503252966,
+     "approx_tokens": 1000039,
+     "bm25@1": {
+      "p": 0.8964352607727051,
+      "s": 0.9199838638305664,
+      "n_chunks": 5227,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.979408323764801,
+      "s": 1.0409080982208252,
+      "n_chunks": 5227,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 33,
+     "gold": false,
+     "depth": 0.6790572906687105,
+     "approx_tokens": 1000071,
+     "bm25@1": {
+      "p": 0.13669341802597046,
+      "s": 0.9308738708496094,
+      "n_chunks": 5221,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9475633502006531,
+      "s": 1.0159530639648438,
+      "n_chunks": 5221,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 34,
+     "gold": true,
+     "depth": 0.7429888590088359,
+     "approx_tokens": 1000467,
+     "bm25@1": {
+      "p": 0.9866320490837097,
+      "s": 0.9273910522460938,
+      "n_chunks": 5208,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9866320490837097,
+      "s": 1.0523579120635986,
+      "n_chunks": 5208,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 35,
+     "gold": false,
+     "depth": 0.5170628834355828,
+     "approx_tokens": 1000027,
+     "bm25@1": {
+      "p": 0.26003676652908325,
+      "s": 0.9101099967956543,
+      "n_chunks": 5218,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9725248217582703,
+      "s": 1.0264713764190674,
+      "n_chunks": 5218,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 36,
+     "gold": true,
+     "depth": 0.3639494833524684,
+     "approx_tokens": 1000304,
+     "bm25@1": {
+      "p": 0.932283341884613,
+      "s": 0.9033470153808594,
+      "n_chunks": 5228,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9893971681594849,
+      "s": 0.9848692417144775,
+      "n_chunks": 5228,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 37,
+     "gold": false,
+     "depth": 0.7620689655172413,
+     "approx_tokens": 1000201,
+     "bm25@1": {
+      "p": 0.6063271760940552,
+      "s": 0.905543327331543,
+      "n_chunks": 5221,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9022871851921082,
+      "s": 0.9899280071258545,
+      "n_chunks": 5221,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 38,
+     "gold": true,
+     "depth": 0.6059907834101382,
+     "approx_tokens": 1000043,
+     "bm25@1": {
+      "p": 0.9613984227180481,
+      "s": 0.9116761684417725,
+      "n_chunks": 5210,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9613984227180481,
+      "s": 1.0043158531188965,
+      "n_chunks": 5210,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 39,
+     "gold": false,
+     "depth": 0.7989337395277989,
+     "approx_tokens": 1000221,
+     "bm25@1": {
+      "p": 0.7999624013900757,
+      "s": 0.918297290802002,
+      "n_chunks": 5254,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9772805571556091,
+      "s": 1.0084619522094727,
+      "n_chunks": 5254,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 40,
+     "gold": true,
+     "depth": 0.21793893129770991,
+     "approx_tokens": 1000145,
+     "bm25@1": {
+      "p": 0.9465354681015015,
+      "s": 0.9000298976898193,
+      "n_chunks": 5241,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9465354681015015,
+      "s": 1.0157711505889893,
+      "n_chunks": 5241,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 41,
+     "gold": false,
+     "depth": 0.960045880328809,
+     "approx_tokens": 1000026,
+     "bm25@1": {
+      "p": 0.36526820063591003,
+      "s": 0.9074838161468506,
+      "n_chunks": 5232,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9619163274765015,
+      "s": 1.0063130855560303,
+      "n_chunks": 5232,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 42,
+     "gold": true,
+     "depth": 0.4739762724837352,
+     "approx_tokens": 1000180,
+     "bm25@1": {
+      "p": 0.937728226184845,
+      "s": 0.9167277812957764,
+      "n_chunks": 5227,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.937728226184845,
+      "s": 1.0449869632720947,
+      "n_chunks": 5227,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 43,
+     "gold": false,
+     "depth": 0.7900403768506057,
+     "approx_tokens": 1000272,
+     "bm25@1": {
+      "p": 0.43596217036247253,
+      "s": 0.9120748043060303,
+      "n_chunks": 5202,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9415858387947083,
+      "s": 0.9823172092437744,
+      "n_chunks": 5202,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 44,
+     "gold": true,
+     "depth": 0.9280933256836871,
+     "approx_tokens": 1000085,
+     "bm25@1": {
+      "p": 0.921970546245575,
+      "s": 0.916234016418457,
+      "n_chunks": 5230,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9900920987129211,
+      "s": 1.0946381092071533,
+      "n_chunks": 5230,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 45,
+     "gold": false,
+     "depth": 0.1260326609029779,
+     "approx_tokens": 1000023,
+     "bm25@1": {
+      "p": 0.2722797393798828,
+      "s": 0.9035799503326416,
+      "n_chunks": 5207,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9889782071113586,
+      "s": 1.009545087814331,
+      "n_chunks": 5207,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 46,
+     "gold": true,
+     "depth": 0.3470836531082118,
+     "approx_tokens": 1000076,
+     "bm25@1": {
+      "p": 0.9248842000961304,
+      "s": 0.9004888534545898,
+      "n_chunks": 5213,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.985551118850708,
+      "s": 0.9975070953369141,
+      "n_chunks": 5213,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 47,
+     "gold": false,
+     "depth": 0.8850818094321463,
+     "approx_tokens": 1000022,
+     "bm25@1": {
+      "p": 0.06663559377193451,
+      "s": 0.9259090423583984,
+      "n_chunks": 5197,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8118575215339661,
+      "s": 0.9862689971923828,
+      "n_chunks": 5197,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 48,
+     "gold": true,
+     "depth": 0.8149500384319754,
+     "approx_tokens": 1000015,
+     "bm25@1": {
+      "p": 0.9211289286613464,
+      "s": 0.9056558609008789,
+      "n_chunks": 5205,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9870142936706543,
+      "s": 1.0061225891113281,
+      "n_chunks": 5205,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 49,
+     "gold": false,
+     "depth": 0.47894333843797854,
+     "approx_tokens": 1000128,
+     "bm25@1": {
+      "p": 0.24269992113113403,
+      "s": 0.9192960262298584,
+      "n_chunks": 5226,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9561927318572998,
+      "s": 1.0160939693450928,
+      "n_chunks": 5226,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 50,
+     "gold": true,
+     "depth": 0.7720814132104454,
+     "approx_tokens": 1000094,
+     "bm25@1": {
+      "p": 0.8514278531074524,
+      "s": 0.908029317855835,
+      "n_chunks": 5210,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8856210708618164,
+      "s": 0.9734337329864502,
+      "n_chunks": 5210,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 51,
+     "gold": false,
+     "depth": 0.46500095365248906,
+     "approx_tokens": 1000033,
+     "bm25@1": {
+      "p": 0.29964083433151245,
+      "s": 0.9067373275756836,
+      "n_chunks": 5244,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.8892086148262024,
+      "s": 0.9848389625549316,
+      "n_chunks": 5244,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 52,
+     "gold": true,
+     "depth": 0.7110179184140297,
+     "approx_tokens": 1000125,
+     "bm25@1": {
+      "p": 0.9011889100074768,
+      "s": 0.9240818023681641,
+      "n_chunks": 5248,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9450120329856873,
+      "s": 1.0233449935913086,
+      "n_chunks": 5248,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 53,
+     "gold": false,
+     "depth": 0.17196225688426728,
+     "approx_tokens": 1000017,
+     "bm25@1": {
+      "p": 0.13089057803153992,
+      "s": 0.9217169284820557,
+      "n_chunks": 5194,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9869019985198975,
+      "s": 1.0006530284881592,
+      "n_chunks": 5194,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 54,
+     "gold": true,
+     "depth": 0.7880820080475187,
+     "approx_tokens": 1000150,
+     "bm25@1": {
+      "p": 0.9657541513442993,
+      "s": 0.9260690212249756,
+      "n_chunks": 5220,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9657541513442993,
+      "s": 1.0033729076385498,
+      "n_chunks": 5220,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 55,
+     "gold": false,
+     "depth": 0.17702339854238588,
+     "approx_tokens": 1000114,
+     "bm25@1": {
+      "p": 0.4774062931537628,
+      "s": 0.9129469394683838,
+      "n_chunks": 5215,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9775550365447998,
+      "s": 1.0247023105621338,
+      "n_chunks": 5215,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 56,
+     "gold": true,
+     "depth": 0.05008702378650164,
+     "approx_tokens": 1000173,
+     "bm25@1": {
+      "p": 0.8755786418914795,
+      "s": 0.9069290161132812,
+      "n_chunks": 5172,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.979808509349823,
+      "s": 1.0428152084350586,
+      "n_chunks": 5172,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 57,
+     "gold": false,
+     "depth": 0.7350853635142912,
+     "approx_tokens": 1000234,
+     "bm25@1": {
+      "p": 0.35980504751205444,
+      "s": 0.9322407245635986,
+      "n_chunks": 5214,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9426147937774658,
+      "s": 1.048018217086792,
+      "n_chunks": 5214,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 58,
+     "gold": true,
+     "depth": 0.9570469798657718,
+     "approx_tokens": 1000023,
+     "bm25@1": {
+      "p": 0.845391035079956,
+      "s": 0.9282069206237793,
+      "n_chunks": 5217,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9583898186683655,
+      "s": 0.9728708267211914,
+      "n_chunks": 5217,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    },
+    {
+     "i": 59,
+     "gold": false,
+     "depth": 0.26702371843917366,
+     "approx_tokens": 1000017,
+     "bm25@1": {
+      "p": 0.3073982894420624,
+      "s": 0.9020726680755615,
+      "n_chunks": 5230,
+      "n_scored": 1,
+      "needle_rank": null,
+      "hit": true
+     },
+     "bm25@5": {
+      "p": 0.9771650433540344,
+      "s": 1.075394868850708,
+      "n_chunks": 5230,
+      "n_scored": 5,
+      "needle_rank": null,
+      "hit": true
+     }
+    }
+   ]
+  }
+ },
+ "pool": "squad train, unique contexts"
+}

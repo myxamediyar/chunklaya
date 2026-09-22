@@ -1,0 +1,4 @@
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 2110.66it/s]
+scored 5700 non-sports passages in 29s; 33516 rows cached, 877 hits / 4823 misses this session
+P(Sports) over pool: >0.2 1.351% (77)  >0.5 1.105% (63)  >0.9 0.877% (50)  max 1.000
+total 54s
