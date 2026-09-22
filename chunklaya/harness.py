@@ -7,11 +7,33 @@ from laya.common import confidence_from_probs
 from .aggregate import choice_loglinear, choice_mixture, noul_any, noul_max, noul_mean, score_expected
 from .batch import predict_many
 from .chunk import Chunk, chunk_paragraphs, chunk_text
-from .prefilter import bm25_rank, question_query
+from .prefilter import BM25Index, question_query
 
 GATE_TEMPLATE = ("Does this text contain the information needed to answer the following question? "
                  "Question: {instructions}")
 DEFAULT_AGG = {"noul": "max", "choice": "mixture", "score": "mixture"}
+
+
+class ChunkIndex:
+    """One state, chunked once, with its BM25 index built on first use.
+
+    ChunkLaya.index(text) makes one; ChunkLaya.ask accepts it in place of the text. Chunking and
+    indexing are the only per-question costs that grow with the input once a prefilter is on (at
+    ~1M tokens, 0.9 of the 0.92 s a question takes -- results/2026-09-22-needle-scale), so a state
+    that will take more than one question should be indexed once."""
+
+    def __init__(self, text: str, chunks: List[Chunk], params: tuple):
+        self.text, self.chunks, self.params = text, chunks, params
+        self._bm25: Optional[BM25Index] = None
+
+    @property
+    def bm25(self) -> BM25Index:
+        if self._bm25 is None:
+            self._bm25 = BM25Index([c.text for c in self.chunks])
+        return self._bm25
+
+    def __len__(self) -> int:
+        return len(self.chunks)
 
 
 class ChunkLaya:
@@ -48,11 +70,22 @@ class ChunkLaya:
             return chunk_paragraphs(self.agent.tok, text, self.chunk_tokens)
         return chunk_text(self.agent.tok, text, self.chunk_tokens, self.stride)
 
-    def _select(self, chunks: List[Chunk], qdef: Dict) -> List[Chunk]:
+    @property
+    def _params(self) -> tuple:
+        return (self.mode, self.chunk_tokens, self.stride)
+
+    def index(self, text: str) -> ChunkIndex:
+        """Chunk `text` once (and, on demand, index it) so it can take many questions via `ask`."""
+        if not isinstance(text, str):
+            raise TypeError("ChunkLaya.index takes a string state; serialize dict/list states first")
+        return ChunkIndex(text, self.chunks(text), self._params)
+
+    def _select(self, idx: ChunkIndex, qdef: Dict) -> List[Chunk]:
         """The chunks Laya will score for this question, in document order."""
+        chunks = idx.chunks
         if self.prefilter is None or len(chunks) <= self.top_k:
             return chunks
-        keep = sorted(bm25_rank([c.text for c in chunks], question_query(qdef))[: self.top_k])
+        keep = sorted(idx.bm25.rank(question_query(qdef))[: self.top_k])
         return [chunks[i] for i in keep]
 
     def _use_gate(self, qdef: Dict) -> bool:
@@ -64,9 +97,10 @@ class ChunkLaya:
         tpl = self.gate if isinstance(self.gate, str) and self.gate != "auto" else GATE_TEMPLATE
         return {"type": "noul", "instructions": tpl.format(instructions=qdef["instructions"])}
 
-    def ask(self, state: str, questions: Dict[str, Dict], agg: Optional[Dict[str, str]] = None,
+    def ask(self, state: Union[str, ChunkIndex], questions: Dict[str, Dict], agg: Optional[Dict[str, str]] = None,
             max_len: Optional[int] = None, detectors: Optional[Dict[str, tuple]] = None) -> Dict[str, Any]:
         """
+        state      the text, or a ChunkIndex from `index` when the same text takes several calls
         agg        per-question override of the aggregation rule:
                    noul: max | any | mean      choice: mixture | loglinear | stack      score: mixture | stack
         max_len    window passed to Laya for each chunk (default agent.cfg["max_len"])
@@ -77,9 +111,13 @@ class ChunkLaya:
         Returns laya-shaped {"answers": {qid: {...}}} plus n_chunks and per-chunk detail under
         answers[qid]["chunks"] = [{"index", "p", "gate", "tok_start", "tok_end"}].
         """
-        if not isinstance(state, str):
-            raise TypeError("ChunkLaya.ask takes a string state; serialize dict/list states first")
-        chunks = self.chunks(state)
+        if isinstance(state, ChunkIndex):
+            if state.params != self._params:
+                raise ValueError(f"index was built with {state.params}, this harness chunks with {self._params}")
+            idx = state
+        else:
+            idx = self.index(state)
+        chunks = idx.chunks
         agg = {**DEFAULT_AGG, **{k: v for k, v in (agg or {}).items()}}
         m = len(chunks)
 
@@ -88,7 +126,7 @@ class ChunkLaya:
         pairs, index, sel = [], [], {}
         detectors = detectors or {}
         for qid, qdef in questions.items():
-            C = sel[qid] = self._select(chunks, qdef)
+            C = sel[qid] = self._select(idx, qdef)
             mq = len(C)
             g = self._use_gate(qdef) and mq > 1
             det = detectors.get(qid)
