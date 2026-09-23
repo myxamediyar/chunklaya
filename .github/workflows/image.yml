@@ -1,0 +1,70 @@
+# Build the serving image and push it to GHCR as ghcr.io/<owner>/chunklaya.
+#
+# Every push that touches the package or serve/ builds and pushes a :<sha>
+# tag; pushes to main also move :latest. It can also be run by hand from the
+# Actions tab. GITHUB_TOKEN can push packages but cannot change a package's
+# visibility: the first push creates a private package, and a host that pulls
+# it either needs the package made public (package settings → visibility) or
+# a registry credential. serve/README.md covers both.
+name: image
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "chunklaya/**"
+      - "pyproject.toml"
+      - "serve/**"
+      - ".dockerignore"
+      - ".github/workflows/image.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: image-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      # torch + CUDA + 2.3 GB of weights need more room than a runner leaves by default.
+      - name: Free runner disk
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h /
+
+      - uses: docker/setup-buildx-action@v3
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Image name
+        id: image
+        run: echo "name=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/chunklaya" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: serve/Dockerfile
+          platforms: linux/amd64
+          push: true
+          build-args: |
+            GIT_SHA=${{ github.sha }}
+          tags: |
+            ${{ steps.image.outputs.name }}:${{ github.sha }}
+            ${{ github.ref == 'refs/heads/main' && format('{0}:latest', steps.image.outputs.name) || '' }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=min
+
+      - name: Pushed
+        run: echo "${{ steps.image.outputs.name }}:${{ github.sha }}"
